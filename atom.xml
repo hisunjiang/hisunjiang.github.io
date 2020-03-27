@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Q. Sun&#39;s Blog</title>
-  
+  <icon>https://hisunjiang.gitee.io/icon.png</icon>
   <subtitle>愿孤独的人都有酒喝。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
