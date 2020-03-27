@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Learning across multi-stimulus</title>
+    <url>/2020/03/26/Learning-across-multi-stimulus/</url>
+    <content><![CDATA[<center>Learning across multi-stimulus enhances target recognition methods in SSVEP-based BCIs</center>  
+
+<center>万峰团队，澳门大学，2020</center>
+
+<center>Journal of Neural Engineering</center>
+
+<p>Abstract: SSVEP传统的特征提取方法是利用一个target刺激构造一个权值矩阵w，而本文作者表明，可以通过目标刺激周围的几个刺激共同计算w，从而得到更好的特征提取效果，即multi-stimulus。作者将multi-stimulus和extended CCA、ensemble TRCA结合（使用了filter bank），在清华的35名受试者数据集上得到了较好的效果。</p>
+<a id="more"></a>
+
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="Learning-from-multi-stimulus-scheme"><a href="#Learning-from-multi-stimulus-scheme" class="headerlink" title="Learning from multi-stimulus scheme"></a>Learning from multi-stimulus scheme</h2><h3 id="主要思想"><a href="#主要思想" class="headerlink" title="主要思想"></a>主要思想</h3><p><a href="https://imgchr.com/i/G9UoV0" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/03/26/G9UoV0.md.png" alt="G9UoV0.md.png"></a></p>
+<p>可从图中看到，顶部是传统的构造空间滤波器w的方法，即一个刺激对应一个w，而本文中的观点是结合target stimulus周围几个刺激一起构造w。这里很明显，target左右刺激数为超参数。</p>
+<h3 id="训练集矩阵调整"><a href="#训练集矩阵调整" class="headerlink" title="训练集矩阵调整"></a>训练集矩阵调整</h3><p>根据这个思想，我们需要对CCA和TRCA训练过程中的两个矩阵A、 B（CCA中为template和构造的sin，TRCA为template和联结矩阵）进行修改。这里通过将训练数据对角联结方法，重新构造A、B。<font color=red>（9）for CCA, (11) for TRCA.</font></p>
+<p><a href="https://imgchr.com/i/G9wU8U" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/03/26/G9wU8U.png" alt="G9wU8U.png"></a></p>
+<p><a href="https://imgchr.com/i/G9wyUx" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/03/26/G9wyUx.png" alt="G9wyUx.png"></a></p>
+<p>​    上述构造后，两个算法的优化问题变为以下两个公式</p>
+<p><img src="https://s1.ax1x.com/2020/03/26/G9w7IP.png" alt="G9w7IP.png"></p>
+<p>​    上述问题求解较为复杂，作者通过SSVEPs share a common spatial pattern across different stimulus frequencies  现象，对u和v进行约束（<strong>这里还引入了ρ-CCA</strong>），从而求解。</p>
+<h3 id="求解相关系数"><a href="#求解相关系数" class="headerlink" title="求解相关系数"></a>求解相关系数</h3><p>计算出了空间矩阵后，便可以通过下述的公式分别计算相关系数了。</p>
+<p><a href="https://imgchr.com/i/G90bwR" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/03/27/G90bwR.png" alt="G90bwR.png"></a></p>
+<h2 id="ms-eCCA-ms-eTRCA"><a href="#ms-eCCA-ms-eTRCA" class="headerlink" title="ms-eCCA + ms-eTRCA"></a>ms-eCCA + ms-eTRCA</h2><p>TRCA是最大化inter-trial之间的协方差，而CCA是最大化inter-stimulus之间的协方差，两者结合会产生更好的效果。（想法是没问题…不过下面这个公式的结合方法也算创新？排列组合中的一种吧…）</p>
+<p><a href="https://imgchr.com/i/G9DsVs" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/03/27/G9DsVs.png" alt="G9DsVs.png"></a></p>
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="减少训练集"><a href="#减少训练集" class="headerlink" title="减少训练集"></a>减少训练集</h2><p>Multi-stimulus 方法可以减少训练trial数。这在eCCA上的效果尤其明显。</p>
+<p><a href="https://imgchr.com/i/G9yCgf" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/03/27/G9yCgf.png" alt="G9yCgf.png"></a></p>
+<h2 id="组合特征提取效果更佳"><a href="#组合特征提取效果更佳" class="headerlink" title="组合特征提取效果更佳"></a>组合特征提取效果更佳</h2><p>ms-eCCA + ms-eTRCA效果最佳</p>
+<p><a href="https://imgchr.com/i/G9ysVH" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/03/27/G9ysVH.png" alt="G9ysVH.png"></a></p>
+<h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>解决small sample size (SSS) problem，即小样本问题，这在论文Linear discriminant analysis<br>for the small sample size problem: an overview  中已有描述，可以借鉴。 </p>
+]]></content>
+      <categories>
+        <category>论文笔记</category>
+        <category>BCI</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>SSVEP</tag>
+        <tag>特征提取</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些论文idea</title>
+    <url>/2020/03/26/%E4%B8%80%E4%BA%9B%E8%AE%BA%E6%96%87idea/</url>
+    <content><![CDATA[<p>记录一些不成熟的点子，以后有一定知识量了再来解释和实现。</p>
+<a id="more"></a>
+
+<ol>
+<li><p>采用对抗生成网络来增加数据集，这一点在情绪脑机接口上已经实现了（参考上海交大吕宝粮老师的研究）。</p>
+</li>
+<li><p>迁移学习已经应用到BCI上了，但是在SSVEP上的应用并不多见？可以在清华的数据集上测试一下，进行受试者之间的自适应。</p>
+</li>
+<li><p>清华19年研究了疲劳对SSVEP的影响，发现不同程度的疲劳会对SSVEP的相位和幅值产生影响。刚好14年他们有一篇文章，关于相位锁定CCA的研究（ρ-CCA），是否可以根据检测疲劳从而进行相位自适应？查阅过很多论文，主要难点在疲劳和相位之间的量化分析上…</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习生活</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>idea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>光影</title>
+    <url>/2020/03/26/%E5%85%89%E5%BD%B1/</url>
+    <content><![CDATA[<p>下午透过窗口缝隙照射在墙上的光。</p>
+<p>…</p>
+<a id="more"></a>
+
+<p><img src="https://s1.ax1x.com/2020/03/26/GpemjJ.jpg" alt="GpemjJ.jpg"></p>
+]]></content>
+      <tags>
+        <tag>杂记</tag>
+        <tag>摄影</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CV</title>
+    <url>/2020/03/26/CV/</url>
+    <content><![CDATA[<p><strong>About me</strong></p>
+<center>一个研究BCI的水硕</center>
+
+<center>  一个喜欢旅拍的摄影小白  </center>
+
+<center>一个充满希望打满鸡血的海迷</center>
+
+<center>...</center>
+
+<center>总之</center>
+
+<center>天道酬勤，人丑多读书</center>
+
+<a id="more"></a>
+
+<hr>
+<p><strong>Contact info</strong></p>
+<p>Github: <a href="https://github.com/hisunjiang" target="_blank" rel="noopener">hisunjiang</a></p>
+<p>CSDN: <a href="https://blog.csdn.net/weixin_42765703" target="_blank" rel="noopener">hi强森</a></p>
+<p>email: <a href="mailto:hisunjiang@outlook.com">hisunjiang@outlook.com</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>记录一些好用的网站</title>
+    <url>/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>记录一下平时遇到的好用的网站，方便第一时间想起。先成为工具人，再学会挖井~</p>
+<a id="more"></a>
+
+<h1 id="编程区"><a href="#编程区" class="headerlink" title="编程区"></a>编程区</h1><ol>
+<li><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程</a><br>里面包含很多编程语言的学习资料，平时复习语法时可以看一看。特别推荐里面提供的很多在线工具。</p>
+</li>
+<li><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000" target="_blank" rel="noopener">廖雪峰官网Git教程</a><br>里面Git教程很详细，还有一些Python、Java的教程。</p>
+</li>
+<li><p><a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">Notepad++</a><br>一个非常简洁小巧的代码编辑器，支持多种源码的查看和编辑。</p>
+</li>
+<li><p><a href="https://typora.io" target="_blank" rel="noopener">Typora</a><br>一个很好用的Markdown编辑器。</p>
+</li>
+</ol>
+<h1 id="学习区"><a href="#学习区" class="headerlink" title="学习区"></a>学习区</h1><ol>
+<li><a href="https://www.sci-hub.tw/" target="_blank" rel="noopener">Sci-hub</a><br>大量的英文文献可以下载，包括一些已经收录但是没有刊载的。离校没有VPN时可以试试这个网站，比百度学术或者Google学术下载更方便。</li>
+<li><a href="http://gen.lib.rus.ec/" target="_blank" rel="noopener">Library Genesis</a><br>主要是用来查找一些难以寻找到的英文专业著作等，当然这里面还可以下载论文。均是免费下载，不需要注册。</li>
+<li><a href="http://www.6453.net/" target="_blank" rel="noopener">龙猫学术导航</a><br>学术相关的论坛（小木虫等）、资料下载途径（包括上面两个网站）等等均列出来了入口。</li>
+<li><a href="http://www.pqdtcn.com/" target="_blank" rel="noopener">ProQuest</a><br>国外硕博论文全文数据库，这需要学校购买权限。</li>
+<li><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML20.html" target="_blank" rel="noopener">台湾大学李宏毅老师机器学习课程</a><br>看吴恩达老师的课还是有点难以下咽，李宏毅老师的中文机器学习课更易上手，关键是老师人还是特别幽默的台湾腔。刚好今年春期课程开启，作业、video和slides都更新了。当然B站上也有人整理出来了新版的课程，不用上油管观看。</li>
+<li><a href="https://ww2.mathworks.cn/matlabcentral/?s_tid=gn_mlc" target="_blank" rel="noopener">MathWorks社区</a><br>里面File Exchange 功能太强大了，这里面能找到很多网友提供的优质MATLAB程序，配合其Documentation工具包说明文档学习，编程更快。</li>
+<li><a href="https://www.grammarly.com/" target="_blank" rel="noopener">Grammarly</a><br>强大的英文写作工具，自动检查语法错误并纠正。搭配<a href="http://www.phrasebank.manchester.ac.uk/" target="_blank" rel="noopener">phasebank</a>（曼彻斯特大学学术英语写作语料库，包括论文each part的写作技巧）和<a href="https://www.english-corpora.org/coca/" target="_blank" rel="noopener">coca</a>（当代美语语料库，可以查看一些词语或者短语的用法，以及在美国出版物中的使用频率）一起使用，英语写作更加标准。</li>
+</ol>
+<h1 id="兴趣区"><a href="#兴趣区" class="headerlink" title="兴趣区"></a>兴趣区</h1><ol>
+<li><a href="https://www.pexels.com/zh-cn/" target="_blank" rel="noopener">Pexels</a><br>由摄影作者分享的素材照片，视频等。免费下载无水印，不需要注册。没事可以看看，提高一下审美。</li>
+<li><a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a><br>高清素材照片免费下载，无需注册。</li>
+<li><a href="https://www.doyoudo.com/" target="_blank" rel="noopener">doyoudo</a><br>Pr、Ps、Ae等软件的教程网。学剪辑当然还是关注B站上的一些摄影师更有收获。</li>
+<li><a href="https://docsmall.com/" target="_blank" rel="noopener">docsmall</a><br>一个非常简洁清新的图片压缩、GIF压缩、PDF压缩和分割网站，无广告。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习生活</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>编程</tag>
+      </tags>
+  </entry>
+</search>

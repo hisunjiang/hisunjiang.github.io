@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Q. Sun&#39;s Blog</title>
+  
+  <subtitle>愿孤独的人都有酒喝。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://hisunjiang.gitee.io/"/>
+  <updated>2020-03-27T00:37:09.346Z</updated>
+  <id>https://hisunjiang.gitee.io/</id>
+  
+  <author>
+    <name>sun</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Learning across multi-stimulus</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/26/Learning-across-multi-stimulus/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/26/Learning-across-multi-stimulus/</id>
+    <published>2020-03-26T14:53:45.000Z</published>
+    <updated>2020-03-27T00:37:09.346Z</updated>
+    
+    <summary type="html">
+    
+      &lt;center&gt;Learning across multi-stimulus enhances target recognition methods in SSVEP-based BCIs&lt;/center&gt;  
+
+&lt;center&gt;万峰团队，澳门大学，2020&lt;/center&gt;
+
+&lt;center&gt;Journal of Neural Engineering&lt;/center&gt;
+
+&lt;p&gt;Abstract: SSVEP传统的特征提取方法是利用一个target刺激构造一个权值矩阵w，而本文作者表明，可以通过目标刺激周围的几个刺激共同计算w，从而得到更好的特征提取效果，即multi-stimulus。作者将multi-stimulus和extended CCA、ensemble TRCA结合（使用了filter bank），在清华的35名受试者数据集上得到了较好的效果。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+    
+      <category term="学习" scheme="https://hisunjiang.gitee.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
+    
+      <category term="特征提取" scheme="https://hisunjiang.gitee.io/tags/%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些论文idea</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/26/%E4%B8%80%E4%BA%9B%E8%AE%BA%E6%96%87idea/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/26/%E4%B8%80%E4%BA%9B%E8%AE%BA%E6%96%87idea/</id>
+    <published>2020-03-26T13:32:26.000Z</published>
+    <updated>2020-03-26T15:12:52.011Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一些不成熟的点子，以后有一定知识量了再来解释和实现。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="学习生活" scheme="https://hisunjiang.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="学习" scheme="https://hisunjiang.gitee.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="idea" scheme="https://hisunjiang.gitee.io/tags/idea/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>光影</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/26/%E5%85%89%E5%BD%B1/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/26/%E5%85%89%E5%BD%B1/</id>
+    <published>2020-03-26T05:03:45.000Z</published>
+    <updated>2020-03-26T11:19:08.543Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;下午透过窗口缝隙照射在墙上的光。&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="杂记" scheme="https://hisunjiang.gitee.io/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+      <category term="摄影" scheme="https://hisunjiang.gitee.io/tags/%E6%91%84%E5%BD%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CV</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/26/CV/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/26/CV/</id>
+    <published>2020-03-26T01:27:21.324Z</published>
+    <updated>2020-03-26T01:55:06.273Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;About me&lt;/strong&gt;&lt;/p&gt;
+&lt;center&gt;一个研究BCI的水硕&lt;/center&gt;
+
+&lt;center&gt;  一个喜欢旅拍的摄影小白  &lt;/center&gt;
+
+&lt;center&gt;一个充满希望打满鸡血的海迷&lt;/center&gt;
+
+&lt;center&gt;...&lt;/center&gt;
+
+&lt;center&gt;总之&lt;/center&gt;
+
+&lt;center&gt;天道酬勤，人丑多读书&lt;/center&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>记录一些好用的网站</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</id>
+    <published>2020-03-26T01:20:30.000Z</published>
+    <updated>2020-03-26T11:19:23.881Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下平时遇到的好用的网站，方便第一时间想起。先成为工具人，再学会挖井~&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="学习生活" scheme="https://hisunjiang.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="学习" scheme="https://hisunjiang.gitee.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="编程" scheme="https://hisunjiang.gitee.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+</feed>
