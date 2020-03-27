@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-03-27T07:54:35.682Z</updated>
+  <updated>2020-03-27T14:48:09.635Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -17,26 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://hisunjiang.gitee.io/2020/03/27/test/"/>
-    <id>https://hisunjiang.gitee.io/2020/03/27/test/</id>
-    <published>2020-03-27T07:50:36.000Z</published>
-    <updated>2020-03-27T07:54:35.682Z</updated>
+    <title>Exploiting inter-subject information for SSVEP-based BCI</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/</id>
+    <published>2020-03-27T08:57:06.000Z</published>
+    <updated>2020-03-27T14:48:09.635Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;测试一下updated功能&lt;/p&gt;
+      &lt;center&gt;Enhancing performances of SSVEP-based brain–computer interfaces via exploiting inter-subject information&lt;/center&gt;
 
-        
-      
+&lt;center&gt;Xiaogang Chen，清华大学，2015&lt;/center&gt;
+
+&lt;center&gt;Journal of Neural Engineering&lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt;  根据已有的受试者数据构造template，用于新的受试者进行分类，类似于迁移学习的思想。于是作者提出了transfer template based canonical correlation analysis (tt-CCA) ，在线实验过程中利用新的测试数据进行template更新。数据格式和清华的公开数据集一致，包括40个刺激和6个block。采用LOO进行正确率验证，即11个受试者作为source subject，用来构造transfer template。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;  有迁移学习的意思，但是只是简单的受试者平均而已，这样的效果肯定没有对每个受试者进行template计算正确率高。需要注意的是，本文的方法是不需要训练集的，而且引入了在线更新的手段，使得其自适应更强。&lt;/p&gt;
     
     </summary>
     
     
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
+    
+      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   

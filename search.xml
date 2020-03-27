@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>test</title>
-    <url>/2020/03/27/test/</url>
-    <content><![CDATA[<p>测试一下updated功能</p>
+    <title>Exploiting inter-subject information for SSVEP-based BCI</title>
+    <url>/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/</url>
+    <content><![CDATA[<center>Enhancing performances of SSVEP-based brain–computer interfaces via exploiting inter-subject information</center>
+
+<center>Xiaogang Chen，清华大学，2015</center>
+
+<center>Journal of Neural Engineering</center>
+
+<p><strong>Abstract:</strong>  根据已有的受试者数据构造template，用于新的受试者进行分类，类似于迁移学习的思想。于是作者提出了transfer template based canonical correlation analysis (tt-CCA) ，在线实验过程中利用新的测试数据进行template更新。数据格式和清华的公开数据集一致，包括40个刺激和6个block。采用LOO进行正确率验证，即11个受试者作为source subject，用来构造transfer template。</p>
+<p><strong>Note:</strong>  有迁移学习的意思，但是只是简单的受试者平均而已，这样的效果肯定没有对每个受试者进行template计算正确率高。需要注意的是，本文的方法是不需要训练集的，而且引入了在线更新的手段，使得其自适应更强。</p>
+<a id="more"></a>
+
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><p>标准的CCA是没有利用到SSVEP的相位信息的（标准CCA的参考是正余弦构成的，但对这个算法本身，是对相位敏感的），如果能够在参考信号中加入相位信息，那么识别率会上升（这一点11年他们组的文章就有介绍ρ-CCA）。故后面才提出了通过训练集来构造参考信号的想法，但是又需要训练的步骤，那么CCA的最大优势就不明显了（虽然最近几年的趋势来看，更倾向于带训练的算法，毕竟还是要想正确率妥协~）。CCA有个特点，在数据长度较短的时候，由于自发脑电的影响，其效果并不理想。基于此，作者提出了training-free的结构——transfer template-based CCA (tt-CCA)  。</p>
+<h2 id="tt-CCA"><a href="#tt-CCA" class="headerlink" title="tt-CCA"></a>tt-CCA</h2><h3 id="Single-channel"><a href="#Single-channel" class="headerlink" title="Single-channel"></a>Single-channel</h3><p>单通道（通常为Oz）下的tt-CCA算法结构。</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/Gi496H.png" alt="tt-CCA single"></p>
+<h3 id="Multi-channel"><a href="#Multi-channel" class="headerlink" title="Multi-channel"></a>Multi-channel</h3><p>多通道下tt-CCA结构</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/Gi48A0.png" alt="tt-CCA multi"></p>
+<h2 id="在线更新方法"><a href="#在线更新方法" class="headerlink" title="在线更新方法"></a>在线更新方法</h2><p>在线的想法也比较简单，当计算出的相关系数ρ的前两个最大值之间的差异达到阈值时，便更新template。本文取得阈值为0，意思是不管怎样均更新。（其实我觉得这个超参数不是很好确定，因为SSVEP识别太玄学了，有可能某两个刺激频率就是相差特别小，这在神经机理上也能说通，毕竟每个人大脑构造都不一样。）</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/Gi5tat.png" alt="ott-CCA"></p>
+<p>下面给出template的更新公式，$n_k$的初值$c_0$为另一个超参数，本文设置为11，初始template由11个trial数据构成，但具体来自那几个人的不清楚（因为可以用于做template的trial有66个）。</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/Giom9K.png" alt="更新公式"></p>
+<p>需要注意的是，两个超参数，$c_0$控制着原始template和当前EEG信号的相对重要性，thr控制着当前EEG trial可能用来更新的可能性。两者在较小时能够取得快速更新的效果。</p>
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p>答案不用说了，ott-CCA &gt; tt-CCA(multi-channel) &gt; tt-CCA(single-channel)。ott-CCA在0.5s时效果并不好，因为tt-CCA不行，所以没法提升。</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GiHKjU.png" alt="tt-CCA结果"></p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GiHhDg.png" alt="ott-CCA结果"></p>
+<h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>本文只是提出了一个频率识别结构，对其中两点进行改进均可以提升整体效果。第一是更改transfer template的计算，比如采用m-CCA；第二是采用更好的频率识别方法并结合本文的模板更新措施，说白了就是对现有更好的方法进行自适应。</p>
+<p><strong>毕竟这是15年的论文，目前SSVEP的成熟结构还是filter bank + ensemble + algorithm的方式，可参考电子科大19年的层次分类网络论文。</strong></p>
 ]]></content>
+      <categories>
+        <category>论文笔记</category>
+        <category>BCI</category>
+      </categories>
+      <tags>
+        <tag>SSVEP</tag>
+        <tag>迁移学习</tag>
+      </tags>
   </entry>
   <entry>
     <title>Alpha neurofeedback training(NFT)</title>
