@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Alpha neurofeedback training(NFT)</title>
+    <url>/2020/03/27/Alpha-neurofeedback-training-NFT/</url>
+    <content><![CDATA[<center>Alpha neurofeedback training improves SSVEP-based BCI performance</center>
+
+<center>万峰团队，澳门大学，2016</center>
+
+<center>Journal of Neural Engineering</center>
+
+<p><strong>Abstract:</strong> 作者通过对受试者进行神经反馈训练，使其individual alpha band (IAB) amplitudes  产生下调，从而增加受试者对SSVEP的敏感性。实验表明，经历NFT的受试者产生的SSVEP信噪比(+16.5%)和分类正确率(+20.3%)均明显提升。实验分两步，第一是发现alpha波与SSVEP之间的关系，第二根据第一步实验结果对受试者进行训练，最后对比有无训练的受试者之间差异。刺激为7~15Hz之间的10个频率，6导，算法采用标准CCA。</p>
+<p><strong>Note:</strong> alpha波会对SSVEP产生影响（已有论文发现，引言中有介绍），可以通过调制alpha波增强SSVEP；引言列出了诸多关于神经反馈训练的参考论文；</p>
+<a id="more"></a>
+
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="神经反馈训练的参数"><a href="#神经反馈训练的参数" class="headerlink" title="神经反馈训练的参数"></a>神经反馈训练的参数</h2><p>采用Oz导联的relative IAB amplitude作为训练参数，其计算公式为</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GCHknJ.png" alt="r-IAB"></p>
+<p>X(k)是睁眼信号FFT后的幅值，上述公式可以理解为：在频段0.5<del>30Hz范围内，LTF</del>HTF频段占比。HTF和LTF可从下图中得到</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GCHMcD.png" alt="alpha波阻断"></p>
+<p>图中为受试者睁闭眼各1min的结果，睁闭眼幅值的交叉点为LTF和HTF频率，图中能够明显的反应alpha阻断现象。</p>
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="The-relationship-between-the-resting-relative-IAB-and-the-BCI-performance"><a href="#The-relationship-between-the-resting-relative-IAB-and-the-BCI-performance" class="headerlink" title="The relationship between the resting relative IAB and the BCI performance"></a>The relationship between the resting relative IAB and the BCI performance</h2><p>相对IAB与SSVEP的SNR以及正确率呈现负相关，即在低relative IAB条件下，BCI性能会表现较好。</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GCqUOg.png" alt="SNR&amp;ACC"></p>
+<h2 id="NFT-results"><a href="#NFT-results" class="headerlink" title="NFT results"></a>NFT results</h2><h3 id="EEG-changes"><a href="#EEG-changes" class="headerlink" title="EEG changes"></a>EEG changes</h3><p>受试者进行NFT训练，实验记录每个session相对IAB值后可以发现，受试者逐渐能够通过训练降低该参数。</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GCOk26.png" alt="训练进程"></p>
+<h3 id="BCI性能变化"><a href="#BCI性能变化" class="headerlink" title="BCI性能变化"></a>BCI性能变化</h3><p>下图能够明显反应采用NFT训练后的BCI性能变化。其中test1为第一阶段，test2为第二阶段，控制组下test2与test1保持一致，而NFT组需要在test2前对受试者进行神经反馈训练。可以发现经过训练后的受试SNR和ACC均提升。</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GCOhJ1.png" alt="NFT前后结果对比"></p>
+<h1 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h1><ol>
+<li><p>静息态EEG活动和SSVEP的关系在之前已经有研究,包括prestimulus alpha 活动与视觉感知功能负相关等等；</p>
+</li>
+<li><p>目前的研究表明低频段的SSVEP与alpha之前存在着本文所述的相关性，而这种现象在高频下26–34.7 Hz  还未发现；</p>
+</li>
+<li><p>已有研究发现，尽管对受试者进行了NFT训练，但是一段时间后其alpha的幅值又会回到最初的水品。在本文中，相对IAB在每个session之间并没有很大的变化，但是最后却得到了性能的提升，这是为什么呢？可以用受试者的专注度和大脑神经的兴奋性来解释，即通过训练，受试者更沉着，神经活动更加兴奋了。</p>
+</li>
+</ol>
+<h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>探索在高频刺激下该工作是否成立。</p>
+]]></content>
+      <categories>
+        <category>论文笔记</category>
+        <category>BCI</category>
+      </categories>
+      <tags>
+        <tag>SSVEP</tag>
+        <tag>神经反馈训练</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Learning across multi-stimulus</title>
     <url>/2020/03/26/Learning-across-multi-stimulus/</url>
     <content><![CDATA[<center>Learning across multi-stimulus enhances target recognition methods in SSVEP-based BCIs</center>  
@@ -10,24 +53,25 @@
 <center>Journal of Neural Engineering</center>
 
 <p><strong>Abstract:</strong> SSVEP传统的特征提取方法是利用一个target刺激构造一个权值矩阵w，而本文作者表明，可以通过目标刺激周围的几个刺激共同计算w，从而得到更好的特征提取效果，即multi-stimulus。作者将multi-stimulus和extended CCA、ensemble TRCA结合（使用了filter bank），在清华的35名受试者数据集上得到了较好的效果。</p>
+<p><strong>*Note:</strong> 利用非目标刺激也能增加目标识别的准确性；提供了一种不同算法的融合策略。</p>
 <a id="more"></a>
 
 <h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="Learning-from-multi-stimulus-scheme"><a href="#Learning-from-multi-stimulus-scheme" class="headerlink" title="Learning from multi-stimulus scheme"></a>Learning from multi-stimulus scheme</h2><h3 id="主要思想"><a href="#主要思想" class="headerlink" title="主要思想"></a>主要思想</h3><p><img src="https://s1.ax1x.com/2020/03/26/G9UoV0.png" alt="G9UoV0.png"></p>
 <p>可从图中看到，顶部是传统的构造空间滤波器w的方法，即一个刺激对应一个w，而本文中的观点是结合target stimulus周围几个刺激一起构造w。这里很明显，target左右刺激数为超参数。</p>
 <h3 id="训练集矩阵调整"><a href="#训练集矩阵调整" class="headerlink" title="训练集矩阵调整"></a>训练集矩阵调整</h3><p>根据这个思想，我们需要对CCA和TRCA训练过程中的两个矩阵A、 B（CCA中为template和构造的sin，TRCA为template和联结矩阵）进行修改。这里通过将训练数据对角联结方法，重新构造A、B。<font color=red>（9）for CCA, (11) for TRCA.</font></p>
-<p>[<img src="https://s1.ax1x.com/2020/03/26/G9wU8U.png" alt="G9wU8U.png">)U)</p>
-<p>[<img src="https://s1.ax1x.com/2020/03/26/G9wyUx.png" alt="G9wyUx.png"></p>
-<p>​    上述构造后，两个算法的优化问题变为以下两个公式</p>
+<p><img src="https://s1.ax1x.com/2020/03/26/G9wU8U.png" alt="G9wU8U.png"></p>
+<p><img src="https://s1.ax1x.com/2020/03/26/G9wyUx.png" alt="G9wyUx.png"></p>
+<p>上述构造后，两个算法的优化问题变为以下两个公式</p>
 <p><img src="https://s1.ax1x.com/2020/03/26/G9w7IP.png" alt="G9w7IP.png"></p>
-<p>​    上述问题求解较为复杂，作者通过SSVEPs share a common spatial pattern across different stimulus frequencies  现象，对u和v进行约束（<strong>这里还引入了ρ-CCA</strong>），从而求解。</p>
+<p>上述问题求解较为复杂，作者通过SSVEPs share a common spatial pattern across different stimulus frequencies  现象，对u和v进行约束（<strong>这里还引入了ρ-CCA</strong>），从而求解。</p>
 <h3 id="求解相关系数"><a href="#求解相关系数" class="headerlink" title="求解相关系数"></a>求解相关系数</h3><p>计算出了空间矩阵后，便可以通过下述的公式分别计算相关系数了。</p>
-<p>[<img src="https://s1.ax1x.com/2020/03/27/G90bwR.png" alt="G90bwR.png"></p>
+<p><img src="https://s1.ax1x.com/2020/03/27/G90bwR.png" alt="G90bwR.png"></p>
 <h2 id="ms-eCCA-ms-eTRCA"><a href="#ms-eCCA-ms-eTRCA" class="headerlink" title="ms-eCCA + ms-eTRCA"></a>ms-eCCA + ms-eTRCA</h2><p>TRCA是最大化inter-trial之间的协方差，而CCA是最大化inter-stimulus之间的协方差，两者结合会产生更好的效果。（想法是没问题…不过下面这个公式的结合方法也算创新？排列组合中的一种吧…）</p>
-<p>[<img src="https://s1.ax1x.com/2020/03/27/G9DsVs.png" alt="G9DsVs.png"></p>
+<p><img src="https://s1.ax1x.com/2020/03/27/G9DsVs.png" alt="G9DsVs.png"></p>
 <h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="减少训练集"><a href="#减少训练集" class="headerlink" title="减少训练集"></a>减少训练集</h2><p>Multi-stimulus 方法可以减少训练trial数。这在eCCA上的效果尤其明显。</p>
-<p>[<img src="https://s1.ax1x.com/2020/03/27/G9yCgf.png" alt="G9yCgf.png"></p>
+<p><img src="https://s1.ax1x.com/2020/03/27/G9yCgf.png" alt="G9yCgf.png"></p>
 <h2 id="组合特征提取效果更佳"><a href="#组合特征提取效果更佳" class="headerlink" title="组合特征提取效果更佳"></a>组合特征提取效果更佳</h2><p>ms-eCCA + ms-eTRCA效果最佳</p>
-<p>[<img src="https://s1.ax1x.com/2020/03/27/G9ysVH.png" alt="G9ysVH.png"></p>
+<p><img src="https://s1.ax1x.com/2020/03/27/G9ysVH.png" alt="G9ysVH.png"></p>
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>解决small sample size (SSS) problem，即小样本问题，这在论文Linear discriminant analysis<br>for the small sample size problem: an overview  中已有描述，可以借鉴。 </p>
 ]]></content>
       <categories>
