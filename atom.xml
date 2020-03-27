@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-03-27T01:44:48.522Z</updated>
+  <updated>2020-03-27T02:10:12.952Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hisunjiang.gitee.io/2020/03/26/Learning-across-multi-stimulus/"/>
     <id>https://hisunjiang.gitee.io/2020/03/26/Learning-across-multi-stimulus/</id>
     <published>2020-03-26T14:53:45.000Z</published>
-    <updated>2020-03-27T01:44:48.522Z</updated>
+    <updated>2020-03-27T02:10:12.952Z</updated>
     
     <summary type="html">
     
@@ -31,7 +31,7 @@
 
 &lt;center&gt;Journal of Neural Engineering&lt;/center&gt;
 
-&lt;p&gt;Abstract: SSVEP传统的特征提取方法是利用一个target刺激构造一个权值矩阵w，而本文作者表明，可以通过目标刺激周围的几个刺激共同计算w，从而得到更好的特征提取效果，即multi-stimulus。作者将multi-stimulus和extended CCA、ensemble TRCA结合（使用了filter bank），在清华的35名受试者数据集上得到了较好的效果。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt; SSVEP传统的特征提取方法是利用一个target刺激构造一个权值矩阵w，而本文作者表明，可以通过目标刺激周围的几个刺激共同计算w，从而得到更好的特征提取效果，即multi-stimulus。作者将multi-stimulus和extended CCA、ensemble TRCA结合（使用了filter bank），在清华的35名受试者数据集上得到了较好的效果。&lt;/p&gt;
     
     </summary>
     
