@@ -65,7 +65,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">576字</span>
+            <span class="post-count">635字</span>
         </span>
     </span>
 
@@ -120,6 +120,7 @@
 <h3 id="求解相关系数"><a href="#求解相关系数" class="headerlink" title="求解相关系数"></a>求解相关系数</h3><p>计算出了空间矩阵后，便可以通过下述的公式分别计算相关系数了。</p>
 <p><img src="https://s1.ax1x.com/2020/03/27/G90bwR.png" alt="G90bwR.png"></p>
 <h2 id="ms-eCCA-ms-eTRCA"><a href="#ms-eCCA-ms-eTRCA" class="headerlink" title="ms-eCCA + ms-eTRCA"></a>ms-eCCA + ms-eTRCA</h2><p>TRCA是最大化inter-trial之间的协方差，而CCA是最大化inter-stimulus之间的协方差，两者结合会产生更好的效果。（想法是没问题…不过下面这个公式的结合方法也算创新？排列组合中的一种吧…）</p>
+<p><font color=red>发现一个有意思的事，这里的融合其实相当于把eCCA和eTRCA的结果进行求和？只是省略了eCCA其中一项而已，但是我之前测试了并没有效果啊（CCA+MSI）？？枯了…</font></p>
 <p><img src="https://s1.ax1x.com/2020/03/27/G9DsVs.png" alt="G9DsVs.png"></p>
 <h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="减少训练集"><a href="#减少训练集" class="headerlink" title="减少训练集"></a>减少训练集</h2><p>Multi-stimulus 方法可以减少训练trial数。这在eCCA上的效果尤其明显。</p>
 <p><img src="https://s1.ax1x.com/2020/03/27/G9yCgf.png" alt="G9yCgf.png"></p>
