@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-03-27T14:48:09.635Z</updated>
+  <updated>2020-03-28T14:34:18.710Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一章 绪论</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/28/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/28/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/</id>
+    <published>2020-03-28T12:52:29.000Z</published>
+    <updated>2020-03-28T14:34:18.710Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;课程简介：神经工程是生物医学工程的一个分支学科，它致力于采用工程技术实现认识、修复、替代、增强或探索神经系统的特性。作为一个相对新兴的学科，尽管神经工程发展很快，但与其相关的信息和研究仍相对有限。一个制约研究队伍扩大的重要原因是我们的大学很少向本科生研究生传授有关神经科学的知识和技能。因此本导论课程的教学目的是通过对神经工程学中的一些基础问题及研究的介绍使得生物医学工程专业学生对神经工程学有初步的认识和了解。掌握神经工程学研究领域中一些基本的概念、原理和逻辑思维，为之前学习到的知识寻找应用范例，进而为有志于从事神经工程学研究的学生提供系统的知识培养。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note：&lt;/strong&gt;本课程由天津大学医学部明东教授主讲，学堂在线可在线观看、下载slides。本文及以后的系列博客主要更新自己在学习本课程的一些笔记和感触（&lt;font color=shocking pink &gt;绿色字体&lt;/font&gt;）,方便今后复习和写论文。&lt;/p&gt;
+&lt;p&gt;第一章 绪论&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1.1 神经工程的前世今生&lt;/li&gt;
+&lt;li&gt;1.2 神经工程的未来&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="神经工程学" scheme="https://hisunjiang.gitee.io/categories/%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E5%AD%A6/"/>
+    
+    
+      <category term="公开课笔记" scheme="https://hisunjiang.gitee.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Exploiting inter-subject information for SSVEP-based BCI</title>
@@ -53,7 +82,7 @@
     <link href="https://hisunjiang.gitee.io/2020/03/27/Alpha-neurofeedback-training-NFT/"/>
     <id>https://hisunjiang.gitee.io/2020/03/27/Alpha-neurofeedback-training-NFT/</id>
     <published>2020-03-27T04:07:46.000Z</published>
-    <updated>2020-03-27T06:21:02.246Z</updated>
+    <updated>2020-03-28T11:30:04.356Z</updated>
     
     <summary type="html">
     
@@ -160,7 +189,7 @@
     <link href="https://hisunjiang.gitee.io/2020/03/26/CV/"/>
     <id>https://hisunjiang.gitee.io/2020/03/26/CV/</id>
     <published>2020-03-26T01:27:21.324Z</published>
-    <updated>2020-03-27T15:18:52.755Z</updated>
+    <updated>2020-03-28T11:31:48.549Z</updated>
     
     <summary type="html">
     

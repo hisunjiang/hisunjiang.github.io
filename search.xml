@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>第一章 绪论</title>
+    <url>/2020/03/28/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/</url>
+    <content><![CDATA[<blockquote>
+<p>课程简介：神经工程是生物医学工程的一个分支学科，它致力于采用工程技术实现认识、修复、替代、增强或探索神经系统的特性。作为一个相对新兴的学科，尽管神经工程发展很快，但与其相关的信息和研究仍相对有限。一个制约研究队伍扩大的重要原因是我们的大学很少向本科生研究生传授有关神经科学的知识和技能。因此本导论课程的教学目的是通过对神经工程学中的一些基础问题及研究的介绍使得生物医学工程专业学生对神经工程学有初步的认识和了解。掌握神经工程学研究领域中一些基本的概念、原理和逻辑思维，为之前学习到的知识寻找应用范例，进而为有志于从事神经工程学研究的学生提供系统的知识培养。</p>
+</blockquote>
+<p><strong>Note：</strong>本课程由天津大学医学部明东教授主讲，学堂在线可在线观看、下载slides。本文及以后的系列博客主要更新自己在学习本课程的一些笔记和感触（<font color=shocking pink >绿色字体</font>）,方便今后复习和写论文。</p>
+<p>第一章 绪论</p>
+<ul>
+<li>1.1 神经工程的前世今生</li>
+<li>1.2 神经工程的未来</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="1-1-神经工程的前世今生"><a href="#1-1-神经工程的前世今生" class="headerlink" title="1.1 神经工程的前世今生"></a>1.1 神经工程的前世今生</h2><ul>
+<li>2016年AlphaGo VS 李世石，2017年AlphaGo VS 柯洁 （DeepMind公司产物，目前最强是zero？）；</li>
+<li>人-机混合智能的关键——神经工程技术；</li>
+<li>未来的愿景是脑-机智能，目前还停留在脑-机接口层面；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/28/GAsDvn.png" alt="人机混合智能"></p>
+<ul>
+<li>1553年Andreas Vesalius(1514-1564)开启人体解剖学时代；</li>
+<li>1861年法国外科医生、人类学家、神经病理学家Paul Broca在偏瘫半失语病人皮层中发现了控制运动语言中枢，后人为纪念他将该区域命名为Broca区，这一事件被认为是神经心理学的历史起点。<font color=shocking pink >我记得好像有个什么大脑分区表，貌似是根据德国骨科医生命名的？</font>；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/28/GAcnEV.png" alt="Broca分区"></p>
+<ul>
+<li><p>20世纪20年代瑞士生理学家沃尔特-鲁道夫-赫斯（1949年获生理学和医学奖）证明可以通过在猫脑里面植入电极进行电刺激，激发猫脑的行为反应（愤怒、饥饿等）。<font color=shocking pink >这可能是FES的前身了</font>；</p>
+</li>
+<li><p>1963年西班牙科学家何塞-德尔加多（Jose Delgado）向植入大脑的电极发送无线信号，让横冲直撞的公牛停了下来；</p>
+</li>
+<li><p>1963年，英国神经生理学家William Gray Walter实现了<font color=red>人类历史上第一次完整的脑-机接口技术实验</font>（意念实现幻灯片的翻页，他所设计的脑机接口系统闭环且完整）；</p>
+</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/28/GARC4K.png" alt="人类第一次BCI"></p>
+<ul>
+<li><p><strong>1973年脑机接口概念提出者Jacques J. Vidal在其文章中<font color=red>第一次给出Brain-Computer Interface 这一名词</font>，并给出了系统雏形。2000年第一次脑-机接口国际会议上Jonathan R. Wolpaw等人给出了脑-机接口的准确定义，2002年他发表的综述详细的描述了各个范式和系统性能评价指标；</strong><font color=shocking pink >BCI这个领域真是非常年轻</font>；</p>
+</li>
+<li><p>2008年Andrew Schwartz团队（匹兹堡大学University of Pittsburgh，美国公立常春藤）在Nature上发表文章，将电极植入猴子运动皮层，多次训练后，猴子能够通过大脑活动控制机械臂抓取食物；随后该团队开展了人体实验；</p>
+</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/28/GAqGKx.png" alt="人体实验"></p>
+<h2 id="1-2-神经工程的未来"><a href="#1-2-神经工程的未来" class="headerlink" title="1.2 神经工程的未来"></a>1.2 神经工程的未来</h2><ul>
+<li>神经工程的研究内容</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/28/GALuOP.png" alt="研究内容"></p>
+<ul>
+<li>神经工程的市场前景。马斯克2017年成立NeuroLink公司<font color=shocking pink >（NeuroLink主要是做植入式BCI，目前最大的成绩在于19年研发出的植入式设备）</font>，扎克伯格同年启动意念打字项目；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/28/GALDkF.png" alt="前景"></p>
+<p><img src="https://s1.ax1x.com/2020/03/28/GALH1A.png" alt="公司"></p>
+<ul>
+<li>深部脑刺激(Deep Brain Stimulation, DBS)是一个成功的案例，已经大量用于临床，我国也是继美国第二个拥有该临床技术的国家；</li>
+<li><font color=red>群脑组网、群脑协同和群脑融合</font>。2015年七月，杜克大学发表研究成果，猴子合作作为大脑网络时比独立控制效果更优。<font color=shocking pink >这是一个非常有前景的概念，类似于环太平洋中的机甲</font>；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/28/GAjWmq.png" alt="群脑"></p>
+<ul>
+<li>2016年天津大学完成人类首次太空脑-机接口实验（天宫二号）；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/28/GAvMcj.png" alt="太空实验"></p>
+]]></content>
+      <categories>
+        <category>神经工程学</category>
+      </categories>
+      <tags>
+        <tag>公开课笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Exploiting inter-subject information for SSVEP-based BCI</title>
     <url>/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/</url>
     <content><![CDATA[<center>Enhancing performances of SSVEP-based brain–computer interfaces via exploiting inter-subject information</center>
@@ -53,7 +120,7 @@
 
 <h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="神经反馈训练的参数"><a href="#神经反馈训练的参数" class="headerlink" title="神经反馈训练的参数"></a>神经反馈训练的参数</h2><p>采用Oz导联的relative IAB amplitude作为训练参数，其计算公式为</p>
 <p><img src="https://s1.ax1x.com/2020/03/27/GCHknJ.png" alt="r-IAB"></p>
-<p>X(k)是睁眼信号FFT后的幅值，上述公式可以理解为：在频段0.5<del>30Hz范围内，LTF</del>HTF频段占比。HTF和LTF可从下图中得到</p>
+<p>X(k)是睁眼信号FFT后的幅值，上述公式可以理解为：在频段0.5 ~ 30Hz范围内，LTF ~ HTF频段占比。HTF和LTF可从下图中得到</p>
 <p><img src="https://s1.ax1x.com/2020/03/27/GCHMcD.png" alt="alpha波阻断"></p>
 <p>图中为受试者睁闭眼各1min的结果，睁闭眼幅值的交叉点为LTF和HTF频率，图中能够明显的反应alpha阻断现象。</p>
 <h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="The-relationship-between-the-resting-relative-IAB-and-the-BCI-performance"><a href="#The-relationship-between-the-resting-relative-IAB-and-the-BCI-performance" class="headerlink" title="The relationship between the resting relative IAB and the BCI performance"></a>The relationship between the resting relative IAB and the BCI performance</h2><p>相对IAB与SSVEP的SNR以及正确率呈现负相关，即在低relative IAB条件下，BCI性能会表现较好。</p>
@@ -180,7 +247,7 @@
 <p><strong>Contact info</strong></p>
 <p>Github: <a href="https://github.com/hisunjiang" target="_blank" rel="noopener">hisunjiang</a></p>
 <p>CSDN: <a href="https://blog.csdn.net/weixin_42765703" target="_blank" rel="noopener">hi强森</a></p>
-<p>email: <a href="mailto:hisunjiang@outlook.com">hisunjiang@outlook.com</a></p>
+<p>Email: <a href="mailto:hisunjiang@outlook.com">hisunjiang@outlook.com</a></p>
 ]]></content>
   </entry>
   <entry>
