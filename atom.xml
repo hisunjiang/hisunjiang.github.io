@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-03-28T14:34:18.710Z</updated>
+  <updated>2020-03-29T13:26:52.561Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Adding subject-independent information to subject-specific models</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/29/Adding-subject-independent-information-to-subject-specific-models/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/29/Adding-subject-independent-information-to-subject-specific-models/</id>
+    <published>2020-03-29T05:56:42.000Z</published>
+    <updated>2020-03-29T13:26:52.561Z</updated>
+    
+    <summary type="html">
+    
+      &lt;center&gt;Enhancing performance of subject-specific models via subject-independent information for SSVEP-based BCIs&lt;/center&gt;
+
+&lt;center&gt;Mohammad Hadi Mehdizavareh, University of Tehran, 2020&lt;/center&gt;
+
+&lt;center&gt;PLOS ONE&lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt; 本文是对Extended CCA的完善和改进。eCCA提出的时候就存在一些短处，比如总共有三种数据（测试、template和sinusoidal signal），他们之间有多种计算投影矩阵和相关性的组合，但是eCCA只取了其中五种相关系数解法。为什么这样做以及是否有更好的选择，并没有讨论。且ensemble方法还未在eCCA上实现。本文作者即对上述问题进行了分析和讨论，得到了优化后的eCCA，在清华公开数据集上进行验证。实验表明，优化后的方法比eCCA效果更好，且在数据长度大于0.3s时，性能优于TRCA（ensemble应用后亦是如此）。改进的方法在sub-band较少，导联数较少以及训练样本数较少时均优于TRCA（前提是数据长度大于0.3s）。&lt;font color=red&gt;由于作者在论文中部分描述不是很清晰，所以结论将信将疑吧…但这个思路是没问题的。&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 能否有效利用SSVEP的相位信息，对其正确率有很大的影响；在数据长度低于0.3s时，TRCA仍然具有优势。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
+    
+      <category term="CCA" scheme="https://hisunjiang.gitee.io/tags/CCA/"/>
+    
+  </entry>
   
   <entry>
     <title>第一章 绪论</title>
@@ -66,9 +98,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -98,9 +130,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -130,9 +162,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
