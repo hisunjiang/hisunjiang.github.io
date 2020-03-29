@@ -29,8 +29,8 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>目前SSVEP识别得到公认的最优秀算法是Extended CCA和Ensemble TRCA，多数改进或新提出的方法均跟其进行对比；Filter bank和Ensemble方法似乎已经得到了普及使用。</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -134,8 +134,8 @@
 <p><strong>毕竟这是15年的论文，目前SSVEP的成熟结构还是filter bank + ensemble + algorithm的方式，可参考电子科大19年的层次分类网络论文。</strong></p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -177,8 +177,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>探索在高频刺激下该工作是否成立。</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -218,8 +218,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>解决small sample size (SSS) problem，即小样本问题，这在论文Linear discriminant analysis<br>for the small sample size problem: an overview  中已有描述，可以借鉴。 </p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
