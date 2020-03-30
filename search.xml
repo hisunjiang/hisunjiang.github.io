@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>第二章 神经生理心理基础 part1</title>
+    <url>/2020/03/30/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part1/</url>
+    <content><![CDATA[<p>第二章 神经生理心理基础</p>
+<ul>
+<li>2.1 人脑的进化和发育</li>
+<li>2.2 脑的组成</li>
+<li>2.3 神经元和胶质细胞</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="2-1-人脑的进化和发育"><a href="#2-1-人脑的进化和发育" class="headerlink" title="2.1 人脑的进化和发育"></a>2.1 人脑的进化和发育</h2><ul>
+<li>大脑重量约1.5kg，约体重的2%，大脑消耗人体总能量的20%；</li>
+</ul>
+<h2 id="2-2-脑的组成"><a href="#2-2-脑的组成" class="headerlink" title="2.2 脑的组成"></a>2.2 脑的组成</h2><ul>
+<li>脑的切面</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/Gn2891.png" alt="大脑切面"></p>
+<ul>
+<li>脑的组成。婴儿摇晃症候群是白质受损的表现；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/Gn2ygP.png" alt="灰质与白质"></p>
+<p><img src="https://s1.ax1x.com/2020/03/30/GnWtTe.png" alt="大脑沟回"></p>
+<p>额叶与高级决策处理、意识等相关；顶叶主要与运动、感觉相关；枕叶与视觉处理相关；颞叶与听觉和平衡相关；</p>
+<ul>
+<li>沿用至今的大脑Brodmann分区；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/GnWjpR.png" alt="大脑分区"></p>
+<ul>
+<li>间脑与脑干；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/GuP6kF.png" alt="间脑与脑干"></p>
+<ul>
+<li>丘脑；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/GuitHK.png" alt="丘脑"></p>
+<ul>
+<li>小脑；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/Gui43j.png" alt="小脑"></p>
+<h2 id="神经元与胶质细胞"><a href="#神经元与胶质细胞" class="headerlink" title="神经元与胶质细胞"></a>神经元与胶质细胞</h2><ul>
+<li>神经系统的<strong>基本功能单位</strong>是神经元（Neuron）；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/GuFvo8.png" alt="神经元"></p>
+<ul>
+<li>神经元按照功能可以分为感觉神经元、中间神经元和运动神经元。下图展示一个典型的运动神经元结构；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/GukjXR.png" alt="运动神经元结构"></p>
+<ul>
+<li>树突棘——神经元接受信息的关键部位，位于树突上的微小分支；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/GuAqVP.png" alt="树突棘"></p>
+<ul>
+<li>胶质细胞——不产生动作电位，不传递信息，如下图中的红色和蓝色部分；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/GuEBIf.png" alt="胶质细胞"></p>
+<ul>
+<li>胶质细胞的分类；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/GuVNfU.png" alt="胶质细胞"></p>
+<ul>
+<li>胶质细胞功能，星形细胞形成血管屏障，少突胶质细胞形成髓鞘，小胶质细胞参与脑组织损伤的修复；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/30/GuVgfO.png" alt="胶质细胞功能"></p>
+]]></content>
+      <categories>
+        <category>神经工程学</category>
+      </categories>
+      <tags>
+        <tag>公开课笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Adding subject-independent information to subject-specific models</title>
     <url>/2020/03/29/Adding-subject-independent-information-to-subject-specific-models/</url>
     <content><![CDATA[<center>Enhancing performance of subject-specific models via subject-independent information for SSVEP-based BCIs</center>
@@ -29,8 +101,8 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>目前SSVEP识别得到公认的最优秀算法是Extended CCA和Ensemble TRCA，多数改进或新提出的方法均跟其进行对比；Filter bank和Ensemble方法似乎已经得到了普及使用。</p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -59,7 +131,7 @@
 <p><img src="https://s1.ax1x.com/2020/03/28/GAsDvn.png" alt="人机混合智能"></p>
 <ul>
 <li>1553年Andreas Vesalius(1514-1564)开启人体解剖学时代；</li>
-<li>1861年法国外科医生、人类学家、神经病理学家Paul Broca在偏瘫半失语病人皮层中发现了控制运动语言中枢，后人为纪念他将该区域命名为Broca区，这一事件被认为是神经心理学的历史起点。<font color=shocking pink >我记得好像有个什么大脑分区表，貌似是根据德国骨科医生命名的？</font>；</li>
+<li>1861年法国外科医生、人类学家、神经病理学家Paul Broca在偏瘫半失语病人皮层中发现了控制运动语言中枢，后人为纪念他将该区域命名为Broca区，这一事件被认为是神经心理学的历史起点。<font color=shocking pink >我记得好像有个什么大脑分区表，貌似是根据德国骨科医生命名的？</font></li>
 </ul>
 <p><img src="https://s1.ax1x.com/2020/03/28/GAcnEV.png" alt="Broca分区"></p>
 <ul>
@@ -134,8 +206,8 @@
 <p><strong>毕竟这是15年的论文，目前SSVEP的成熟结构还是filter bank + ensemble + algorithm的方式，可参考电子科大19年的层次分类网络论文。</strong></p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -177,8 +249,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>探索在高频刺激下该工作是否成立。</p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -218,8 +290,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>解决small sample size (SSS) problem，即小样本问题，这在论文Linear discriminant analysis<br>for the small sample size problem: an overview  中已有描述，可以借鉴。 </p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>

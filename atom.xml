@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-03-29T13:26:52.561Z</updated>
+  <updated>2020-03-30T13:14:45.074Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第二章 神经生理心理基础 part1</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/30/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part1/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/30/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part1/</id>
+    <published>2020-03-30T10:09:56.000Z</published>
+    <updated>2020-03-30T13:14:45.074Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第二章 神经生理心理基础&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2.1 人脑的进化和发育&lt;/li&gt;
+&lt;li&gt;2.2 脑的组成&lt;/li&gt;
+&lt;li&gt;2.3 神经元和胶质细胞&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="神经工程学" scheme="https://hisunjiang.gitee.io/categories/%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E5%AD%A6/"/>
+    
+    
+      <category term="公开课笔记" scheme="https://hisunjiang.gitee.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Adding subject-independent information to subject-specific models</title>
@@ -37,9 +63,9 @@
     </summary>
     
     
-      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
-    
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -53,7 +79,7 @@
     <link href="https://hisunjiang.gitee.io/2020/03/28/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/"/>
     <id>https://hisunjiang.gitee.io/2020/03/28/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/</id>
     <published>2020-03-28T12:52:29.000Z</published>
-    <updated>2020-03-28T14:34:18.710Z</updated>
+    <updated>2020-03-30T13:15:59.370Z</updated>
     
     <summary type="html">
     
@@ -98,9 +124,9 @@
     </summary>
     
     
-      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
-    
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -130,9 +156,9 @@
     </summary>
     
     
-      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
-    
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -162,9 +188,9 @@
     </summary>
     
     
-      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
-    
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
