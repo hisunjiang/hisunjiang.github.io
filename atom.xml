@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-03-31T08:34:39.405Z</updated>
+  <updated>2020-03-31T08:44:31.139Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -21,18 +21,12 @@
     <link href="https://hisunjiang.gitee.io/2020/03/31/%E4%BA%91/"/>
     <id>https://hisunjiang.gitee.io/2020/03/31/%E4%BA%91/</id>
     <published>2020-03-31T08:04:45.000Z</published>
-    <updated>2020-03-31T08:34:39.405Z</updated>
+    <updated>2020-03-31T08:44:31.139Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;在门前拍到看着很舒服的云。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/03/31/GMvG60.png&quot;
-        
-      
+      &lt;p&gt;在门前拍到看着很舒服的云。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/03/31/GMvG60.png&quot; alt=&quot;云&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -113,9 +107,9 @@
     </summary>
     
     
-      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
-    
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -174,9 +168,9 @@
     </summary>
     
     
-      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
-    
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -206,9 +200,9 @@
     </summary>
     
     
-      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
-    
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -238,9 +232,9 @@
     </summary>
     
     
-      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
-    
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
