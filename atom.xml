@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-03-30T13:14:45.074Z</updated>
+  <updated>2020-03-31T08:34:39.405Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>云</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/31/%E4%BA%91/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/31/%E4%BA%91/</id>
+    <published>2020-03-31T08:04:45.000Z</published>
+    <updated>2020-03-31T08:34:39.405Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在门前拍到看着很舒服的云。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/03/31/GMvG60.png&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="杂记" scheme="https://hisunjiang.gitee.io/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Introduction</title>
+    <link href="https://hisunjiang.gitee.io/2020/03/31/Introduction/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/31/Introduction/</id>
+    <published>2020-03-31T02:23:09.000Z</published>
+    <updated>2020-03-31T08:36:31.269Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;课程简介：本课程是国立台湾大学&lt;a href=&quot;http://speech.ee.ntu.edu.tw/~tlkagk/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;李宏毅(Hung-yi Lee)老师&lt;/a&gt;2020年春期课程，课程内容包含回归、分类、深度学习、迁移学习、强化学习、元学习等重要内容。&lt;img src=&quot;https://s1.ax1x.com/2020/03/31/GK1wfs.png&quot; alt=&quot;知识图谱&quot;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 作为非计算机科班出生的理工科学生，能够找到一个适合自己学习的机器学习课程并不容易。以前常自己啃西瓜书，后来发现没有系统的接受课程训练，对ML的理解并不深入。此外，李老师的台湾腔以及幽默的授课风格真让人爱了。本文及后续博文是关于本课程的学习笔记，其中&lt;font color=shocking pink &gt;绿色部分&lt;/font&gt;是自己不成熟的思考。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="https://hisunjiang.gitee.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="公开课学习" scheme="https://hisunjiang.gitee.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>第二章 神经生理心理基础 part1</title>
@@ -63,9 +113,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -124,9 +174,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -156,9 +206,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -188,9 +238,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>

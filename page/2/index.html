@@ -67,6 +67,164 @@
     
     
     
+    <article id="post-Exploiting-inter-subject-information-for-SSVEP-based-BCI" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/"
+    >Exploiting inter-subject information for SSVEP-based BCI</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/" class="article-date">
+  <time datetime="2020-03-27T08:57:06.000Z" itemprop="datePublished">2020-03-27</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/BCI/">BCI</a> / <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <center>Enhancing performances of SSVEP-based brain–computer interfaces via exploiting inter-subject information</center>
+
+<center>Xiaogang Chen，清华大学，2015</center>
+
+<center>Journal of Neural Engineering</center>
+
+<p><strong>Abstract:</strong>  根据已有的受试者数据构造template，用于新的受试者进行分类，类似于迁移学习的思想。于是作者提出了transfer template based canonical correlation analysis (tt-CCA) ，在线实验过程中利用新的测试数据进行template更新。数据格式和清华的公开数据集一致，包括40个刺激和6个block。采用LOO进行正确率验证，即11个受试者作为source subject，用来构造transfer template。</p>
+<p><strong>Note:</strong>  有迁移学习的意思，但是只是简单的受试者平均而已，这样的效果肯定没有对每个受试者进行template计算正确率高。需要注意的是，本文的方法是不需要训练集的，而且引入了在线更新的手段，使得其自适应更强。</p>
+      
+      <a class="article-more-link" href="/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/">more...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSVEP/" rel="tag">SSVEP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/" rel="tag">迁移学习</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-Alpha-neurofeedback-training-NFT" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/27/Alpha-neurofeedback-training-NFT/"
+    >Alpha neurofeedback training(NFT)</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/27/Alpha-neurofeedback-training-NFT/" class="article-date">
+  <time datetime="2020-03-27T04:07:46.000Z" itemprop="datePublished">2020-03-27</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/BCI/">BCI</a> / <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <center>Alpha neurofeedback training improves SSVEP-based BCI performance</center>
+
+<center>万峰团队，澳门大学，2016</center>
+
+<center>Journal of Neural Engineering</center>
+
+<p><strong>Abstract:</strong> 作者通过对受试者进行神经反馈训练，使其individual alpha band (IAB) amplitudes  产生下调，从而增加受试者对SSVEP的敏感性。实验表明，经历NFT的受试者产生的SSVEP信噪比(+16.5%)和分类正确率(+20.3%)均明显提升。实验分两步，第一是发现alpha波与SSVEP之间的关系，第二根据第一步实验结果对受试者进行训练，最后对比有无训练的受试者之间差异。刺激为7~15Hz之间的10个频率，6导，算法采用标准CCA。</p>
+<p><strong>Note:</strong> alpha波会对SSVEP产生影响（已有论文发现，引言中有介绍），可以通过调制alpha波增强SSVEP；引言列出了诸多关于神经反馈训练的参考论文。</p>
+      
+      <a class="article-more-link" href="/2020/03/27/Alpha-neurofeedback-training-NFT/">more...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSVEP/" rel="tag">SSVEP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A5%9E%E7%BB%8F%E5%8F%8D%E9%A6%88%E8%AE%AD%E7%BB%83/" rel="tag">神经反馈训练</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
     <article id="post-Learning-across-multi-stimulus" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -287,160 +445,13 @@
 
 </article>
     
-    <article id="post-CV" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/26/CV/"
-    >CV</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/03/26/CV/" class="article-date">
-  <time datetime="2020-03-26T01:27:21.324Z" itemprop="datePublished">2020-03-26</time>
-</a>
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p><strong>About me</strong></p>
-<center>一个研究BCI的水硕</center>
-
-<center>  一个喜欢旅拍的摄影小白  </center>
-
-<center>一个充满希望打满鸡血的海迷</center>
-
-<center>...</center>
-
-<center>总之</center>
-
-<center>天道酬勤，相信未来</center>
-      
-      <a class="article-more-link" href="/2020/03/26/CV/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-记录一些好用的网站" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/"
-    >记录一些好用的网站</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/" class="article-date">
-  <time datetime="2020-03-26T01:20:30.000Z" itemprop="datePublished">2020-03-26</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/">学习生活</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>记录一下平时遇到的好用的网站，方便第一时间想起。先成为工具人，再学会挖井~</p>
-      
-      <a class="article-more-link" href="/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
   </nav>
   
 </section>

@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>云</title>
+    <url>/2020/03/31/%E4%BA%91/</url>
+    <content><![CDATA[<p>在门前拍到看着很舒服的云。</p>
+<p><img src="https://s1.ax1x.com/2020/03/31/GMvG60.png" alt="云"></p>
+<p>突然感觉到了力不从心，无论是对学习的规划，还是对自己爱好的培养，都没能得到满足和平衡。上午看了中科院王晋东博士对迁移学习的总结，里面有句引用写得真好：<strong>吾生也有涯，而知也无涯。以有涯随无涯，殆已。</strong>可能自己需要多一些理性的思考，对自己努力的方向有更清晰的认识……</p>
+]]></content>
+      <tags>
+        <tag>杂记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Introduction</title>
+    <url>/2020/03/31/Introduction/</url>
+    <content><![CDATA[<blockquote>
+<p>课程简介：本课程是国立台湾大学<a href="http://speech.ee.ntu.edu.tw/~tlkagk/index.html" target="_blank" rel="noopener">李宏毅(Hung-yi Lee)老师</a>2020年春期课程，课程内容包含回归、分类、深度学习、迁移学习、强化学习、元学习等重要内容。<img src="https://s1.ax1x.com/2020/03/31/GK1wfs.png" alt="知识图谱"></p>
+</blockquote>
+<p><strong>Note:</strong> 作为非计算机科班出生的理工科学生，能够找到一个适合自己学习的机器学习课程并不容易。以前常自己啃西瓜书，后来发现没有系统的接受课程训练，对ML的理解并不深入。此外，李老师的台湾腔以及幽默的授课风格真让人爱了。本文及后续博文是关于本课程的学习笔记，其中<font color=shocking pink >绿色部分</font>是自己不成熟的思考。</p>
+<a id="more"></a>
+
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><ul>
+<li>机器学习的任务就是找出输入与输出之前的函数关系，其内容不仅包含回归和分类，还包括generation（GAN, seq2seq等）；</li>
+<li>最新的Alpha zero应用的是强化学习；</li>
+<li>函数的寻找方法——梯度下降；</li>
+</ul>
+<p><strong>下面是一些前沿研究课题</strong></p>
+<ul>
+<li>Explainable AI: 我们需要对机器为什么做出一个决策做分析；</li>
+<li>Adversarial Attack: 我们所设计的模型都具有一定的鲁棒性，即在噪声的干扰下能够保持较好的性能。但是如果我们加入的噪声是经过一定修饰的，那我们的机器会做出什么样的决策呢？</li>
+<li>Network Compression: 如果我们设计的模型很大，那如何把它嵌入到类似手机一样的小设备中？</li>
+<li>Anomaly Detection: 如果把做好的模型用到线上，输入样本中出现了训练阶段从来未遇到过的样本类型（比如做动物识别，但是放入了汽车的照片），那机器怎么知道它不知道这个样本是什么的哲学问题；</li>
+<li>迁移学习（这里推荐中科院博士整理的<a href="http://transferlearning.xyz/#0latest-publications-%e6%9c%80%e6%96%b0%e8%ae%ba%e6%96%87" target="_blank" rel="noopener">超全的资料</a>）；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/31/GK0aA1.png" alt="迁移学习"></p>
+<ul>
+<li><font color=red>Meta Learning:</font> 学习如何学习，赋予机器学习如何学习的能力。机器学习是写一段程序让机器具有学习能力，而元学习是写一段程序，这个程序可以用来写另外一段程序，使之具有学习功能；</li>
+<li>Life-long Learning: 让机器不断地学习，使之能够处理的任务不断增加；</li>
+</ul>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>公开课学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第二章 神经生理心理基础 part1</title>
     <url>/2020/03/30/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part1/</url>
     <content><![CDATA[<p>第二章 神经生理心理基础</p>
@@ -101,8 +147,8 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>目前SSVEP识别得到公认的最优秀算法是Extended CCA和Ensemble TRCA，多数改进或新提出的方法均跟其进行对比；Filter bank和Ensemble方法似乎已经得到了普及使用。</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -206,8 +252,8 @@
 <p><strong>毕竟这是15年的论文，目前SSVEP的成熟结构还是filter bank + ensemble + algorithm的方式，可参考电子科大19年的层次分类网络论文。</strong></p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -249,8 +295,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>探索在高频刺激下该工作是否成立。</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -290,8 +336,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>解决small sample size (SSS) problem，即小样本问题，这在论文Linear discriminant analysis<br>for the small sample size problem: an overview  中已有描述，可以借鉴。 </p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
