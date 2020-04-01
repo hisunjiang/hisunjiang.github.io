@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-03-31T08:44:31.139Z</updated>
+  <updated>2020-04-01T05:58:46.357Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cross-Subject Transfer Learning based SSVEP</title>
+    <link href="https://hisunjiang.gitee.io/2020/04/01/Cross-Subject-Transfer-Learning-based-SSVEP/"/>
+    <id>https://hisunjiang.gitee.io/2020/04/01/Cross-Subject-Transfer-Learning-based-SSVEP/</id>
+    <published>2020-04-01T04:19:05.000Z</published>
+    <updated>2020-04-01T05:58:46.357Z</updated>
+    
+    <summary type="html">
+    
+      &lt;center&gt;Cross-Subject Transfer Learning Improves the Practicality of
+    Real-World Applications of Brain-Computer Interfaces&lt;/center&gt;
+
+&lt;center&gt;Kuan-Jung Chiang, 加州大学圣迭戈分校, 2019&lt;/center&gt;
+
+&lt;center&gt;9th International IEEE EMBS Conference on Neural Engineering&lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt; 通过其他受试者的数据对现有测试者template进行增广，并利用TRCA验证增广前后的分类性能。其中，作者利用最小二乘变换(Least-Squares Transformation, LST)  将其他人的数据变换为当前受试者的template，从而增加训练集。实验测试了template增广前后以及LST使用前后的效果，实验表明，当受试者template trial数较少（即训练集数量较小）时，LST具有明显的优势。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;  利用现有数据实现受试者之间的template迁移，本文是通过LST将其他受试者数据变换到当前受试者的数据空间上&lt;font color=red&gt;（类似于增大其他人数据与当前受试者之间的相似度）&lt;/font&gt;;内含部分SSVEP中迁移学习的文献。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/BCI/"/>
+    
+    
+      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>云</title>
@@ -107,9 +138,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -168,9 +199,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -200,9 +231,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -232,9 +263,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>

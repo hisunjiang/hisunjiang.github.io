@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Cross-Subject Transfer Learning based SSVEP</title>
+    <url>/2020/04/01/Cross-Subject-Transfer-Learning-based-SSVEP/</url>
+    <content><![CDATA[<center>Cross-Subject Transfer Learning Improves the Practicality of
+    Real-World Applications of Brain-Computer Interfaces</center>
+
+<center>Kuan-Jung Chiang, 加州大学圣迭戈分校, 2019</center>
+
+<center>9th International IEEE EMBS Conference on Neural Engineering</center>
+
+<p><strong>Abstract:</strong> 通过其他受试者的数据对现有测试者template进行增广，并利用TRCA验证增广前后的分类性能。其中，作者利用最小二乘变换(Least-Squares Transformation, LST)  将其他人的数据变换为当前受试者的template，从而增加训练集。实验测试了template增广前后以及LST使用前后的效果，实验表明，当受试者template trial数较少（即训练集数量较小）时，LST具有明显的优势。</p>
+<p><strong>Note:</strong>  利用现有数据实现受试者之间的template迁移，本文是通过LST将其他受试者数据变换到当前受试者的数据空间上<font color=red>（类似于增大其他人数据与当前受试者之间的相似度）</font>;内含部分SSVEP中迁移学习的文献。</p>
+<a id="more"></a>
+
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="Least-Squares-Transformation-LST"><a href="#Least-Squares-Transformation-LST" class="headerlink" title="Least-Squares Transformation (LST)"></a>Least-Squares Transformation (LST)</h2><p>本文的整体出发点是认为受试者之间的SSVEP信号存在变换关系，即可以通过变换矩阵P将已有受试者数据$\acute{x}$变换为与当前受试者$x$一致，即$x=P\acute{x}$。其中变换矩阵P可以通过channel-wise最小二乘回归求得，见图</p>
+<p><img src="https://s1.ax1x.com/2020/04/01/G16zrt.png" alt="LST"></p>
+<p>在实际应用过程中，当前受试者的数据$\bar{x}$根据训练集数量进行trial平均,将existing subjects的$N_t$个trial数据按通道进行LST计算，最后得到变换后的$N_t$个trial数据$\acute{x}_{trans}$。</p>
+<h2 id="Three-schemes-for-SSVEP-decoding"><a href="#Three-schemes-for-SSVEP-decoding" class="headerlink" title="Three schemes for SSVEP decoding"></a>Three schemes for SSVEP decoding</h2><p>本文对比了subjects迁移前后，使用LST计算template前后的分类效果，三种scheme：Baseline、w/o LST和w/LST如下图</p>
+<p><img src="https://s1.ax1x.com/2020/04/01/G1gl0P.png" alt="schemes"></p>
+<p>实验数据分为8 subjects * 2 sessions * 15 blocks * 40 targets，故对每个session包含15个trial per stimulus，上图亦是针对每个session而言，将15个trial划分成5个训练（生成template）和10个测试，并重复了10次随机划分。8个受试者之间执行了LOO。</p>
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p><img src="https://s1.ax1x.com/2020/04/01/G12Fjs.png" alt="结果"></p>
+<p><img src="https://s1.ax1x.com/2020/04/01/G12aCD.png" alt="结果"></p>
+<p>从图中可以看到</p>
+<ul>
+<li><font color=red>当template size较小时，通过其他受试者数据的引入，能够提高分类正确率；</font></li>
+<li>随着template size的增加（到5时，即每个刺激包含5个训练样本），w/LST方法与Baseline方法无显著差异；</li>
+<li>w/LST方法具有显著优势，特别是当受试者的训练数据不足时。</li>
+</ul>
+<h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>当前SSVEP的频率识别多是根据相关性的方法，其中的关键问题是template的获取，故本文研究的迁移学习思想也是针对template的改进，将已有数据向测试受试者的数据进行逼近。<font color=shocking pink><strong>是否存在更好的特征迁移方法？比如将其他受试者的数据和当前受试者的数据变换到相同的数据空间。（本文是通过特征变换方式减少源域和目标域的差异，采用统一变换到相同特征空间呢？）</strong></font></p>
+]]></content>
+      <categories>
+        <category>论文笔记</category>
+        <category>BCI</category>
+      </categories>
+      <tags>
+        <tag>迁移学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>云</title>
     <url>/2020/03/31/%E4%BA%91/</url>
     <content><![CDATA[<p>在门前拍到看着很舒服的云。</p>
@@ -149,8 +187,8 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>目前SSVEP识别得到公认的最优秀算法是Extended CCA和Ensemble TRCA，多数改进或新提出的方法均跟其进行对比；Filter bank和Ensemble方法似乎已经得到了普及使用。</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -254,8 +292,8 @@
 <p><strong>毕竟这是15年的论文，目前SSVEP的成熟结构还是filter bank + ensemble + algorithm的方式，可参考电子科大19年的层次分类网络论文。</strong></p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -297,8 +335,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>探索在高频刺激下该工作是否成立。</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -338,8 +376,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>解决small sample size (SSS) problem，即小样本问题，这在论文Linear discriminant analysis<br>for the small sample size problem: an overview  中已有描述，可以借鉴。 </p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
