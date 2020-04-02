@@ -17,6 +17,7 @@
 <p><strong>保持好奇心和激情是一件很难却很酷的事。</strong>我记得推免的时候系主任问我以后的规划，我说我想学智能算法让自己做的机器人有灵魂，哈哈哈，现在想想这种话也好意思在这么多老师面前说出口。后来来到了CQU，套用实验室师兄毕业论文中的致谢以表达我对导师们的感激之情：先生不以余学术浅陋，将余纳入门墙，从此言传身教，亲生相授。学生不敏，未习得先生一二，然耳濡目染，亦有所获。虽然自己很菜，但所幸对现在的研究方向颇为感兴趣，希望勤勤恳恳有所获。BCI以后肯定会很火，毕竟我的偶像Elon Musk也在17年创办了Neruolink。</p>
 <h3 id="还有一些关于爱好"><a href="#还有一些关于爱好" class="headerlink" title="还有一些关于爱好"></a>还有一些关于爱好</h3><p>以后会在博客中开专栏更摄影的东西。</p>
 <p><strong>一定要开始学剪辑了。</strong>感觉没点爱好生活好像失去了一些灵魂要素。都在B站观望摄影好多年了，迟迟不开始主要是因为穷……等着今年一定要把α6400或者M6 mark II买了。会旅拍真是一件很酷的技能，无论是转场、运镜还是剪辑，早点熟练就可以早点记录下一些精彩的故事。</p>
+<p>&nbsp; &nbsp;</p>
 <p>“人的梦想是不会终止的”</p>
 <p>对喜欢的事多一点偏执和理想主义挺好</p>
 <p>以上，是关于我的博客的介绍，亦是来自内心纠结的自述</p>
@@ -60,6 +61,7 @@
         <category>BCI</category>
       </categories>
       <tags>
+        <tag>SSVEP</tag>
         <tag>迁移学习</tag>
       </tags>
   </entry>
@@ -212,8 +214,8 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>目前SSVEP识别得到公认的最优秀算法是Extended CCA和Ensemble TRCA，多数改进或新提出的方法均跟其进行对比；Filter bank和Ensemble方法似乎已经得到了普及使用。</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -317,12 +319,12 @@
 <p><strong>毕竟这是15年的论文，目前SSVEP的成熟结构还是filter bank + ensemble + algorithm的方式，可参考电子科大19年的层次分类网络论文。</strong></p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>迁移学习</tag>
         <tag>SSVEP</tag>
+        <tag>迁移学习</tag>
       </tags>
   </entry>
   <entry>
@@ -360,8 +362,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>探索在高频刺激下该工作是否成立。</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -401,8 +403,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>解决small sample size (SSS) problem，即小样本问题，这在论文Linear discriminant analysis<br>for the small sample size problem: an overview  中已有描述，可以借鉴。 </p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
