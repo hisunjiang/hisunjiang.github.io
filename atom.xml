@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-04-01T05:58:46.357Z</updated>
+  <updated>2020-04-01T16:00:00.000Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于我的博客</title>
+    <link href="https://hisunjiang.gitee.io/2020/04/02/%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://hisunjiang.gitee.io/2020/04/02/%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</id>
+    <published>2020-04-02T09:20:49.000Z</published>
+    <updated>2020-04-01T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;center&gt;欢迎来到我的吐槽空间&lt;/center&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;突然有一天想搭一个博客记录生活中的一些琐事，看了很多教程后便着手做了这件事。作为一个前端业余爱好者，所以也没什么经验值得分享，博客是利用hexo+github/gitee搭建的，感谢原作者贡献的主题&lt;a href=&quot;https://github.com/Shen-Yu/hexo-theme-ayer&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Ayer&lt;/a&gt;。后续会逐渐添加更多的功能。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/04/02/GYPzvV.png&quot; alt=&quot;ONE PIECE&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="杂记" scheme="https://hisunjiang.gitee.io/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Cross-Subject Transfer Learning based SSVEP</title>
@@ -204,9 +228,9 @@
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
     
-      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
-    
       <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
     
   </entry>
   
@@ -322,7 +346,7 @@
     <link href="https://hisunjiang.gitee.io/2020/03/26/CV/"/>
     <id>https://hisunjiang.gitee.io/2020/03/26/CV/</id>
     <published>2020-03-26T01:27:21.324Z</published>
-    <updated>2020-04-02T09:04:09.696Z</updated>
+    <updated>2020-04-02T09:18:16.620Z</updated>
     
     <summary type="html">
     
