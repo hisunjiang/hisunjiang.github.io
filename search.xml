@@ -167,7 +167,7 @@
 
 <center>PLOS ONE</center>
 
-<p><strong>Abstract:</strong> 本文是对Extended CCA的完善和改进。eCCA提出的时候就存在一些短处，比如总共有三种数据（测试、template和sinusoidal signal），他们之间有多种计算投影矩阵和相关性的组合，但是eCCA只取了其中五种相关系数解法。为什么这样做以及是否有更好的选择，并没有讨论。且ensemble方法还未在eCCA上实现。本文作者即对上述问题进行了分析和讨论，得到了优化后的eCCA，在清华公开数据集上进行验证。实验表明，优化后的方法比eCCA效果更好，且在数据长度大于0.3s时，性能优于TRCA（ensemble应用后亦是如此）。改进的方法在sub-band较少，导联数较少以及训练样本数较少时均优于TRCA（前提是数据长度大于0.3s）。<font color=red>由于作者在论文中部分描述不是很清晰，所以结论将信将疑吧…但这个思路是没问题的。</font></p>
+<p><strong>Abstract:</strong> 本文是对Extended CCA的完善和改进。eCCA提出的时候就存在一些短处，比如总共有三种数据（测试、template和sinusoidal signal），他们之间有多种计算投影矩阵和相关性的组合，但是eCCA只取了其中五种相关系数解法。为什么这样做以及是否有更好的选择，并没有讨论。且ensemble方法还未在eCCA上实现。本文作者即对上述问题进行了分析和讨论，得到了优化后的eCCA，在清华公开数据集上进行验证。实验表明，优化后的方法比eCCA效果更好，且在数据长度大于0.3s时，性能优于TRCA（ensemble应用后亦是如此）。改进的方法在sub-band较少，导联数较少以及训练样本数较少时均优于TRCA（前提是数据长度大于0.3s）。<font color=red>由于作者在论文中部分描述不是很清晰，我也没怎么看懂精髓，部分笔记详尽请见谅。</font></p>
 <p><strong>Note:</strong> 能否有效利用SSVEP的相位信息，对其正确率有很大的影响；在数据长度低于0.3s时，TRCA仍然具有优势。</p>
 <a id="more"></a>
 
@@ -183,12 +183,12 @@
 <p>接下来就是标准的eCCA过程，ensemble方法的公式如下</p>
 <p><img src="https://s1.ax1x.com/2020/03/29/GZwVXt.png" alt="ensemble"></p>
 <p>其中由于相关系数r有些对分类结果的影响不一，故前面添加了加权系数进行平衡。加权系数通过在30名训练受试者中进行GA运算得到。</p>
-<p><font color=shocking pink>可以看到，求解过程比较繁琐…作者都没描述清楚数据集怎么划分，GA和FS执行过程是怎样配合…估计他自己都晕了</font>。这里还有一个很重要的问题作者并没有描述，我们对受试者进行了7折交叉验证，那么最后只有5名受试者可以根据得到的模型求出正确率。那怎么跟TRCA结果进行对比呢？TRCA是所有人均可以直接计算呀。作者这里做了参数优化，难道还要把训练过得数据再次用于测试？那就犯错误了。</p>
+<p><font color=shocking pink>这里还有一个很重要的问题作者并没有描述，我们对受试者进行了7折交叉验证，那么最后只有5名受试者可以根据得到的模型求出正确率。那怎么跟TRCA结果进行对比呢？TRCA是所有人均可以直接计算呀。</font></p>
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>目前SSVEP识别得到公认的最优秀算法是Extended CCA和Ensemble TRCA，多数改进或新提出的方法均跟其进行对比；Filter bank和Ensemble方法似乎已经得到了普及使用。</p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -292,8 +292,8 @@
 <p><strong>毕竟这是15年的论文，目前SSVEP的成熟结构还是filter bank + ensemble + algorithm的方式，可参考电子科大19年的层次分类网络论文。</strong></p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -335,8 +335,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>探索在高频刺激下该工作是否成立。</p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -376,8 +376,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>解决small sample size (SSS) problem，即小样本问题，这在论文Linear discriminant analysis<br>for the small sample size problem: an overview  中已有描述，可以借鉴。 </p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
