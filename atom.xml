@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-04-01T16:00:00.000Z</updated>
+  <updated>2020-04-04T14:22:12.244Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Euclidean space data alignment</title>
+    <link href="https://hisunjiang.gitee.io/2020/04/04/Euclidean-space-data-alignment/"/>
+    <id>https://hisunjiang.gitee.io/2020/04/04/Euclidean-space-data-alignment/</id>
+    <published>2020-04-04T11:46:45.000Z</published>
+    <updated>2020-04-04T14:22:12.244Z</updated>
+    
+    <summary type="html">
+    
+      &lt;center&gt;Transfer Learning for Brain–Computer Interfaces:
+    A Euclidean Space Data Alignment Approach&lt;/center&gt; 
+&lt;center&gt;He He et al., 华中科技大学，2020&lt;/center&gt;
+
+&lt;center&gt;IEEE TRANSACTIONS ON BIOMEDICAL ENGINEERING &lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt; 提出了一种欧式空间下的数据对齐方法，通过对不同受试者的EEG trial进行数据对齐，增加inter-subject之间的数据相似性，从而达到迁移学习的目的。作者将提出的方法EA与黎曼空间下的数据对齐方式RA进行了对比，离线和在线测试均表明了其优越性。实验测试数据分MI和ERP两类，分类器采用最小黎曼均值距离MDRM、LDA和SVM。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; EA可以看成一种子空间学习的方法，通过将源域和目标域同时变换增加相似性；论文中包含了较多黎曼流行学习的文献；介绍了一种增加ERP协方差矩阵时域信息的方法；受试者空闲态数据对迁移学习有帮助(RA-MDRM)。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="MI" scheme="https://hisunjiang.gitee.io/tags/MI/"/>
+    
+  </entry>
   
   <entry>
     <title>关于我的博客</title>
@@ -45,7 +77,7 @@
     <link href="https://hisunjiang.gitee.io/2020/04/01/Cross-Subject-Transfer-Learning-based-SSVEP/"/>
     <id>https://hisunjiang.gitee.io/2020/04/01/Cross-Subject-Transfer-Learning-based-SSVEP/</id>
     <published>2020-04-01T04:19:05.000Z</published>
-    <updated>2020-04-02T13:18:34.069Z</updated>
+    <updated>2020-04-04T11:53:36.858Z</updated>
     
     <summary type="html">
     
@@ -62,9 +94,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
-      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/BCI/"/>
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
