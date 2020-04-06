@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Cross-Subject Transfer Learning based SSVEP |  Q. Sun&#39;s Blog
+    【论文笔记 5】Cross-Subject Transfer Learning based SSVEP |  Q. Sun&#39;s Blog
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -41,7 +41,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Cross-Subject Transfer Learning based SSVEP
+  【论文笔记 5】Cross-Subject Transfer Learning based SSVEP
 </h1>
  
 
@@ -65,7 +65,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">749字</span>
+            <span class="post-count">815字</span>
         </span>
     </span>
 
@@ -74,7 +74,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2分钟</span>
+            <span class="post-count">3分钟</span>
         </span>
     </span>
 </div>
@@ -115,7 +115,7 @@
 <p>在实际应用过程中，当前受试者的数据$\bar{x}$根据训练集数量进行trial平均,将existing subjects的$N_t$个trial数据按通道进行LST计算，最后得到变换后的$N_t$个trial数据$\acute{x}_{trans}$。</p>
 <h2 id="Three-schemes-for-SSVEP-decoding"><a href="#Three-schemes-for-SSVEP-decoding" class="headerlink" title="Three schemes for SSVEP decoding"></a>Three schemes for SSVEP decoding</h2><p>本文对比了subjects迁移前后，使用LST计算template前后的分类效果，三种scheme：Baseline、w/o LST和w/LST如下图</p>
 <p><img src="https://s1.ax1x.com/2020/04/01/G1gl0P.png" alt="schemes"></p>
-<p>实验数据分为8 subjects * 2 sessions * 15 blocks * 40 targets，故对每个session包含15个trial per stimulus，上图亦是针对每个session而言，将15个trial划分成5个训练（生成template）和10个测试，并重复了10次随机划分。8个受试者之间执行了LOO。</p>
+<p>实验数据分为8 subjects * 2 sessions * 15 blocks * 40 targets，故对每个session包含15个trial per stimulus，上图亦是针对每个session而言，将15个trial划分成5个训练（生成template）和10个测试，并重复了10次随机划分。8个受试者之间执行了LOO。<font color=shocking pink>值得留意的是，这里论文并没有告诉来自其他受试者的trial数量有多少问题。实际上，来自其他受试者的trial数应该是会对结果产生影响的，毕竟没有进行数据筛选。</font></p>
 <h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p><img src="https://s1.ax1x.com/2020/04/01/G12Fjs.png" alt="结果"></p>
 <p><img src="https://s1.ax1x.com/2020/04/01/G12aCD.png" alt="结果"></p>
 <p>从图中可以看到</p>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-04-04T14:22:12.244Z</updated>
+  <updated>2020-04-05T16:00:00.000Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Euclidean space data alignment</title>
+    <title>【论文笔记 6】Euclidean space data alignment</title>
     <link href="https://hisunjiang.gitee.io/2020/04/04/Euclidean-space-data-alignment/"/>
     <id>https://hisunjiang.gitee.io/2020/04/04/Euclidean-space-data-alignment/</id>
     <published>2020-04-04T11:46:45.000Z</published>
-    <updated>2020-04-04T14:22:12.244Z</updated>
+    <updated>2020-04-05T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -73,11 +73,11 @@
   </entry>
   
   <entry>
-    <title>Cross-Subject Transfer Learning based SSVEP</title>
+    <title>【论文笔记 5】Cross-Subject Transfer Learning based SSVEP</title>
     <link href="https://hisunjiang.gitee.io/2020/04/01/Cross-Subject-Transfer-Learning-based-SSVEP/"/>
     <id>https://hisunjiang.gitee.io/2020/04/01/Cross-Subject-Transfer-Learning-based-SSVEP/</id>
     <published>2020-04-01T04:19:05.000Z</published>
-    <updated>2020-04-04T11:53:36.858Z</updated>
+    <updated>2020-04-06T02:29:52.184Z</updated>
     
     <summary type="html">
     
@@ -176,11 +176,11 @@
   </entry>
   
   <entry>
-    <title>Adding subject-independent information to subject-specific models</title>
+    <title>【论文笔记 4】Adding subject-independent information to subject-specific models</title>
     <link href="https://hisunjiang.gitee.io/2020/03/29/Adding-subject-independent-information-to-subject-specific-models/"/>
     <id>https://hisunjiang.gitee.io/2020/03/29/Adding-subject-independent-information-to-subject-specific-models/</id>
     <published>2020-03-29T05:56:42.000Z</published>
-    <updated>2020-04-02T08:41:24.748Z</updated>
+    <updated>2020-04-06T02:29:28.708Z</updated>
     
     <summary type="html">
     
@@ -237,11 +237,11 @@
   </entry>
   
   <entry>
-    <title>Exploiting inter-subject information for SSVEP-based BCI</title>
+    <title>【论文笔记 3】Exploiting inter-subject information for SSVEP-based BCI</title>
     <link href="https://hisunjiang.gitee.io/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/"/>
     <id>https://hisunjiang.gitee.io/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/</id>
     <published>2020-03-27T08:57:06.000Z</published>
-    <updated>2020-03-27T14:48:09.635Z</updated>
+    <updated>2020-04-06T02:29:07.164Z</updated>
     
     <summary type="html">
     
@@ -269,11 +269,11 @@
   </entry>
   
   <entry>
-    <title>Alpha neurofeedback training(NFT)</title>
+    <title>【论文笔记 2】Alpha neurofeedback training(NFT)</title>
     <link href="https://hisunjiang.gitee.io/2020/03/27/Alpha-neurofeedback-training-NFT/"/>
     <id>https://hisunjiang.gitee.io/2020/03/27/Alpha-neurofeedback-training-NFT/</id>
     <published>2020-03-27T04:07:46.000Z</published>
-    <updated>2020-03-28T11:30:04.356Z</updated>
+    <updated>2020-04-06T02:28:50.655Z</updated>
     
     <summary type="html">
     
@@ -301,11 +301,11 @@
   </entry>
   
   <entry>
-    <title>Learning across multi-stimulus</title>
+    <title>【论文笔记 1】Learning across multi-stimulus</title>
     <link href="https://hisunjiang.gitee.io/2020/03/26/Learning-across-multi-stimulus/"/>
     <id>https://hisunjiang.gitee.io/2020/03/26/Learning-across-multi-stimulus/</id>
     <published>2020-03-26T14:53:45.000Z</published>
-    <updated>2020-03-27T07:53:25.048Z</updated>
+    <updated>2020-04-06T02:28:32.598Z</updated>
     
     <summary type="html">
     

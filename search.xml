@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Euclidean space data alignment</title>
+    <title>【论文笔记 6】Euclidean space data alignment</title>
     <url>/2020/04/04/Euclidean-space-data-alignment/</url>
     <content><![CDATA[<center>Transfer Learning for Brain–Computer Interfaces:
     A Euclidean Space Data Alignment Approach</center> 
@@ -20,11 +20,11 @@
 <p><img src="https://s1.ax1x.com/2020/04/04/G0QddU.png" alt="RM"></p>
 <p>MDRM分类器的思想类似于欧式空间下的欧氏距离分类，通过计算测试数据的协方差矩阵，然后度量其与各个类别黎曼均值之间的黎曼距离，距离最小者属于该类别</p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G0lPO0.png" alt="MDRM"></p>
-<h3 id="RA-MDRM"><a href="#RA-MDRM" class="headerlink" title="RA-MDRM"></a>RA-MDRM</h3><p>Zanini et al.  2018年提出了一种黎曼空间下的迁移学习方法，即RA-MDRM，利用其他session和subject的数据来增强当前受试者的分类效果。作者对来自不同session和subject的协方差矩阵根据一个共同参考进行align。论文认为当大脑在执行一个特定的任务时，流形上的协方差矩阵会向同一个方向移动，则可以将协方差矩阵按参考方向进行聚集，那我们只需要观察距离参考态的相对位移即可。所以该方法的关键是找到该reference matrix，该矩阵通过受试者的空闲态求得<strong>（MI为受试者不进行运动想象时的数据，ERP中即受试者未受外界刺激non-target stimuli）</strong>，利用空闲态数据矩阵可求得黎曼均值$\bar{R}$。然后利用该参考矩阵对当前数据进行变换，即可减少inter-session/subject variability </p>
+<h3 id="RA-MDRM"><a href="#RA-MDRM" class="headerlink" title="RA-MDRM"></a>RA-MDRM</h3><p>Zanini et al.  2018年提出了一种黎曼空间下的迁移学习方法，即RA-MDRM，利用其他session和subject的数据来增强当前受试者的分类效果。作者对来自不同session和subject的协方差矩阵根据一个共同参考进行align。论文认为当大脑在执行一个特定的任务时，流形上的协方差矩阵会向同一个方向移动，则可以将协方差矩阵按参考方向进行聚集，那我们只需要观察距离参考态的相对位移即可。所以该方法的关键是找到该reference matrix，该矩阵通过受试者的空闲态求得<strong>（MI为受试者不进行运动想象时的数据，ERP中即受试者未受外界刺激non-target stimuli时的数据，故ERP中需要知道标签信息，才能确定非目标刺激）</strong>，利用空闲态数据矩阵可求得黎曼均值$\bar{R}$。然后利用该参考矩阵对当前数据进行变换，即可减少inter-session/subject variability </p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G08D76.png" alt="reference"></p>
 <h3 id="关于协方差矩阵"><a href="#关于协方差矩阵" class="headerlink" title="关于协方差矩阵"></a>关于协方差矩阵</h3><p>在运动想象中，trial$X_i$的协方差矩阵可以通过$\sum_i=X_iX^T_i$求得，但是该矩阵只能反映大脑活动的空间分布，这对MI任务是适合的。但是针对ERP范式，其最优分类信息在时域上，所以需要对该协方差矩阵计算进行修改，增加时域信息。<font color=shocking pink>这里开一个脑洞：目前识别SSVEP均是利用了其时域信息进行相关性计算，类似于CSP等空域滤波方法效果不好是不是因为该协方差矩阵没有进行改进呢？我们是否可以按这里的方法有效ERP信号的时域和空域信息，从而达到很好的效果呢？</font></p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G0YnpD.png" alt="ERP 协方差计算"></p>
-<h2 id="EEG-data-alignment-in-the-Euclidean-Space-EA"><a href="#EEG-data-alignment-in-the-Euclidean-Space-EA" class="headerlink" title="EEG data alignment in the Euclidean Space (EA)"></a>EEG data alignment in the Euclidean Space (EA)</h2><h3 id="The-EA"><a href="#The-EA" class="headerlink" title="The EA"></a>The EA</h3><p>通过使不同受试者的数据分布相似化，从而一个数据集中训练好的分类器在其他受试者上亦会有较好的分类效果，这是TL的基本思想。和RA一样，EA也需要构造参考矩阵$\bar{R}$，该矩阵通过计算所有数据的的协方差算术平均而得。</p>
+<h2 id="EEG-data-alignment-in-the-Euclidean-Space-EA"><a href="#EEG-data-alignment-in-the-Euclidean-Space-EA" class="headerlink" title="EEG data alignment in the Euclidean Space (EA)"></a>EEG data alignment in the Euclidean Space (EA)</h2><h3 id="The-EA"><a href="#The-EA" class="headerlink" title="The EA"></a>The EA</h3><p>通过使不同受试者的数据分布相似化，从而一个数据集中训练好的分类器在其他受试者上亦会有较好的分类效果，这是TL的基本思想。和RA一样，EA也需要构造参考矩阵$\bar{R}$，该矩阵通过计算所有数据的的协方差算术平均而得。<font color=shocking pink>这里使用的是所有已知数据，意思是计算参考矩阵时没有对类别进行分开。这可能是因为本文的目的是为了让来自不同受试者的数据分布一致，这个【论文笔记 5】介绍的cross-subject transfer不一样，那一篇论文中按照类别进行迁移的。</font></p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G0asr4.png" alt="EA"></p>
 <h3 id="Comparison-with-RA"><a href="#Comparison-with-RA" class="headerlink" title="Comparison with RA"></a>Comparison with RA</h3><ul>
 <li>EA和RA在进行数据对齐后，其协方差矩阵的黎曼距离并不会改变（同余不变性）；</li>
@@ -88,7 +88,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Cross-Subject Transfer Learning based SSVEP</title>
+    <title>【论文笔记 5】Cross-Subject Transfer Learning based SSVEP</title>
     <url>/2020/04/01/Cross-Subject-Transfer-Learning-based-SSVEP/</url>
     <content><![CDATA[<center>Cross-Subject Transfer Learning Improves the Practicality of
     Real-World Applications of Brain-Computer Interfaces</center>
@@ -106,7 +106,7 @@
 <p>在实际应用过程中，当前受试者的数据$\bar{x}$根据训练集数量进行trial平均,将existing subjects的$N_t$个trial数据按通道进行LST计算，最后得到变换后的$N_t$个trial数据$\acute{x}_{trans}$。</p>
 <h2 id="Three-schemes-for-SSVEP-decoding"><a href="#Three-schemes-for-SSVEP-decoding" class="headerlink" title="Three schemes for SSVEP decoding"></a>Three schemes for SSVEP decoding</h2><p>本文对比了subjects迁移前后，使用LST计算template前后的分类效果，三种scheme：Baseline、w/o LST和w/LST如下图</p>
 <p><img src="https://s1.ax1x.com/2020/04/01/G1gl0P.png" alt="schemes"></p>
-<p>实验数据分为8 subjects * 2 sessions * 15 blocks * 40 targets，故对每个session包含15个trial per stimulus，上图亦是针对每个session而言，将15个trial划分成5个训练（生成template）和10个测试，并重复了10次随机划分。8个受试者之间执行了LOO。</p>
+<p>实验数据分为8 subjects * 2 sessions * 15 blocks * 40 targets，故对每个session包含15个trial per stimulus，上图亦是针对每个session而言，将15个trial划分成5个训练（生成template）和10个测试，并重复了10次随机划分。8个受试者之间执行了LOO。<font color=shocking pink>值得留意的是，这里论文并没有告诉来自其他受试者的trial数量有多少问题。实际上，来自其他受试者的trial数应该是会对结果产生影响的，毕竟没有进行数据筛选。</font></p>
 <h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p><img src="https://s1.ax1x.com/2020/04/01/G12Fjs.png" alt="结果"></p>
 <p><img src="https://s1.ax1x.com/2020/04/01/G12aCD.png" alt="结果"></p>
 <p>从图中可以看到</p>
@@ -247,7 +247,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Adding subject-independent information to subject-specific models</title>
+    <title>【论文笔记 4】Adding subject-independent information to subject-specific models</title>
     <url>/2020/03/29/Adding-subject-independent-information-to-subject-specific-models/</url>
     <content><![CDATA[<center>Enhancing performance of subject-specific models via subject-independent information for SSVEP-based BCIs</center>
 
@@ -351,7 +351,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Exploiting inter-subject information for SSVEP-based BCI</title>
+    <title>【论文笔记 3】Exploiting inter-subject information for SSVEP-based BCI</title>
     <url>/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/</url>
     <content><![CDATA[<center>Enhancing performances of SSVEP-based brain–computer interfaces via exploiting inter-subject information</center>
 
@@ -389,7 +389,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Alpha neurofeedback training(NFT)</title>
+    <title>【论文笔记 2】Alpha neurofeedback training(NFT)</title>
     <url>/2020/03/27/Alpha-neurofeedback-training-NFT/</url>
     <content><![CDATA[<center>Alpha neurofeedback training improves SSVEP-based BCI performance</center>
 
@@ -432,7 +432,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Learning across multi-stimulus</title>
+    <title>【论文笔记 1】Learning across multi-stimulus</title>
     <url>/2020/03/26/Learning-across-multi-stimulus/</url>
     <content><![CDATA[<center>Learning across multi-stimulus enhances target recognition methods in SSVEP-based BCIs</center>  
 
