@@ -65,7 +65,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">2.1k字</span>
+            <span class="post-count">2.2k字</span>
         </span>
     </span>
 
@@ -120,7 +120,7 @@
 <p><img src="https://s1.ax1x.com/2020/04/04/G08D76.png" alt="reference"></p>
 <h3 id="关于协方差矩阵"><a href="#关于协方差矩阵" class="headerlink" title="关于协方差矩阵"></a>关于协方差矩阵</h3><p>在运动想象中，trial$X_i$的协方差矩阵可以通过$\sum_i=X_iX^T_i$求得，但是该矩阵只能反映大脑活动的空间分布，这对MI任务是适合的。但是针对ERP范式，其最优分类信息在时域上，所以需要对该协方差矩阵计算进行修改，增加时域信息。<font color=shocking pink>这里开一个脑洞：目前识别SSVEP均是利用了其时域信息进行相关性计算，类似于CSP等空域滤波方法效果不好是不是因为该协方差矩阵没有进行改进呢？我们是否可以按这里的方法有效ERP信号的时域和空域信息，从而达到很好的效果呢？</font></p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G0YnpD.png" alt="ERP 协方差计算"></p>
-<h2 id="EEG-data-alignment-in-the-Euclidean-Space-EA"><a href="#EEG-data-alignment-in-the-Euclidean-Space-EA" class="headerlink" title="EEG data alignment in the Euclidean Space (EA)"></a>EEG data alignment in the Euclidean Space (EA)</h2><h3 id="The-EA"><a href="#The-EA" class="headerlink" title="The EA"></a>The EA</h3><p>通过使不同受试者的数据分布相似化，从而一个数据集中训练好的分类器在其他受试者上亦会有较好的分类效果，这是TL的基本思想。和RA一样，EA也需要构造参考矩阵$\bar{R}$，该矩阵通过计算所有数据的的协方差算术平均而得。<font color=shocking pink>这里使用的是所有已知数据，意思是计算参考矩阵时没有对类别进行分开。这可能是因为本文的目的是为了让来自不同受试者的数据分布一致，这个【论文笔记 5】介绍的cross-subject transfer不一样，那一篇论文中按照类别进行迁移的。</font></p>
+<h2 id="EEG-data-alignment-in-the-Euclidean-Space-EA"><a href="#EEG-data-alignment-in-the-Euclidean-Space-EA" class="headerlink" title="EEG data alignment in the Euclidean Space (EA)"></a>EEG data alignment in the Euclidean Space (EA)</h2><h3 id="The-EA"><a href="#The-EA" class="headerlink" title="The EA"></a>The EA</h3><p>通过使不同受试者的数据分布相似化，从而一个数据集中训练好的分类器在其他受试者上亦会有较好的分类效果，这是TL的基本思想。和RA一样，EA也需要构造参考矩阵$\bar{R}$，该矩阵通过计算所有数据的的协方差算术平均而得。<font color=shocking pink>论文中说参考矩阵是由受试者所有trial计算而来，意思是包括所有类别的数据一起？这和【论文笔记 5】中采用的cross-subject不同，该作者是按照类别进行迁移的。</font></p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G0asr4.png" alt="EA"></p>
 <h3 id="Comparison-with-RA"><a href="#Comparison-with-RA" class="headerlink" title="Comparison with RA"></a>Comparison with RA</h3><ul>
 <li>EA和RA在进行数据对齐后，其协方差矩阵的黎曼距离并不会改变（同余不变性）；</li>
@@ -133,7 +133,7 @@
 <p>上述为来自Dataset 2a的受试者1左右手想象数据，纵轴表示导联，数值表示经过EA前后的数据相关系数大小。可以发现，经过EA操作后，数据幅值明显降低，并且相关性减小。</p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G00dPI.png" alt="EA results 2"></p>
 <p>作者通过t-Stochastic Neighbor Embedding (t-SNE) 算法，将来自MI和ERP范式的受试者测试数据（红色点）和训练数据（蓝色点）进行特征可视化，左右图分别为EA前后的效果。可以发现EA可以使训练和测试数据分布变得统一（除个别情况，后面会讨论）。</p>
-<h2 id="Offline-unsupervised-classification"><a href="#Offline-unsupervised-classification" class="headerlink" title="Offline unsupervised classification"></a>Offline unsupervised classification</h2><p>对数据集进行leave-one-subject-out cross-validation，每次选择一个受试者当测试，其余受试者为训练集。算法大概流程为：利用所有受试者的数据求参考矩阵$\bar{R}$；再利用其对数据进行align操作，使不同受试者之间的数据相似性增加（这个过程类似于CSP，需要对测试数据进行处理，但是并未利用其进行训练，可以理解为特征提取过程）；利用其它受试者的数据训练分类器，并在当前受试者上进行测试。<font color=red>为什么说这里是无监督学习呢？这是针对当前受试者而言，我们并没有利用来自他的标签信息，我们的SVM等分类器模型是根据其他受试者训练而得。</font></p>
+<h2 id="Offline-unsupervised-classification"><a href="#Offline-unsupervised-classification" class="headerlink" title="Offline unsupervised classification"></a>Offline unsupervised classification</h2><p>对数据集进行leave-one-subject-out cross-validation，每次选择一个受试者当test set，其余受试者为training set。算法大概流程为：<strong>利用所有受试者（包括测试受试者）的数据求参考矩阵$\bar{R}$；</strong>再对数据进行align操作，使不同受试者之间的数据相似性增加；利用其它受试者的数据训练分类器，并在当前受试者上进行测试。<font color=red>为什么说这里是无监督学习呢？这是针对当前受试者而言，我们并没有利用来自他的标签信息，我们的SVM等分类器模型是根据其他受试者训练而得。</font><font color=shocking pink>这里我们利用了所有受试者的数据计算参考矩阵，包括test set。<strong>这里我们并不知道test set的标签，意味着EA在计算参考矩阵的时候，是没有将类别分开的。</strong>而在实际的应用中，test 按trial慢慢送入，故参考矩阵没办法利用当前受试者信息，除非当前受试者已有部分数据，类似于文章后面讨论的在线监督模型。</font></p>
 <h3 id="MI-Datasets"><a href="#MI-Datasets" class="headerlink" title="MI Datasets"></a>MI Datasets</h3><p><img src="https://s1.ax1x.com/2020/04/04/G0DGAH.png" alt="MI"></p>
 <p>首先可以看到，不管是RA还是EA，应用过后均取得了较好的效果；EA-CSP-LDA的效果最佳。</p>
 <h3 id="ERP-Dataset"><a href="#ERP-Dataset" class="headerlink" title="ERP Dataset"></a>ERP Dataset</h3><p><img src="https://s1.ax1x.com/2020/04/04/G0DgCn.png" alt="ERP"></p>
@@ -180,6 +180,15 @@
   
   
   <nav class="article-nav">
+    
+      <a href="/2020/04/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part2/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            【神经工程学】第二章 神经生理心理基础 part2
+          
+        </div>
+      </a>
     
     
       <a href="/2020/04/02/%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="article-nav-link">

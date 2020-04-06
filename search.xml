@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【神经工程学】第二章 神经生理心理基础 part2</title>
+    <url>/2020/04/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part2/</url>
+    <content><![CDATA[<p>第二章 神经生理心理基础</p>
+<ul>
+<li>2.4 神经元电生理特性</li>
+<li>2.5 突触与突触传递</li>
+<li>2.6 神经心理学概述</li>
+<li>2.7 心理学过程的神经学机制</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="2-4-神经元电生理特性"><a href="#2-4-神经元电生理特性" class="headerlink" title="2.4 神经元电生理特性"></a>2.4 神经元电生理特性</h2><ul>
+<li>1820年，德国科学家测得在肌肉完好和损伤部位之间存在电位差。即损伤电位，为负值；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyKNqI.png" alt="损伤电位"></p>
+<ul>
+<li>细胞在生命活动时伴随着电现象，是由带电离子跨膜运输产生的，表现为跨膜电位(Transmembrane Potential)或膜电位(Membrane Potential)；</li>
+<li><strong>静息电位(Resting Potential):</strong> 细胞在安静时存在于膜两侧的电位差。内负外正，为一稳定的直流电位，不同细胞静息电位不同，范围在-10~-100mV之间；</li>
+<li>静息电位产生的前提1：细胞膜内外存在离子浓度差。离子所受的驱动力为<strong>电化学驱动力</strong>；</li>
+<li>静息电位产生的前提2：细胞膜对离子的通透性不同。<strong>平衡电位(Equilibrium Potential)</strong>指某种离子所受电化学驱动力为0，不在做跨膜移动时的膜电位值。细胞的静息电位接近于$K^+$的平衡电位；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/Gy8PaR.png" alt="离子浓度差"></p>
+<p><img src="https://s1.ax1x.com/2020/04/06/Gy8cyF.png" alt="离子通透性"></p>
+<ul>
+<li>细胞膜在静息状态下对$K^+$通透性远高于$Na^+$ (100:1)，细胞膜上钠钾泵的存在维持着静息态膜内外$K^+$浓度不平衡；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyG7hq.png" alt="静息电位"></p>
+<ul>
+<li><strong>动作电位(Action Potential):</strong> 可兴奋细胞受到有效刺激后产生的一过性的电位活动。其特点是瞬时、可逆、传导性（可扩步）；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyYAGq.png" alt="动作电位组成"></p>
+<ul>
+<li>动作电位的钠学说；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/Gyt5He.png" alt="钠学说"></p>
+<ul>
+<li>AP机制；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyNzM6.png" alt="AP机制"></p>
+<ul>
+<li>阈电位；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GygJSO.png" alt="阈电位"></p>
+<ul>
+<li>动作电位的触发；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/Gyg4kq.png" alt="阈电位的产生机制"></p>
+<ul>
+<li>动作电位的特点；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyR1xO.png" alt="特点"></p>
+<ul>
+<li>膜的被动电学特性以及电紧张电位(electrotonic potential)；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyRxSK.png" alt="被动电学模型"></p>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyWiTA.png" alt="电紧张电位"></p>
+<ul>
+<li>局部电位(Local Potential)，不存在“全或无”现象，呈电紧张形式扩步；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyWDt1.png" alt="LP"></p>
+<ul>
+<li>动作电位和局部电位对比；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyfvrD.png" alt="AP VS. LP"></p>
+<h2 id="2-5-突触与突触传递"><a href="#2-5-突触与突触传递" class="headerlink" title="2.5 突触与突触传递"></a>2.5 突触与突触传递</h2><ul>
+<li>突触的定义；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyhhWt.png" alt="突触"></p>
+<ul>
+<li>突触分电突触和化学突触(Chemical synapse)两种。化学突触即我们熟知的以神经递质作为传递媒介的突触，在高等哺乳动物大脑中几乎都是化学突触；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/Gy4Y1P.png" alt="电突触"></p>
+<p><img src="https://s1.ax1x.com/2020/04/06/Gy5kDS.png" alt="化学性突触"></p>
+<ul>
+<li>神经递质的去向；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyoZpn.png" alt="神经递质去向"></p>
+<h2 id="2-6-神经心理学概述"><a href="#2-6-神经心理学概述" class="headerlink" title="2.6 神经心理学概述"></a>2.6 神经心理学概述</h2><ul>
+<li>定义：将大脑视为心理活动的物质本体，综合研究二者关系；</li>
+<li>发展历史；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/GyTpC9.png" alt="发展历史"></p>
+<ul>
+<li>神经心理学三大分支：临床、实验和认知神经心理学。其中认知神经心理学：从信息加工的角度来了解与具体认知心理活动相关的大脑结构和功能，采集神经心理测试过程中的大量脑活动相关数据，以信息加工角度挖掘潜在神经机制；</li>
+</ul>
+<h2 id="2-7-心理学过程的神经学机制"><a href="#2-7-心理学过程的神经学机制" class="headerlink" title="2.7 心理学过程的神经学机制"></a>2.7 心理学过程的神经学机制</h2><ul>
+<li>现代大脑功能理论模型</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/06/Gy7QJJ.png" alt="Model"></p>
+]]></content>
+      <categories>
+        <category>神经工程学</category>
+      </categories>
+      <tags>
+        <tag>公开课笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【论文笔记 6】Euclidean space data alignment</title>
     <url>/2020/04/04/Euclidean-space-data-alignment/</url>
     <content><![CDATA[<center>Transfer Learning for Brain–Computer Interfaces:
@@ -24,7 +122,7 @@
 <p><img src="https://s1.ax1x.com/2020/04/04/G08D76.png" alt="reference"></p>
 <h3 id="关于协方差矩阵"><a href="#关于协方差矩阵" class="headerlink" title="关于协方差矩阵"></a>关于协方差矩阵</h3><p>在运动想象中，trial$X_i$的协方差矩阵可以通过$\sum_i=X_iX^T_i$求得，但是该矩阵只能反映大脑活动的空间分布，这对MI任务是适合的。但是针对ERP范式，其最优分类信息在时域上，所以需要对该协方差矩阵计算进行修改，增加时域信息。<font color=shocking pink>这里开一个脑洞：目前识别SSVEP均是利用了其时域信息进行相关性计算，类似于CSP等空域滤波方法效果不好是不是因为该协方差矩阵没有进行改进呢？我们是否可以按这里的方法有效ERP信号的时域和空域信息，从而达到很好的效果呢？</font></p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G0YnpD.png" alt="ERP 协方差计算"></p>
-<h2 id="EEG-data-alignment-in-the-Euclidean-Space-EA"><a href="#EEG-data-alignment-in-the-Euclidean-Space-EA" class="headerlink" title="EEG data alignment in the Euclidean Space (EA)"></a>EEG data alignment in the Euclidean Space (EA)</h2><h3 id="The-EA"><a href="#The-EA" class="headerlink" title="The EA"></a>The EA</h3><p>通过使不同受试者的数据分布相似化，从而一个数据集中训练好的分类器在其他受试者上亦会有较好的分类效果，这是TL的基本思想。和RA一样，EA也需要构造参考矩阵$\bar{R}$，该矩阵通过计算所有数据的的协方差算术平均而得。<font color=shocking pink>这里使用的是所有已知数据，意思是计算参考矩阵时没有对类别进行分开。这可能是因为本文的目的是为了让来自不同受试者的数据分布一致，这个【论文笔记 5】介绍的cross-subject transfer不一样，那一篇论文中按照类别进行迁移的。</font></p>
+<h2 id="EEG-data-alignment-in-the-Euclidean-Space-EA"><a href="#EEG-data-alignment-in-the-Euclidean-Space-EA" class="headerlink" title="EEG data alignment in the Euclidean Space (EA)"></a>EEG data alignment in the Euclidean Space (EA)</h2><h3 id="The-EA"><a href="#The-EA" class="headerlink" title="The EA"></a>The EA</h3><p>通过使不同受试者的数据分布相似化，从而一个数据集中训练好的分类器在其他受试者上亦会有较好的分类效果，这是TL的基本思想。和RA一样，EA也需要构造参考矩阵$\bar{R}$，该矩阵通过计算所有数据的的协方差算术平均而得。<font color=shocking pink>论文中说参考矩阵是由受试者所有trial计算而来，意思是包括所有类别的数据一起？这和【论文笔记 5】中采用的cross-subject不同，该作者是按照类别进行迁移的。</font></p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G0asr4.png" alt="EA"></p>
 <h3 id="Comparison-with-RA"><a href="#Comparison-with-RA" class="headerlink" title="Comparison with RA"></a>Comparison with RA</h3><ul>
 <li>EA和RA在进行数据对齐后，其协方差矩阵的黎曼距离并不会改变（同余不变性）；</li>
@@ -37,7 +135,7 @@
 <p>上述为来自Dataset 2a的受试者1左右手想象数据，纵轴表示导联，数值表示经过EA前后的数据相关系数大小。可以发现，经过EA操作后，数据幅值明显降低，并且相关性减小。</p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G00dPI.png" alt="EA results 2"></p>
 <p>作者通过t-Stochastic Neighbor Embedding (t-SNE) 算法，将来自MI和ERP范式的受试者测试数据（红色点）和训练数据（蓝色点）进行特征可视化，左右图分别为EA前后的效果。可以发现EA可以使训练和测试数据分布变得统一（除个别情况，后面会讨论）。</p>
-<h2 id="Offline-unsupervised-classification"><a href="#Offline-unsupervised-classification" class="headerlink" title="Offline unsupervised classification"></a>Offline unsupervised classification</h2><p>对数据集进行leave-one-subject-out cross-validation，每次选择一个受试者当测试，其余受试者为训练集。算法大概流程为：利用所有受试者的数据求参考矩阵$\bar{R}$；再利用其对数据进行align操作，使不同受试者之间的数据相似性增加（这个过程类似于CSP，需要对测试数据进行处理，但是并未利用其进行训练，可以理解为特征提取过程）；利用其它受试者的数据训练分类器，并在当前受试者上进行测试。<font color=red>为什么说这里是无监督学习呢？这是针对当前受试者而言，我们并没有利用来自他的标签信息，我们的SVM等分类器模型是根据其他受试者训练而得。</font></p>
+<h2 id="Offline-unsupervised-classification"><a href="#Offline-unsupervised-classification" class="headerlink" title="Offline unsupervised classification"></a>Offline unsupervised classification</h2><p>对数据集进行leave-one-subject-out cross-validation，每次选择一个受试者当test set，其余受试者为training set。算法大概流程为：<strong>利用所有受试者（包括测试受试者）的数据求参考矩阵$\bar{R}$；</strong>再对数据进行align操作，使不同受试者之间的数据相似性增加；利用其它受试者的数据训练分类器，并在当前受试者上进行测试。<font color=red>为什么说这里是无监督学习呢？这是针对当前受试者而言，我们并没有利用来自他的标签信息，我们的SVM等分类器模型是根据其他受试者训练而得。</font><font color=shocking pink>这里我们利用了所有受试者的数据计算参考矩阵，包括test set。<strong>这里我们并不知道test set的标签，意味着EA在计算参考矩阵的时候，是没有将类别分开的。</strong>而在实际的应用中，test 按trial慢慢送入，故参考矩阵没办法利用当前受试者信息，除非当前受试者已有部分数据，类似于文章后面讨论的在线监督模型。</font></p>
 <h3 id="MI-Datasets"><a href="#MI-Datasets" class="headerlink" title="MI Datasets"></a>MI Datasets</h3><p><img src="https://s1.ax1x.com/2020/04/04/G0DGAH.png" alt="MI"></p>
 <p>首先可以看到，不管是RA还是EA，应用过后均取得了较好的效果；EA-CSP-LDA的效果最佳。</p>
 <h3 id="ERP-Dataset"><a href="#ERP-Dataset" class="headerlink" title="ERP Dataset"></a>ERP Dataset</h3><p><img src="https://s1.ax1x.com/2020/04/04/G0DgCn.png" alt="ERP"></p>
@@ -53,8 +151,8 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>论文中也说了，如果对已有数据不进行筛选的话，是会影响最终结果的，所以可以考虑利用一些度量标准进行数据筛选（模糊C均值？）；EA虽然应用到了ERP上，但本文讨论的只是RSVP 5Hz下二分类的结果，对SSVEP有效吗？</p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>迁移学习</tag>
@@ -118,8 +216,8 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>当前SSVEP的频率识别多是根据相关性的方法，其中的关键问题是template的获取，故本文研究的迁移学习思想也是针对template的改进，将已有数据向测试受试者的数据进行逼近。<font color=shocking pink><strong>是否存在更好的特征迁移方法？比如将其他受试者的数据和当前受试者的数据变换到相同的数据空间。（本文是通过特征变换方式减少源域和目标域的差异，采用统一变换到相同特征空间呢？）</strong></font></p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -140,7 +238,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Introduction</title>
+    <title>【ML】Introduction</title>
     <url>/2020/03/31/Introduction/</url>
     <content><![CDATA[<blockquote>
 <p>课程简介：本课程是国立台湾大学<a href="http://speech.ee.ntu.edu.tw/~tlkagk/index.html" target="_blank" rel="noopener">李宏毅(Hung-yi Lee)老师</a>2020年春期课程，课程内容包含回归、分类、深度学习、迁移学习、强化学习、元学习等重要内容。<img src="https://s1.ax1x.com/2020/03/31/GK1wfs.png" alt="知识图谱"></p>
@@ -175,7 +273,7 @@
       </tags>
   </entry>
   <entry>
-    <title>第二章 神经生理心理基础 part1</title>
+    <title>【神经工程学】第二章 神经生理心理基础 part1</title>
     <url>/2020/03/30/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part1/</url>
     <content><![CDATA[<p>第二章 神经生理心理基础</p>
 <ul>
@@ -275,8 +373,8 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>目前SSVEP识别得到公认的最优秀算法是Extended CCA和Ensemble TRCA，多数改进或新提出的方法均跟其进行对比；Filter bank和Ensemble方法似乎已经得到了普及使用。</p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -284,7 +382,7 @@
       </tags>
   </entry>
   <entry>
-    <title>第一章 绪论</title>
+    <title>【神经工程学】第一章 绪论</title>
     <url>/2020/03/28/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/</url>
     <content><![CDATA[<blockquote>
 <p>课程简介：神经工程是生物医学工程的一个分支学科，它致力于采用工程技术实现认识、修复、替代、增强或探索神经系统的特性。作为一个相对新兴的学科，尽管神经工程发展很快，但与其相关的信息和研究仍相对有限。一个制约研究队伍扩大的重要原因是我们的大学很少向本科生研究生传授有关神经科学的知识和技能。因此本导论课程的教学目的是通过对神经工程学中的一些基础问题及研究的介绍使得生物医学工程专业学生对神经工程学有初步的认识和了解。掌握神经工程学研究领域中一些基本的概念、原理和逻辑思维，为之前学习到的知识寻找应用范例，进而为有志于从事神经工程学研究的学生提供系统的知识培养。</p>
@@ -380,8 +478,8 @@
 <p><strong>毕竟这是15年的论文，目前SSVEP的成熟结构还是filter bank + ensemble + algorithm的方式，可参考电子科大19年的层次分类网络论文。</strong></p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -423,8 +521,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>探索在高频刺激下该工作是否成立。</p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -464,8 +562,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>解决small sample size (SSS) problem，即小样本问题，这在论文Linear discriminant analysis<br>for the small sample size problem: an overview  中已有描述，可以借鉴。 </p>
 ]]></content>
       <categories>
-        <category>BCI</category>
         <category>论文笔记</category>
+        <category>BCI</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
