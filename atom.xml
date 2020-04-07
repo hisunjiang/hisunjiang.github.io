@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-04-06T12:32:13.045Z</updated>
+  <updated>2020-04-07T03:49:05.638Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【神经工程学】第三章 神经检测与成像</title>
+    <link href="https://hisunjiang.gitee.io/2020/04/07/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F/"/>
+    <id>https://hisunjiang.gitee.io/2020/04/07/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F/</id>
+    <published>2020-04-07T00:36:43.000Z</published>
+    <updated>2020-04-07T03:49:05.638Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第三章 神经检测与成像&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3.1 神经系统电信号及检测&lt;/li&gt;
+&lt;li&gt;3.2 CT成像原理及应用&lt;/li&gt;
+&lt;li&gt;3.3 磁共振成像(MRI)&lt;/li&gt;
+&lt;li&gt;3.4 磁共振技术的发展及应用趋势&lt;/li&gt;
+&lt;li&gt;3.5 光学成像的原理和应用&lt;/li&gt;
+&lt;li&gt;3.6 MEG信号的检测及应用&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="神经工程学" scheme="https://hisunjiang.gitee.io/categories/%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E5%AD%A6/"/>
+    
+    
+      <category term="公开课笔记" scheme="https://hisunjiang.gitee.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>【神经工程学】第二章 神经生理心理基础 part2</title>

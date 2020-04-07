@@ -1,6 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【神经工程学】第三章 神经检测与成像</title>
+    <url>/2020/04/07/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F/</url>
+    <content><![CDATA[<p>第三章 神经检测与成像</p>
+<ul>
+<li>3.1 神经系统电信号及检测</li>
+<li>3.2 CT成像原理及应用</li>
+<li>3.3 磁共振成像(MRI)</li>
+<li>3.4 磁共振技术的发展及应用趋势</li>
+<li>3.5 光学成像的原理和应用</li>
+<li>3.6 MEG信号的检测及应用</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="3-1-神经系统电信号及检测"><a href="#3-1-神经系统电信号及检测" class="headerlink" title="3.1 神经系统电信号及检测"></a>3.1 神经系统电信号及检测</h2><ul>
+<li>EEG发展历史；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GckXi4.png" alt="EEG发展"></p>
+<ul>
+<li>国际10-20系统；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GcADkF.png" alt="10-20"></p>
+<ul>
+<li>EEG信号频段；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GcAIte.png" alt="频率成分"></p>
+<h2 id="CT成像原理及应用"><a href="#CT成像原理及应用" class="headerlink" title="CT成像原理及应用"></a>CT成像原理及应用</h2><ul>
+<li>1895年，德国物理学家伦琴发现并命名X射线；</li>
+<li>计算机断层扫描成像(Computed Tomography, CT);</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GcEXvR.png" alt="CT"></p>
+<ul>
+<li>CT成像由数据采集和图像重建构成； </li>
+<li>增强CT：人为添加造影剂，使成像后的病灶更加清晰；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GceyE6.png" alt="增强CT"></p>
+<ul>
+<li>CT灌注成像；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/Gcefvd.png" alt="灌注成像"></p>
+<h2 id="3-3-磁共振成像-MRI"><a href="#3-3-磁共振成像-MRI" class="headerlink" title="3.3 磁共振成像(MRI)"></a>3.3 磁共振成像(MRI)</h2><ul>
+<li>MRI的分类；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GcnQwq.png" alt="MRI"></p>
+<h2 id="3-4-磁共振技术的发展及应用趋势"><a href="#3-4-磁共振技术的发展及应用趋势" class="headerlink" title="3.4 磁共振技术的发展及应用趋势"></a>3.4 磁共振技术的发展及应用趋势</h2><ul>
+<li>MRI设备发展趋势：更高的外加磁场强度，场强越大则图像信噪比越高；更快的成像速度(目前为百ms级)；研究新型结构成像方式；</li>
+<li>脑连接组(Connectome)学研究；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GcMxAI.png" alt="脑连接组"></p>
+<p><img src="https://s1.ax1x.com/2020/04/07/GcQuCV.png" alt="研究方向"></p>
+<h2 id="3-5-光学成像的原理和应用"><a href="#3-5-光学成像的原理和应用" class="headerlink" title="3.5 光学成像的原理和应用"></a>3.5 光学成像的原理和应用</h2><ul>
+<li>光学成像的两个重要参数：数值孔径和分辨率；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/Gc3ORP.png" alt="参数"></p>
+<ul>
+<li>光学成像方法：荧光成像方法；生物发光学成像方法；光声成像方法；相干断层成像方法；功能性近红外光谱方法；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GcJIqU.png" alt="应用展望"></p>
+<h2 id="3-6-MEG信号的检测及应用"><a href="#3-6-MEG信号的检测及应用" class="headerlink" title="3.6 MEG信号的检测及应用"></a>3.6 MEG信号的检测及应用</h2><ul>
+<li>MEG发展历史。1968年， David Cohen使用铜感应线圈作为检测器， 首次测量到了颅内电流变化产生的磁场及MEG信号， 但信号很差， 信噪比极低；  </li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GcYRTe.png" alt="发展历史"></p>
+<ul>
+<li>MEG信号特点：瞬时性、动态性、非平稳性、具有空间位置差异性、受介质（颅骨、头皮等）影响较小、极微弱，百fT(1fT=$10^{-15}$Tesla)量级；</li>
+<li>MEG的观察指标有极性、振幅、频率、潜伏期、能量和相关性等；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GcUCoF.png" alt="观察指标"></p>
+<ul>
+<li>相关技术对比；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/07/GcUJyt.png" alt="对比"></p>
+]]></content>
+      <categories>
+        <category>神经工程学</category>
+      </categories>
+      <tags>
+        <tag>公开课笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【神经工程学】第二章 神经生理心理基础 part2</title>
     <url>/2020/04/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part2/</url>
     <content><![CDATA[<p>第二章 神经生理心理基础</p>
