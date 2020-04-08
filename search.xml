@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【论文笔记 7】Weighted Transfer Learning for MI</title>
+    <url>/2020/04/08/Weighted-Transfer-Learning-for-MI/</url>
+    <content><![CDATA[<center>Weighted Transfer Learning for Improving Motor Imagery-Based Brain–Computer Interface</center>  
+
+<center>Ahmed M. Azab  et al.，谢菲尔德大学， 2019</center>
+
+<center>IEEE TRANSACTIONS ON NEURAL SYSTEMS AND REHABILITATION ENGINEERING </center>
+
+<p><strong>Abstract:</strong> 提出了一种基于模型参数的迁移学习方法。通过已有数据求得模型，将该模型参数迁移到含少量训练样本的target subject训练过程中，实现inter-subject 和 inter-session之间的迁移。针对已有数据和当前受试者之间可能存在的特征空间不一致等问题，在原迁移学习基础上增加了权重因子，实现对样本的筛选，这里相似度量方法采用KL散度。实验在3个公开数据集上进行了测试，分类模型采用逻辑回归。</p>
+<p><strong>Note:</strong> 本文采用基于模型的迁移方法；提出了根据KL散度的样本筛选方法；逻辑回归。</p>
+<a id="more"></a>
+
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="Logistic-Regression-Based-Transfer-Learning-Algorithm-LTL"><a href="#Logistic-Regression-Based-Transfer-Learning-Algorithm-LTL" class="headerlink" title="Logistic Regression-Based Transfer Learning Algorithm (LTL)"></a>Logistic Regression-Based Transfer Learning Algorithm (LTL)</h2><p>本文采用逻辑回归作为分类器，迁移学习的实现分两步：第一步根据已有数据构造source domain的分类器模型；第二步在target domian模型训练过程中，正则项加入评估不同域模型参数相似性的因子。</p>
+<h3 id="第一步-source-domain训练"><a href="#第一步-source-domain训练" class="headerlink" title="第一步 source domain训练"></a>第一步 source domain训练</h3><p>逻辑回归是一个基本的二分类模型，通过对线性模型进行变换，从而进行概率预测。模型预测值为一概率函数，对于二分类任务，通常认为0.5为分类阈值。该模型可以用logistic sigmoid函数表示为</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWJ4Z6.png" alt="logistic sigmoid" style="zoom:50%;" />
+
+<p>该模型中，$S$表示某一个session，$X_s$表示样本特征矩阵，$W_s$为模型参数，即线性模型的权重。该模型的概率输出P根据分类阈值即可进行类别预测。该模型的关键是对参数$W_s$的估计，可以通过以下目标函数求得</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWtPAK.png" alt="GWtPAK.png" style="zoom:50%;" />
+
+<img src="https://s1.ax1x.com/2020/04/08/GWtuHP.png" alt="GWtuHP.png" style="zoom:50%;" />
+
+<p>(2)式中，H表示交叉熵，表示对训练误差的度量；正则项表示对$W_s$中较大值的惩罚，以减小过拟合。该目标函数求解在训练集上完成，同时我们知道<strong>回归模型无局部最优解</strong>，故该函数存在唯一的最小值，可以通过梯度下降或者牛顿法求解。</p>
+<h3 id="第二步-target-domain训练"><a href="#第二步-target-domain训练" class="headerlink" title="第二步 target domain训练"></a>第二步 target domain训练</h3><p>对于new subject，模型的目标函数$L_1(w_S)$不仅要是分类错误率最低，还应让估计的模型参数$W_s$和source domain中尽量靠近，这样以实现模型参数的迁移，从而减少训练样本。</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWUT0I.png" alt="GWUT0I.png" style="zoom:50%;" />
+
+<p>其中$R_{TL}$表示对$W_t$和$W_s$的相似性惩罚</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWaVc4.png" alt="GWaVc4.png" style="zoom:50%;" />
+
+<p><font color=red>这里需要注意的是：$μ$和$\sum_{TL}$均是对source domain数据分布的估计，且该迁移过程是按照session/subject来的。</font></p>
+<h2 id="Weighted-Logistic-Regression-Based-Transfer-Learning-Algorithm"><a href="#Weighted-Logistic-Regression-Based-Transfer-Learning-Algorithm" class="headerlink" title="Weighted Logistic Regression-Based Transfer Learning Algorithm"></a>Weighted Logistic Regression-Based Transfer Learning Algorithm</h2><p><strong>把每个session进行同样权重的迁移是可行的吗？实际上由于EEG信号的非平稳性，EEG信号经过CSP后会进入不同的特征空间。</strong><font color=shocking pink>什么情况下需要调整权重？首先我们需要衡量数据的空间分布是否一致。</font></p>
+<p>本文作者通过计算source domian session和target domain session之间的KL散度，评估session之间的相似性，从而调整迁移过程中的$W_s$系数。首先，通常认为数据经过CSP后特征呈现正态分布，那么对于两正态分布的数据集$N_0(μ_0, \sum_0)$和$N_1(μ_1, \sum_1)$，KL散度为</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWrbrD.png" alt="GWrbrD.png" style="zoom:50%;" />
+
+<p>这里的KL散度计算有监督和无监督两种方式。<strong>监督(S-wLTL)</strong>: session中按照类别不同分别计算KL散度，最后取平均；<strong>无监督(Us-wLTL)</strong>: session直接计算。最后得加权系数为</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWy9YR.png" alt="GWy9YR.png" style="zoom:50%;" />
+
+<p>$R_{TL}$中参数更新为</p>
+<img src="https://s1.ax1x.com/2020/04/08/GW6l59.png" alt="GW6l59.png" style="zoom:50%;" />
+
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p><img src="https://s1.ax1x.com/2020/04/08/GWcaQ0.png" alt="Results"></p>
+<p>可以看到，在三个数据集上，当受试者trial数较少时，迁移学习方法能够达到显著的效果。随着trial数增加，迁移学习的效果不再明显。<strong>值得注意的是，对于dataset 3，trial数增加的时候迁移学习效果不如SS（SVM）方法效果。这可能是因为当前数据集只包含5个受试者的原因。</strong></p>
+<h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><ul>
+<li>KL散度计算时需要极端协方差矩阵，当受试者trial数不足时，该协方差矩阵并不能真实反映数据分布情况，可以尝试对协方差矩阵进行更有效的估计或者采用其他的度量方法；</li>
+<li>我们根据KL散度计算加权系数时，power值为4，改超参数未进行优化；</li>
+<li>本文的方法并不局限与逻辑回归的应用。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>BCI</category>
+        <category>论文笔记</category>
+      </categories>
+      <tags>
+        <tag>MI</tag>
+        <tag>迁移学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【神经工程学】第三章 神经检测与成像</title>
     <url>/2020/04/07/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F/</url>
     <content><![CDATA[<p>第三章 神经检测与成像</p>
@@ -230,12 +287,12 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>论文中也说了，如果对已有数据不进行筛选的话，是会影响最终结果的，所以可以考虑利用一些度量标准进行数据筛选（模糊C均值？）；EA虽然应用到了ERP上，但本文讨论的只是RSVP 5Hz下二分类的结果，对SSVEP有效吗？</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>迁移学习</tag>
         <tag>MI</tag>
+        <tag>迁移学习</tag>
       </tags>
   </entry>
   <entry>
@@ -295,12 +352,12 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>当前SSVEP的频率识别多是根据相关性的方法，其中的关键问题是template的获取，故本文研究的迁移学习思想也是针对template的改进，将已有数据向测试受试者的数据进行逼近。<font color=shocking pink><strong>是否存在更好的特征迁移方法？比如将其他受试者的数据和当前受试者的数据变换到相同的数据空间。（本文是通过特征变换方式减少源域和目标域的差异，采用统一变换到相同特征空间呢？）</strong></font></p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>SSVEP</tag>
         <tag>迁移学习</tag>
+        <tag>SSVEP</tag>
       </tags>
   </entry>
   <entry>
@@ -452,8 +509,8 @@
 <h1 id="感触"><a href="#感触" class="headerlink" title="感触"></a>感触</h1><p>目前SSVEP识别得到公认的最优秀算法是Extended CCA和Ensemble TRCA，多数改进或新提出的方法均跟其进行对比；Filter bank和Ensemble方法似乎已经得到了普及使用。</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -557,12 +614,12 @@
 <p><strong>毕竟这是15年的论文，目前SSVEP的成熟结构还是filter bank + ensemble + algorithm的方式，可参考电子科大19年的层次分类网络论文。</strong></p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>SSVEP</tag>
         <tag>迁移学习</tag>
+        <tag>SSVEP</tag>
       </tags>
   </entry>
   <entry>
@@ -600,8 +657,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>探索在高频刺激下该工作是否成立。</p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>
@@ -641,8 +698,8 @@
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>解决small sample size (SSS) problem，即小样本问题，这在论文Linear discriminant analysis<br>for the small sample size problem: an overview  中已有描述，可以借鉴。 </p>
 ]]></content>
       <categories>
-        <category>论文笔记</category>
         <category>BCI</category>
+        <category>论文笔记</category>
       </categories>
       <tags>
         <tag>SSVEP</tag>

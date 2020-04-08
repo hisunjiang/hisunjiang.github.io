@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-     Q. Sun&#39;s Blog
+    【论文笔记 7】Weighted Transfer Learning for MI |  Q. Sun&#39;s Blog
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -32,125 +32,17 @@
 <body>
   <div id="app">
     <main class="content">
-      
-<section class="cover">
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover0.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">Q. Sun&#39;s Blog</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-
-<div id="main">
-  <section class="outer">
-  <article class="articles">
-    
-    
-    
-    
-    <article id="post-关于我的博客" class="article article-type-post" itemscope
+      <section class="outer">
+  <article id="post-Weighted-Transfer-Learning-for-MI" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
     
     <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/04/02/%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"
-    >关于我的博客
-  <i class="article-topping">置顶</i>
-</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/04/02/%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time datetime="2020-04-02T09:20:49.000Z" itemprop="datePublished">2020-04-02</time>
-</a>
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <center>欢迎来到我的吐槽空间</center>
-
-<blockquote>
-<p>突然有一天想搭一个博客记录生活中的一些琐事，看了很多教程后便着手做了这件事。作为一个前端业余爱好者，所以也没什么经验值得分享，博客是利用hexo+github/gitee搭建的，感谢原作者贡献的主题<a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" rel="noopener">Ayer</a>。后续会逐渐添加更多的功能。</p>
-</blockquote>
-<p><img src="https://s1.ax1x.com/2020/04/02/GYPzvV.png" alt="ONE PIECE"></p>
-      
-      <a class="article-more-link" href="/2020/04/02/%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%AE%B0/" rel="tag">杂记</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-Weighted-Transfer-Learning-for-MI" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/04/08/Weighted-Transfer-Learning-for-MI/"
-    >【论文笔记 7】Weighted Transfer Learning for MI</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  【论文笔记 7】Weighted Transfer Learning for MI
+</h1>
  
 
     </header>
@@ -168,9 +60,36 @@
 
       
       
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.1k字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">4分钟</span>
+        </span>
+    </span>
+</div>
+
       
     </div>
     
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
 
     
 
@@ -188,9 +107,43 @@
 
 <p><strong>Abstract:</strong> 提出了一种基于模型参数的迁移学习方法。通过已有数据求得模型，将该模型参数迁移到含少量训练样本的target subject训练过程中，实现inter-subject 和 inter-session之间的迁移。针对已有数据和当前受试者之间可能存在的特征空间不一致等问题，在原迁移学习基础上增加了权重因子，实现对样本的筛选，这里相似度量方法采用KL散度。实验在3个公开数据集上进行了测试，分类模型采用逻辑回归。</p>
 <p><strong>Note:</strong> 本文采用基于模型的迁移方法；提出了根据KL散度的样本筛选方法；逻辑回归。</p>
-      
-      <a class="article-more-link" href="/2020/04/08/Weighted-Transfer-Learning-for-MI/">more...</a>
-      
+<a id="more"></a>
+
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="Logistic-Regression-Based-Transfer-Learning-Algorithm-LTL"><a href="#Logistic-Regression-Based-Transfer-Learning-Algorithm-LTL" class="headerlink" title="Logistic Regression-Based Transfer Learning Algorithm (LTL)"></a>Logistic Regression-Based Transfer Learning Algorithm (LTL)</h2><p>本文采用逻辑回归作为分类器，迁移学习的实现分两步：第一步根据已有数据构造source domain的分类器模型；第二步在target domian模型训练过程中，正则项加入评估不同域模型参数相似性的因子。</p>
+<h3 id="第一步-source-domain训练"><a href="#第一步-source-domain训练" class="headerlink" title="第一步 source domain训练"></a>第一步 source domain训练</h3><p>逻辑回归是一个基本的二分类模型，通过对线性模型进行变换，从而进行概率预测。模型预测值为一概率函数，对于二分类任务，通常认为0.5为分类阈值。该模型可以用logistic sigmoid函数表示为</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWJ4Z6.png" alt="logistic sigmoid" style="zoom:50%;" />
+
+<p>该模型中，$S$表示某一个session，$X_s$表示样本特征矩阵，$W_s$为模型参数，即线性模型的权重。该模型的概率输出P根据分类阈值即可进行类别预测。该模型的关键是对参数$W_s$的估计，可以通过以下目标函数求得</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWtPAK.png" alt="GWtPAK.png" style="zoom:50%;" />
+
+<img src="https://s1.ax1x.com/2020/04/08/GWtuHP.png" alt="GWtuHP.png" style="zoom:50%;" />
+
+<p>(2)式中，H表示交叉熵，表示对训练误差的度量；正则项表示对$W_s$中较大值的惩罚，以减小过拟合。该目标函数求解在训练集上完成，同时我们知道<strong>回归模型无局部最优解</strong>，故该函数存在唯一的最小值，可以通过梯度下降或者牛顿法求解。</p>
+<h3 id="第二步-target-domain训练"><a href="#第二步-target-domain训练" class="headerlink" title="第二步 target domain训练"></a>第二步 target domain训练</h3><p>对于new subject，模型的目标函数$L_1(w_S)$不仅要是分类错误率最低，还应让估计的模型参数$W_s$和source domain中尽量靠近，这样以实现模型参数的迁移，从而减少训练样本。</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWUT0I.png" alt="GWUT0I.png" style="zoom:50%;" />
+
+<p>其中$R_{TL}$表示对$W_t$和$W_s$的相似性惩罚</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWaVc4.png" alt="GWaVc4.png" style="zoom:50%;" />
+
+<p><font color=red>这里需要注意的是：$μ$和$\sum_{TL}$均是对source domain数据分布的估计，且该迁移过程是按照session/subject来的。</font></p>
+<h2 id="Weighted-Logistic-Regression-Based-Transfer-Learning-Algorithm"><a href="#Weighted-Logistic-Regression-Based-Transfer-Learning-Algorithm" class="headerlink" title="Weighted Logistic Regression-Based Transfer Learning Algorithm"></a>Weighted Logistic Regression-Based Transfer Learning Algorithm</h2><p><strong>把每个session进行同样权重的迁移是可行的吗？实际上由于EEG信号的非平稳性，EEG信号经过CSP后会进入不同的特征空间。</strong><font color=shocking pink>什么情况下需要调整权重？首先我们需要衡量数据的空间分布是否一致。</font></p>
+<p>本文作者通过计算source domian session和target domain session之间的KL散度，评估session之间的相似性，从而调整迁移过程中的$W_s$系数。首先，通常认为数据经过CSP后特征呈现正态分布，那么对于两正态分布的数据集$N_0(μ_0, \sum_0)$和$N_1(μ_1, \sum_1)$，KL散度为</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWrbrD.png" alt="GWrbrD.png" style="zoom:50%;" />
+
+<p>这里的KL散度计算有监督和无监督两种方式。<strong>监督(S-wLTL)</strong>: session中按照类别不同分别计算KL散度，最后取平均；<strong>无监督(Us-wLTL)</strong>: session直接计算。最后得加权系数为</p>
+<img src="https://s1.ax1x.com/2020/04/08/GWy9YR.png" alt="GWy9YR.png" style="zoom:50%;" />
+
+<p>$R_{TL}$中参数更新为</p>
+<img src="https://s1.ax1x.com/2020/04/08/GW6l59.png" alt="GW6l59.png" style="zoom:50%;" />
+
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p><img src="https://s1.ax1x.com/2020/04/08/GWcaQ0.png" alt="Results"></p>
+<p>可以看到，在三个数据集上，当受试者trial数较少时，迁移学习方法能够达到显著的效果。随着trial数增加，迁移学习的效果不再明显。<strong>值得注意的是，对于dataset 3，trial数增加的时候迁移学习效果不如SS（SVM）方法效果。这可能是因为当前数据集只包含5个受试者的原因。</strong></p>
+<h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><ul>
+<li>KL散度计算时需要极端协方差矩阵，当受试者trial数不足时，该协方差矩阵并不能真实反映数据分布情况，可以尝试对协方差矩阵进行更有效的估计或者采用其他的度量方法；</li>
+<li>我们根据KL散度计算加权系数时，power值为4，改超参数未进行优化；</li>
+<li>本文的方法并不局限与逻辑回归的应用。</li>
+</ul>
+
       
       <!-- reward -->
       
@@ -199,6 +152,17 @@
     
       <!-- copyright -->
       
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>版权声明： </strong s>
+              本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow"
+                target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+            </li>
+          </ul>
+        </div>
+        
     <footer class="article-footer">
       
       
@@ -210,264 +174,80 @@
   </div>
 
   
-
   
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-第三章-神经检测与成像" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/04/07/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F/"
-    >【神经工程学】第三章 神经检测与成像</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/04/07/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F/" class="article-date">
-  <time datetime="2020-04-07T00:36:43.000Z" itemprop="datePublished">2020-04-07</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E5%AD%A6/">神经工程学</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>第三章 神经检测与成像</p>
-<ul>
-<li>3.1 神经系统电信号及检测</li>
-<li>3.2 CT成像原理及应用</li>
-<li>3.3 磁共振成像(MRI)</li>
-<li>3.4 磁共振技术的发展及应用趋势</li>
-<li>3.5 光学成像的原理和应用</li>
-<li>3.6 MEG信号的检测及应用</li>
-</ul>
-      
-      <a class="article-more-link" href="/2020/04/07/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
+  <nav class="article-nav">
     
     
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0/" rel="tag">公开课笔记</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
+      <a href="/2020/04/07/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">【神经工程学】第三章 神经检测与成像</div>
+      </a>
     
-    <article id="post-第二章-神经生理心理基础-part2" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/04/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part2/"
-    >【神经工程学】第二章 神经生理心理基础 part2</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/04/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part2/" class="article-date">
-  <time datetime="2020-04-06T08:55:10.000Z" itemprop="datePublished">2020-04-06</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E5%AD%A6/">神经工程学</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>第二章 神经生理心理基础</p>
-<ul>
-<li>2.4 神经元电生理特性</li>
-<li>2.5 突触与突触传递</li>
-<li>2.6 神经心理学概述</li>
-<li>2.7 心理学过程的神经学机制</li>
-</ul>
-      
-      <a class="article-more-link" href="/2020/04/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part2/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0/" rel="tag">公开课笔记</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-Euclidean-space-data-alignment" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/04/04/Euclidean-space-data-alignment/"
-    >【论文笔记 6】Euclidean space data alignment</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/04/04/Euclidean-space-data-alignment/" class="article-date">
-  <time datetime="2020-04-04T11:46:45.000Z" itemprop="datePublished">2020-04-04</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/BCI/">BCI</a> / <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <center>Transfer Learning for Brain–Computer Interfaces:
-    A Euclidean Space Data Alignment Approach</center> 
-<center>He He et al., 华中科技大学，2020</center>
-
-<center>IEEE TRANSACTIONS ON BIOMEDICAL ENGINEERING </center>
-
-<p><strong>Abstract:</strong> 提出了一种欧式空间下的数据对齐方法，通过对不同受试者的EEG trial进行数据对齐，增加inter-subject之间的数据相似性，从而达到迁移学习的目的。作者将提出的方法EA与黎曼空间下的数据对齐方式RA进行了对比，离线和在线测试均表明了其优越性。实验测试数据分MI和ERP两类，分类器采用最小黎曼均值距离MDRM、LDA和SVM。</p>
-<p><strong>Note:</strong> EA可以看成一种子空间学习的方法，通过将源域和目标域同时变换增加相似性；论文中包含了较多黎曼流行学习的文献；介绍了一种增加ERP协方差矩阵时域信息的方法；受试者空闲态数据对迁移学习有帮助(RA-MDRM)。</p>
-      
-      <a class="article-more-link" href="/2020/04/04/Euclidean-space-data-alignment/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MI/" rel="tag">MI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/" rel="tag">迁移学习</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-  </article>
-  
-
-  
-  <nav class="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
-  
-</section>
-</div>
 
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: 'tj6cFv8k9iEEzScWEip9KOak-gzGzoHsz',
+        app_key: 'V0UHIV8UaX5w4IKQMBDsOoui',
+        path: window.location.pathname,
+        notify: 'true',
+        verify: 'false',
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
       <footer class="footer">
   <div class="outer">
     <ul class="list-inline">
@@ -623,6 +403,30 @@
 </script>
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    onClick: (e) => {
+      $('.toc-link').removeClass('is-active-link');
+      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
+      $(e.target.hash).scrollIntoView();
+      return false;
+    }
+  });
+</script>
 
 
 

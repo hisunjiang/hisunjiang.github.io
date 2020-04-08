@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-04-07T03:49:05.638Z</updated>
+  <updated>2020-04-08T08:05:34.459Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【论文笔记 7】Weighted Transfer Learning for MI</title>
+    <link href="https://hisunjiang.gitee.io/2020/04/08/Weighted-Transfer-Learning-for-MI/"/>
+    <id>https://hisunjiang.gitee.io/2020/04/08/Weighted-Transfer-Learning-for-MI/</id>
+    <published>2020-04-08T06:46:42.000Z</published>
+    <updated>2020-04-08T08:05:34.459Z</updated>
+    
+    <summary type="html">
+    
+      &lt;center&gt;Weighted Transfer Learning for Improving Motor Imagery-Based Brain–Computer Interface&lt;/center&gt;  
+
+&lt;center&gt;Ahmed M. Azab  et al.，谢菲尔德大学， 2019&lt;/center&gt;
+
+&lt;center&gt;IEEE TRANSACTIONS ON NEURAL SYSTEMS AND REHABILITATION ENGINEERING &lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt; 提出了一种基于模型参数的迁移学习方法。通过已有数据求得模型，将该模型参数迁移到含少量训练样本的target subject训练过程中，实现inter-subject 和 inter-session之间的迁移。针对已有数据和当前受试者之间可能存在的特征空间不一致等问题，在原迁移学习基础上增加了权重因子，实现对样本的筛选，这里相似度量方法采用KL散度。实验在3个公开数据集上进行了测试，分类模型采用逻辑回归。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 本文采用基于模型的迁移方法；提出了根据KL散度的样本筛选方法；逻辑回归。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="MI" scheme="https://hisunjiang.gitee.io/tags/MI/"/>
+    
+      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>【神经工程学】第三章 神经检测与成像</title>
@@ -93,14 +125,14 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="MI" scheme="https://hisunjiang.gitee.io/tags/MI/"/>
+    
+      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -150,14 +182,14 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
     
       <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
     
   </entry>
   
@@ -252,9 +284,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -313,14 +345,14 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
     
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
     
       <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
     
   </entry>
   
@@ -345,9 +377,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
@@ -377,9 +409,9 @@
     </summary>
     
     
-      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
