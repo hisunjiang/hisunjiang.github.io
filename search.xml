@@ -53,185 +53,8 @@
         <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>MI</tag>
         <tag>迁移学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【神经工程学】第三章 神经检测与成像</title>
-    <url>/2020/04/07/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%88%90%E5%83%8F/</url>
-    <content><![CDATA[<p>第三章 神经检测与成像</p>
-<ul>
-<li>3.1 神经系统电信号及检测</li>
-<li>3.2 CT成像原理及应用</li>
-<li>3.3 磁共振成像(MRI)</li>
-<li>3.4 磁共振技术的发展及应用趋势</li>
-<li>3.5 光学成像的原理和应用</li>
-<li>3.6 MEG信号的检测及应用</li>
-</ul>
-<a id="more"></a>
-
-<h2 id="3-1-神经系统电信号及检测"><a href="#3-1-神经系统电信号及检测" class="headerlink" title="3.1 神经系统电信号及检测"></a>3.1 神经系统电信号及检测</h2><ul>
-<li>EEG发展历史；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GckXi4.png" alt="EEG发展"></p>
-<ul>
-<li>国际10-20系统；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GcADkF.png" alt="10-20"></p>
-<ul>
-<li>EEG信号频段；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GcAIte.png" alt="频率成分"></p>
-<h2 id="CT成像原理及应用"><a href="#CT成像原理及应用" class="headerlink" title="CT成像原理及应用"></a>CT成像原理及应用</h2><ul>
-<li>1895年，德国物理学家伦琴发现并命名X射线；</li>
-<li>计算机断层扫描成像(Computed Tomography, CT);</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GcEXvR.png" alt="CT"></p>
-<ul>
-<li>CT成像由数据采集和图像重建构成； </li>
-<li>增强CT：人为添加造影剂，使成像后的病灶更加清晰；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GceyE6.png" alt="增强CT"></p>
-<ul>
-<li>CT灌注成像；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/Gcefvd.png" alt="灌注成像"></p>
-<h2 id="3-3-磁共振成像-MRI"><a href="#3-3-磁共振成像-MRI" class="headerlink" title="3.3 磁共振成像(MRI)"></a>3.3 磁共振成像(MRI)</h2><ul>
-<li>MRI的分类；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GcnQwq.png" alt="MRI"></p>
-<h2 id="3-4-磁共振技术的发展及应用趋势"><a href="#3-4-磁共振技术的发展及应用趋势" class="headerlink" title="3.4 磁共振技术的发展及应用趋势"></a>3.4 磁共振技术的发展及应用趋势</h2><ul>
-<li>MRI设备发展趋势：更高的外加磁场强度，场强越大则图像信噪比越高；更快的成像速度(目前为百ms级)；研究新型结构成像方式；</li>
-<li>脑连接组(Connectome)学研究；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GcMxAI.png" alt="脑连接组"></p>
-<p><img src="https://s1.ax1x.com/2020/04/07/GcQuCV.png" alt="研究方向"></p>
-<h2 id="3-5-光学成像的原理和应用"><a href="#3-5-光学成像的原理和应用" class="headerlink" title="3.5 光学成像的原理和应用"></a>3.5 光学成像的原理和应用</h2><ul>
-<li>光学成像的两个重要参数：数值孔径和分辨率；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/Gc3ORP.png" alt="参数"></p>
-<ul>
-<li>光学成像方法：荧光成像方法；生物发光学成像方法；光声成像方法；相干断层成像方法；功能性近红外光谱方法；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GcJIqU.png" alt="应用展望"></p>
-<h2 id="3-6-MEG信号的检测及应用"><a href="#3-6-MEG信号的检测及应用" class="headerlink" title="3.6 MEG信号的检测及应用"></a>3.6 MEG信号的检测及应用</h2><ul>
-<li>MEG发展历史。1968年， David Cohen使用铜感应线圈作为检测器， 首次测量到了颅内电流变化产生的磁场及MEG信号， 但信号很差， 信噪比极低；  </li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GcYRTe.png" alt="发展历史"></p>
-<ul>
-<li>MEG信号特点：瞬时性、动态性、非平稳性、具有空间位置差异性、受介质（颅骨、头皮等）影响较小、极微弱，百fT(1fT=$10^{-15}$Tesla)量级；</li>
-<li>MEG的观察指标有极性、振幅、频率、潜伏期、能量和相关性等；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GcUCoF.png" alt="观察指标"></p>
-<ul>
-<li>相关技术对比；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/07/GcUJyt.png" alt="对比"></p>
-]]></content>
-      <categories>
-        <category>神经工程学</category>
-      </categories>
-      <tags>
-        <tag>公开课笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【神经工程学】第二章 神经生理心理基础 part2</title>
-    <url>/2020/04/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part2/</url>
-    <content><![CDATA[<p>第二章 神经生理心理基础</p>
-<ul>
-<li>2.4 神经元电生理特性</li>
-<li>2.5 突触与突触传递</li>
-<li>2.6 神经心理学概述</li>
-<li>2.7 心理学过程的神经学机制</li>
-</ul>
-<a id="more"></a>
-
-<h2 id="2-4-神经元电生理特性"><a href="#2-4-神经元电生理特性" class="headerlink" title="2.4 神经元电生理特性"></a>2.4 神经元电生理特性</h2><ul>
-<li>1820年，德国科学家测得在肌肉完好和损伤部位之间存在电位差。即损伤电位，为负值；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyKNqI.png" alt="损伤电位"></p>
-<ul>
-<li>细胞在生命活动时伴随着电现象，是由带电离子跨膜运输产生的，表现为跨膜电位(Transmembrane Potential)或膜电位(Membrane Potential)；</li>
-<li><strong>静息电位(Resting Potential):</strong> 细胞在安静时存在于膜两侧的电位差。内负外正，为一稳定的直流电位，不同细胞静息电位不同，范围在-10~-100mV之间；</li>
-<li>静息电位产生的前提1：细胞膜内外存在离子浓度差。离子所受的驱动力为<strong>电化学驱动力</strong>；</li>
-<li>静息电位产生的前提2：细胞膜对离子的通透性不同。<strong>平衡电位(Equilibrium Potential)</strong>指某种离子所受电化学驱动力为0，不在做跨膜移动时的膜电位值。细胞的静息电位接近于$K^+$的平衡电位；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/Gy8PaR.png" alt="离子浓度差"></p>
-<p><img src="https://s1.ax1x.com/2020/04/06/Gy8cyF.png" alt="离子通透性"></p>
-<ul>
-<li>细胞膜在静息状态下对$K^+$通透性远高于$Na^+$ (100:1)，细胞膜上钠钾泵的存在维持着静息态膜内外$K^+$浓度不平衡；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyG7hq.png" alt="静息电位"></p>
-<ul>
-<li><strong>动作电位(Action Potential):</strong> 可兴奋细胞受到有效刺激后产生的一过性的电位活动。其特点是瞬时、可逆、传导性（可扩步）；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyYAGq.png" alt="动作电位组成"></p>
-<ul>
-<li>动作电位的钠学说；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/Gyt5He.png" alt="钠学说"></p>
-<ul>
-<li>AP机制；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyNzM6.png" alt="AP机制"></p>
-<ul>
-<li>阈电位；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GygJSO.png" alt="阈电位"></p>
-<ul>
-<li>动作电位的触发；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/Gyg4kq.png" alt="阈电位的产生机制"></p>
-<ul>
-<li>动作电位的特点；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyR1xO.png" alt="特点"></p>
-<ul>
-<li>膜的被动电学特性以及电紧张电位(electrotonic potential)；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyRxSK.png" alt="被动电学模型"></p>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyWiTA.png" alt="电紧张电位"></p>
-<ul>
-<li>局部电位(Local Potential)，不存在“全或无”现象，呈电紧张形式扩步；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyWDt1.png" alt="LP"></p>
-<ul>
-<li>动作电位和局部电位对比；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyfvrD.png" alt="AP VS. LP"></p>
-<h2 id="2-5-突触与突触传递"><a href="#2-5-突触与突触传递" class="headerlink" title="2.5 突触与突触传递"></a>2.5 突触与突触传递</h2><ul>
-<li>突触的定义；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyhhWt.png" alt="突触"></p>
-<ul>
-<li>突触分电突触和化学突触(Chemical synapse)两种。化学突触即我们熟知的以神经递质作为传递媒介的突触，在高等哺乳动物大脑中几乎都是化学突触；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/Gy4Y1P.png" alt="电突触"></p>
-<p><img src="https://s1.ax1x.com/2020/04/06/Gy5kDS.png" alt="化学性突触"></p>
-<ul>
-<li>神经递质的去向；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyoZpn.png" alt="神经递质去向"></p>
-<h2 id="2-6-神经心理学概述"><a href="#2-6-神经心理学概述" class="headerlink" title="2.6 神经心理学概述"></a>2.6 神经心理学概述</h2><ul>
-<li>定义：将大脑视为心理活动的物质本体，综合研究二者关系；</li>
-<li>发展历史；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/GyTpC9.png" alt="发展历史"></p>
-<ul>
-<li>神经心理学三大分支：临床、实验和认知神经心理学。其中认知神经心理学：从信息加工的角度来了解与具体认知心理活动相关的大脑结构和功能，采集神经心理测试过程中的大量脑活动相关数据，以信息加工角度挖掘潜在神经机制；</li>
-</ul>
-<h2 id="2-7-心理学过程的神经学机制"><a href="#2-7-心理学过程的神经学机制" class="headerlink" title="2.7 心理学过程的神经学机制"></a>2.7 心理学过程的神经学机制</h2><ul>
-<li>现代大脑功能理论模型</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/04/06/Gy7QJJ.png" alt="Model"></p>
-]]></content>
-      <categories>
-        <category>神经工程学</category>
-      </categories>
-      <tags>
-        <tag>公开课笔记</tag>
+        <tag>MI</tag>
       </tags>
   </entry>
   <entry>
@@ -291,8 +114,8 @@
         <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>MI</tag>
         <tag>迁移学习</tag>
+        <tag>MI</tag>
       </tags>
   </entry>
   <entry>
@@ -379,7 +202,7 @@
     <content><![CDATA[<blockquote>
 <p>课程简介：本课程是国立台湾大学<a href="http://speech.ee.ntu.edu.tw/~tlkagk/index.html" target="_blank" rel="noopener">李宏毅(Hung-yi Lee)老师</a>2020年春期课程，课程内容包含回归、分类、深度学习、迁移学习、强化学习、元学习等重要内容。<img src="https://s1.ax1x.com/2020/03/31/GK1wfs.png" alt="知识图谱"></p>
 </blockquote>
-<p><strong>Note:</strong> 作为非计算机科班出生的理工科学生，能够找到一个适合自己学习的机器学习课程并不容易。以前常自己啃西瓜书，后来发现没有系统的接受课程训练，对ML的理解并不深入。此外，李老师的台湾腔以及幽默的授课风格真让人爱了。本文及后续博文是关于本课程的学习笔记，其中<font color=shocking pink >绿色部分</font>是自己不成熟的思考。</p>
+<p><strong>Note:</strong> 作为非计算机科班出生的理工科学生，能够找到一个适合自己学习的机器学习课程并不容易。以前常自己啃西瓜书，后来发现没有系统的接受课程训练，对ML的理解并不深入。此外，李老师的台湾腔以及幽默的授课风格真让人爱了。<font color=red>以后会在<a href="https://github.com/hisunjiang/courses_LeeML" target="_blank" rel="noopener">我的github仓库</a>上传学习笔记(课件上的修改)和作业代码。</font></p>
 <a id="more"></a>
 
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><ul>
@@ -406,78 +229,6 @@
       </categories>
       <tags>
         <tag>公开课学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【神经工程学】第二章 神经生理心理基础 part1</title>
-    <url>/2020/03/30/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A5%9E%E7%BB%8F%E7%94%9F%E7%90%86%E5%BF%83%E7%90%86%E5%9F%BA%E7%A1%80-part1/</url>
-    <content><![CDATA[<p>第二章 神经生理心理基础</p>
-<ul>
-<li>2.1 人脑的进化和发育</li>
-<li>2.2 脑的组成</li>
-<li>2.3 神经元和胶质细胞</li>
-</ul>
-<a id="more"></a>
-
-<h2 id="2-1-人脑的进化和发育"><a href="#2-1-人脑的进化和发育" class="headerlink" title="2.1 人脑的进化和发育"></a>2.1 人脑的进化和发育</h2><ul>
-<li>大脑重量约1.5kg，约体重的2%，大脑消耗人体总能量的20%；</li>
-</ul>
-<h2 id="2-2-脑的组成"><a href="#2-2-脑的组成" class="headerlink" title="2.2 脑的组成"></a>2.2 脑的组成</h2><ul>
-<li>脑的切面</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/Gn2891.png" alt="大脑切面"></p>
-<ul>
-<li>脑的组成。婴儿摇晃症候群是白质受损的表现；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/Gn2ygP.png" alt="灰质与白质"></p>
-<p><img src="https://s1.ax1x.com/2020/03/30/GnWtTe.png" alt="大脑沟回"></p>
-<p>额叶与高级决策处理、意识等相关；顶叶主要与运动、感觉相关；枕叶与视觉处理相关；颞叶与听觉和平衡相关；</p>
-<ul>
-<li>沿用至今的大脑Brodmann分区；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/GnWjpR.png" alt="大脑分区"></p>
-<ul>
-<li>间脑与脑干；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/GuP6kF.png" alt="间脑与脑干"></p>
-<ul>
-<li>丘脑；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/GuitHK.png" alt="丘脑"></p>
-<ul>
-<li>小脑；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/Gui43j.png" alt="小脑"></p>
-<h2 id="神经元与胶质细胞"><a href="#神经元与胶质细胞" class="headerlink" title="神经元与胶质细胞"></a>神经元与胶质细胞</h2><ul>
-<li>神经系统的<strong>基本功能单位</strong>是神经元（Neuron）；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/GuFvo8.png" alt="神经元"></p>
-<ul>
-<li>神经元按照功能可以分为感觉神经元、中间神经元和运动神经元。下图展示一个典型的运动神经元结构；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/GukjXR.png" alt="运动神经元结构"></p>
-<ul>
-<li>树突棘——神经元接受信息的关键部位，位于树突上的微小分支；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/GuAqVP.png" alt="树突棘"></p>
-<ul>
-<li>胶质细胞——不产生动作电位，不传递信息，如下图中的红色和蓝色部分；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/GuEBIf.png" alt="胶质细胞"></p>
-<ul>
-<li>胶质细胞的分类；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/GuVNfU.png" alt="胶质细胞"></p>
-<ul>
-<li>胶质细胞功能，星形细胞形成血管屏障，少突胶质细胞形成髓鞘，小胶质细胞参与脑组织损伤的修复；</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/03/30/GuVgfO.png" alt="胶质细胞功能"></p>
-]]></content>
-      <categories>
-        <category>神经工程学</category>
-      </categories>
-      <tags>
-        <tag>公开课笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -518,12 +269,12 @@
       </tags>
   </entry>
   <entry>
-    <title>【神经工程学】第一章 绪论</title>
+    <title>【神经工程学】绪论</title>
     <url>/2020/03/28/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/</url>
     <content><![CDATA[<blockquote>
 <p>课程简介：神经工程是生物医学工程的一个分支学科，它致力于采用工程技术实现认识、修复、替代、增强或探索神经系统的特性。作为一个相对新兴的学科，尽管神经工程发展很快，但与其相关的信息和研究仍相对有限。一个制约研究队伍扩大的重要原因是我们的大学很少向本科生研究生传授有关神经科学的知识和技能。因此本导论课程的教学目的是通过对神经工程学中的一些基础问题及研究的介绍使得生物医学工程专业学生对神经工程学有初步的认识和了解。掌握神经工程学研究领域中一些基本的概念、原理和逻辑思维，为之前学习到的知识寻找应用范例，进而为有志于从事神经工程学研究的学生提供系统的知识培养。</p>
 </blockquote>
-<p><strong>Note：</strong>本课程由天津大学医学部明东教授主讲，学堂在线可在线观看、下载slides。本文及以后的系列博客主要更新自己在学习本课程的一些笔记和感触（<font color=shocking pink >绿色字体</font>）,方便今后复习和写论文。</p>
+<p><strong>Note：</strong>本课程由天津大学医学部明东教授主讲，学堂在线可在线观看、下载slides。学习笔记（slides笔记）可以看<a href="https://github.com/hisunjiang/Neruoengineering" target="_blank" rel="noopener">我的github仓库</a>。</p>
 <p>第一章 绪论</p>
 <ul>
 <li>1.1 神经工程的前世今生</li>
