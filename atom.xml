@@ -42,9 +42,9 @@
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="MI" scheme="https://hisunjiang.gitee.io/tags/MI/"/>
+    
+      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -74,9 +74,9 @@
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
-    
       <category term="MI" scheme="https://hisunjiang.gitee.io/tags/MI/"/>
+    
+      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -159,10 +159,10 @@
   
   <entry>
     <title>【ML】Introduction</title>
-    <link href="https://hisunjiang.gitee.io/2020/03/31/Introduction/"/>
-    <id>https://hisunjiang.gitee.io/2020/03/31/Introduction/</id>
+    <link href="https://hisunjiang.gitee.io/2020/03/31/[ML]Introduction/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/31/[ML]Introduction/</id>
     <published>2020-03-31T02:23:09.000Z</published>
-    <updated>2020-04-09T04:08:46.800Z</updated>
+    <updated>2020-04-13T04:52:16.363Z</updated>
     
     <summary type="html">
     
@@ -174,10 +174,10 @@
     </summary>
     
     
-      <category term="机器学习" scheme="https://hisunjiang.gitee.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="公开课" scheme="https://hisunjiang.gitee.io/categories/%E5%85%AC%E5%BC%80%E8%AF%BE/"/>
     
     
-      <category term="公开课学习" scheme="https://hisunjiang.gitee.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://hisunjiang.gitee.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -215,10 +215,10 @@
   
   <entry>
     <title>【神经工程学】绪论</title>
-    <link href="https://hisunjiang.gitee.io/2020/03/28/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/"/>
-    <id>https://hisunjiang.gitee.io/2020/03/28/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/</id>
+    <link href="https://hisunjiang.gitee.io/2020/03/28/%E3%80%90%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E5%AD%A6%E3%80%91%E7%BB%AA%E8%AE%BA/"/>
+    <id>https://hisunjiang.gitee.io/2020/03/28/%E3%80%90%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E5%AD%A6%E3%80%91%E7%BB%AA%E8%AE%BA/</id>
     <published>2020-03-28T12:52:29.000Z</published>
-    <updated>2020-04-09T05:04:23.873Z</updated>
+    <updated>2020-04-13T04:51:12.223Z</updated>
     
     <summary type="html">
     
@@ -235,10 +235,10 @@
     </summary>
     
     
-      <category term="神经工程学" scheme="https://hisunjiang.gitee.io/categories/%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E5%AD%A6/"/>
+      <category term="公开课" scheme="https://hisunjiang.gitee.io/categories/%E5%85%AC%E5%BC%80%E8%AF%BE/"/>
     
     
-      <category term="公开课笔记" scheme="https://hisunjiang.gitee.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0/"/>
+      <category term="神经工程学" scheme="https://hisunjiang.gitee.io/tags/%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E5%AD%A6/"/>
     
   </entry>
   
@@ -343,7 +343,7 @@
     <link href="https://hisunjiang.gitee.io/2020/03/26/%E4%B8%80%E4%BA%9B%E8%AE%BA%E6%96%87idea/"/>
     <id>https://hisunjiang.gitee.io/2020/03/26/%E4%B8%80%E4%BA%9B%E8%AE%BA%E6%96%87idea/</id>
     <published>2020-03-26T13:32:26.000Z</published>
-    <updated>2020-03-27T01:45:02.470Z</updated>
+    <updated>2020-04-13T05:04:07.156Z</updated>
     
     <summary type="html">
     
@@ -352,10 +352,8 @@
     </summary>
     
     
-      <category term="学习生活" scheme="https://hisunjiang.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/"/>
     
-    
-      <category term="idea" scheme="https://hisunjiang.gitee.io/tags/idea/"/>
+      <category term="备忘录" scheme="https://hisunjiang.gitee.io/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     
   </entry>
   
@@ -364,7 +362,7 @@
     <link href="https://hisunjiang.gitee.io/2020/03/26/%E5%85%89%E5%BD%B1/"/>
     <id>https://hisunjiang.gitee.io/2020/03/26/%E5%85%89%E5%BD%B1/</id>
     <published>2020-03-26T05:03:45.000Z</published>
-    <updated>2020-03-26T11:19:08.543Z</updated>
+    <updated>2020-04-13T05:03:12.424Z</updated>
     
     <summary type="html">
     
@@ -376,8 +374,6 @@
     
     
       <category term="杂记" scheme="https://hisunjiang.gitee.io/tags/%E6%9D%82%E8%AE%B0/"/>
-    
-      <category term="摄影" scheme="https://hisunjiang.gitee.io/tags/%E6%91%84%E5%BD%B1/"/>
     
   </entry>
   
@@ -414,7 +410,7 @@
     <link href="https://hisunjiang.gitee.io/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/"/>
     <id>https://hisunjiang.gitee.io/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</id>
     <published>2020-03-26T01:20:30.000Z</published>
-    <updated>2020-03-27T01:44:24.691Z</updated>
+    <updated>2020-04-13T05:03:37.617Z</updated>
     
     <summary type="html">
     
@@ -423,10 +419,8 @@
     </summary>
     
     
-      <category term="学习生活" scheme="https://hisunjiang.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/"/>
     
-    
-      <category term="编程" scheme="https://hisunjiang.gitee.io/tags/%E7%BC%96%E7%A8%8B/"/>
+      <category term="备忘录" scheme="https://hisunjiang.gitee.io/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     
   </entry>
   

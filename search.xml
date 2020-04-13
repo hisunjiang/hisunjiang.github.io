@@ -53,8 +53,8 @@
         <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>迁移学习</tag>
         <tag>MI</tag>
+        <tag>迁移学习</tag>
       </tags>
   </entry>
   <entry>
@@ -71,17 +71,22 @@
 <a id="more"></a>
 
 <h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="Manifold-learning"><a href="#Manifold-learning" class="headerlink" title="Manifold learning"></a>Manifold learning</h2><h3 id="Riemannian-Distance"><a href="#Riemannian-Distance" class="headerlink" title="Riemannian Distance"></a>Riemannian Distance</h3><p>EEG trial 之间的协方差矩阵是对称正定(SPD)的，故该矩阵在黎曼空间内，可以表示为流形上的一个点<font color=red>（关于流形学习的论文可以参考F. Lotte：Riemannian approaches in brain-computer interfaces: A review）</font>。两个SPD矩阵之前的黎曼距离以流形上的测地线geodesic长度衡量</p>
-<p><img src="https://s1.ax1x.com/2020/04/04/G0MrKP.png" alt="RD"></p>
+<img src="https://s1.ax1x.com/2020/04/04/G0MrKP.png" alt="RD" style="zoom:50%;" />
+
 <p>对两个SPD矩阵进行可逆线性变换，不改变两者在流形上的黎曼距离，这个性质被称为同余不变性(congruence invariance)。</p>
 <h3 id="MDRM"><a href="#MDRM" class="headerlink" title="MDRM"></a>MDRM</h3><p>首先，黎曼空间上的黎曼均值距离定义为使黎曼距离平方的均值最小化的矩阵P，该矩阵可以通过梯度下降求解。</p>
-<p><img src="https://s1.ax1x.com/2020/04/04/G0QddU.png" alt="RM"></p>
+<img src="https://s1.ax1x.com/2020/04/04/G0QddU.png" alt="RM" style="zoom:50%;" />
+
 <p>MDRM分类器的思想类似于欧式空间下的欧氏距离分类，通过计算测试数据的协方差矩阵，然后度量其与各个类别黎曼均值之间的黎曼距离，距离最小者属于该类别</p>
-<p><img src="https://s1.ax1x.com/2020/04/04/G0lPO0.png" alt="MDRM"></p>
-<h3 id="RA-MDRM"><a href="#RA-MDRM" class="headerlink" title="RA-MDRM"></a>RA-MDRM</h3><p>Zanini et al.  2018年提出了一种黎曼空间下的迁移学习方法，即RA-MDRM，利用其他session和subject的数据来增强当前受试者的分类效果。作者对来自不同session和subject的协方差矩阵根据一个共同参考进行align。论文认为当大脑在执行一个特定的任务时，流形上的协方差矩阵会向同一个方向移动，则可以将协方差矩阵按参考方向进行聚集，那我们只需要观察距离参考态的相对位移即可。所以该方法的关键是找到该reference matrix，该矩阵通过受试者的空闲态求得<strong>（MI为受试者不进行运动想象时的数据，ERP中即受试者未受外界刺激non-target stimuli时的数据，故ERP中需要知道标签信息，才能确定非目标刺激）</strong>，利用空闲态数据矩阵可求得黎曼均值$\bar{R}$。然后利用该参考矩阵对当前数据进行变换，即可减少inter-session/subject variability </p>
-<p><img src="https://s1.ax1x.com/2020/04/04/G08D76.png" alt="reference"></p>
+<img src="https://s1.ax1x.com/2020/04/04/G0lPO0.png" alt="MDRM" style="zoom:50%;" />
+
+<h3 id="RA-MDRM"><a href="#RA-MDRM" class="headerlink" title="RA-MDRM"></a>RA-MDRM</h3><p>Zanini et al.  2018年提出了一种黎曼空间下的迁移学习方法，即RA-MDRM。<font color=red>利用每个session/subject计算平均参考矩阵<strong>（这里利用的是所有类别的数据）</strong>，利用该矩阵对当前session/subject中的trial进行align，从而使得不同session/subject之间的数据具有相同的分布，这样即可增加训练集。</font>论文认为当大脑在执行一个特定的任务时，流形上的协方差矩阵会向同一个方向移动，则可以将协方差矩阵按参考方向进行聚集，那我们只需要观察距离参考态的相对位移即可。所以该方法的关键是找到该reference matrix，该矩阵通过受试者的空闲态求得<strong>（MI为受试者不进行运动想象时的数据，ERP中即受试者未受外界刺激non-target stimuli时的数据，故ERP中需要知道标签信息，才能确定非目标刺激）</strong>，利用空闲态数据矩阵可求得黎曼均值$\bar{R}$。然后利用该参考矩阵对当前数据进行变换，即可减少inter-session/subject variability </p>
+<img src="https://s1.ax1x.com/2020/04/04/G08D76.png" alt="reference" style="zoom:50%;" />
+
 <h3 id="关于协方差矩阵"><a href="#关于协方差矩阵" class="headerlink" title="关于协方差矩阵"></a>关于协方差矩阵</h3><p>在运动想象中，trial$X_i$的协方差矩阵可以通过$\sum_i=X_iX^T_i$求得，但是该矩阵只能反映大脑活动的空间分布，这对MI任务是适合的。但是针对ERP范式，其最优分类信息在时域上，所以需要对该协方差矩阵计算进行修改，增加时域信息。<font color=shocking pink>这里开一个脑洞：目前识别SSVEP均是利用了其时域信息进行相关性计算，类似于CSP等空域滤波方法效果不好是不是因为该协方差矩阵没有进行改进呢？我们是否可以按这里的方法有效ERP信号的时域和空域信息，从而达到很好的效果呢？</font></p>
-<p><img src="https://s1.ax1x.com/2020/04/04/G0YnpD.png" alt="ERP 协方差计算"></p>
-<h2 id="EEG-data-alignment-in-the-Euclidean-Space-EA"><a href="#EEG-data-alignment-in-the-Euclidean-Space-EA" class="headerlink" title="EEG data alignment in the Euclidean Space (EA)"></a>EEG data alignment in the Euclidean Space (EA)</h2><h3 id="The-EA"><a href="#The-EA" class="headerlink" title="The EA"></a>The EA</h3><p>通过使不同受试者的数据分布相似化，从而一个数据集中训练好的分类器在其他受试者上亦会有较好的分类效果，这是TL的基本思想。和RA一样，EA也需要构造参考矩阵$\bar{R}$，该矩阵通过计算所有数据的的协方差算术平均而得。<font color=shocking pink>论文中说参考矩阵是由受试者所有trial计算而来，意思是包括所有类别的数据一起？这和【论文笔记 5】中采用的cross-subject不同，该作者是按照类别进行迁移的。</font></p>
+<img src="https://s1.ax1x.com/2020/04/04/G0YnpD.png" alt="ERP 协方差计算" style="zoom:50%;" />
+
+<h2 id="EEG-data-alignment-in-the-Euclidean-Space-EA"><a href="#EEG-data-alignment-in-the-Euclidean-Space-EA" class="headerlink" title="EEG data alignment in the Euclidean Space (EA)"></a>EEG data alignment in the Euclidean Space (EA)</h2><h3 id="The-EA"><a href="#The-EA" class="headerlink" title="The EA"></a>The EA</h3><p>通过使不同受试者的数据分布相似化，从而一个数据集中训练好的分类器在其他受试者上亦会有较好的分类效果，这是TL的基本思想。和RA一样，EA也需要构造参考矩阵$\bar{R}$，该矩阵通过计算所有数据的的协方差算术平均而得。<font color=shocking pink>这里的参考矩阵是按照每个session/subject计算得来的，这和【论文笔记 5】中采用的cross-subject不同，该作者是按照类别进行迁移的。</font></p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G0asr4.png" alt="EA"></p>
 <h3 id="Comparison-with-RA"><a href="#Comparison-with-RA" class="headerlink" title="Comparison with RA"></a>Comparison with RA</h3><ul>
 <li>EA和RA在进行数据对齐后，其协方差矩阵的黎曼距离并不会改变（同余不变性）；</li>
@@ -94,7 +99,7 @@
 <p>上述为来自Dataset 2a的受试者1左右手想象数据，纵轴表示导联，数值表示经过EA前后的数据相关系数大小。可以发现，经过EA操作后，数据幅值明显降低，并且相关性减小。</p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G00dPI.png" alt="EA results 2"></p>
 <p>作者通过t-Stochastic Neighbor Embedding (t-SNE) 算法，将来自MI和ERP范式的受试者测试数据（红色点）和训练数据（蓝色点）进行特征可视化，左右图分别为EA前后的效果。可以发现EA可以使训练和测试数据分布变得统一（除个别情况，后面会讨论）。</p>
-<h2 id="Offline-unsupervised-classification"><a href="#Offline-unsupervised-classification" class="headerlink" title="Offline unsupervised classification"></a>Offline unsupervised classification</h2><p>对数据集进行leave-one-subject-out cross-validation，每次选择一个受试者当test set，其余受试者为training set。算法大概流程为：<strong>利用所有受试者（包括测试受试者）的数据求参考矩阵$\bar{R}$；</strong>再对数据进行align操作，使不同受试者之间的数据相似性增加；利用其它受试者的数据训练分类器，并在当前受试者上进行测试。<font color=red>为什么说这里是无监督学习呢？这是针对当前受试者而言，我们并没有利用来自他的标签信息，我们的SVM等分类器模型是根据其他受试者训练而得。</font><font color=shocking pink>这里我们利用了所有受试者的数据计算参考矩阵，包括test set。<strong>这里我们并不知道test set的标签，意味着EA在计算参考矩阵的时候，是没有将类别分开的。</strong>而在实际的应用中，test 按trial慢慢送入，故参考矩阵没办法利用当前受试者信息，除非当前受试者已有部分数据，类似于文章后面讨论的在线监督模型。</font></p>
+<h2 id="Offline-unsupervised-classification"><a href="#Offline-unsupervised-classification" class="headerlink" title="Offline unsupervised classification"></a>Offline unsupervised classification</h2><p>对数据集进行leave-one-subject-out cross-validation，每次选择一个受试者当test set，其余受试者为training set。算法大概流程为：<strong>利用每一个受试者（包括测试受试者）的数据分别求参考矩阵$\bar{R}$；</strong>再对数据进行align操作，使不同受试者之间的数据相似性增加；利用其它受试者的数据训练分类器，并在当前受试者上进行测试。<font color=red>为什么说这里是无监督学习呢？这是针对当前受试者而言，我们并没有利用来自他的标签信息，我们的SVM等分类器模型是根据其他受试者训练而得。</font><font color=shocking pink>而在实际的应用中，test 按trial慢慢送入，故参考矩阵没办法利用当前受试者信息，除非当前受试者已有部分数据，类似于文章后面讨论的在线监督模型。</font></p>
 <h3 id="MI-Datasets"><a href="#MI-Datasets" class="headerlink" title="MI Datasets"></a>MI Datasets</h3><p><img src="https://s1.ax1x.com/2020/04/04/G0DGAH.png" alt="MI"></p>
 <p>首先可以看到，不管是RA还是EA，应用过后均取得了较好的效果；EA-CSP-LDA的效果最佳。</p>
 <h3 id="ERP-Dataset"><a href="#ERP-Dataset" class="headerlink" title="ERP Dataset"></a>ERP Dataset</h3><p><img src="https://s1.ax1x.com/2020/04/04/G0DgCn.png" alt="ERP"></p>
@@ -114,8 +119,8 @@
         <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>迁移学习</tag>
         <tag>MI</tag>
+        <tag>迁移学习</tag>
       </tags>
   </entry>
   <entry>
@@ -129,12 +134,11 @@
 <p><img src="https://s1.ax1x.com/2020/04/02/GYPzvV.png" alt="ONE PIECE"></p>
 <a id="more"></a>
 
-<h2 id="这里面记录了什么呢？"><a href="#这里面记录了什么呢？" class="headerlink" title="这里面记录了什么呢？"></a>这里面记录了什么呢？</h2><h3 id="大多数是论文笔记"><a href="#大多数是论文笔记" class="headerlink" title="大多数是论文笔记"></a>大多数是论文笔记</h3><p><strong>毕竟看论文才是研究生的日常。</strong>以前喜欢论文打印出来阅读，笔记心得什么的都写在上面，后来发现离开实验室太不方便了，特别是这次疫情深有体会。本人是做脑-机接口(Brain-Computer Interface, BCI)的水硕一名，主要研究方向是稳态视觉诱发电位(Steady-State Visual Evoked Potential, SSVEP)识别<font color=red>（真不想说自己是做研究的…我这垃圾水平别玷污了研究这个神圣的词）</font>。所以呢，论文笔记关于BCI/SSVEP的多一些。当然，还会更新一些信号处理、机器学习的内容。我觉得用博客做论文笔记真是一件很必要的事，能够转述别人的论文成果，能够总结其中的要点，能够开一些脑洞……对自己的提升都会有很大帮助。毕竟，不能脱口而出乃至授人以渔的知识，都不是自己已经掌握的知识。这里的笔记记录主要是方便自己思考和回顾，如果想看高质量的人工智能论文解读和推荐，转<a href="http://www.paperweekly.site/" target="_blank" rel="noopener">Paperweekly</a>。</p>
+<h2 id="这里面记录了什么呢？"><a href="#这里面记录了什么呢？" class="headerlink" title="这里面记录了什么呢？"></a>这里面记录了什么呢？</h2><h3 id="大多数是论文笔记"><a href="#大多数是论文笔记" class="headerlink" title="大多数是论文笔记"></a>大多数是论文笔记</h3><p><strong>毕竟看论文才是研究生的日常。</strong>以前喜欢论文打印出来阅读，笔记心得什么的都写在上面，后来发现离开实验室太不方便了，特别是这次疫情深有体会。本人是做脑-机接口(Brain-Computer Interface, BCI)的水硕一名，主要研究方向是稳态视觉诱发电位(Steady-State Visual Evoked Potential, SSVEP)识别<font color=red>（真不想说自己是做研究的…我这垃圾水平别玷污了研究这个神圣的词）</font>。所以呢，论文笔记关于BCI/SSVEP的多一些。当然，还会更新一些信号处理、机器学习的内容。我觉得用博客做论文笔记真是一件很必要的事，能够转述别人的论文成果，能够总结其中的要点，能够开一些脑洞……对自己的提升都会有很大帮助。毕竟，不能脱口而出乃至授人以渔的知识，都不是自己已经掌握的知识。这里的笔记记录主要是方便自己思考和回顾。</p>
 <h3 id="部分为一些杂记"><a href="#部分为一些杂记" class="headerlink" title="部分为一些杂记"></a>部分为一些杂记</h3><p>包括一些心灵鸡汤和随笔。</p>
-<p><strong>学习真是一件很神奇的事，你会越来越发现自己有多无知又有多值得努力。</strong>我爱我的母校西大，但是我却遗憾自己在那里没能接受到前沿的教育，这可能是大多数高校存在的问题。本科的时候是在电子科创实验室，主要做一些控制方面的东西，也得过一些全国的奖，什么电赛、全国机器人大赛之类的。后来参加的比赛多了，见识过其他学校的同学水平，那时候才意识到自己眼界和能力有多欠缺。那种感觉就好像是你在使用旧式步枪，而对方已经开始应用自动制导了一样。虽然你正中十环，但对方给你的震慑力远比这微不足道的成绩更值得留意。那时候我开始对AI这个行业抱有强烈的兴趣，后来看过一些零星的报道和书籍，这里推荐微软亚洲研究院院长洪小文2017年在清华的报告：<a href="https://www.msra.cn/zh-cn/news/features/hon-the-brief-history-of-intelligence-1" target="_blank" rel="noopener">以科学的方式赤裸裸地剖析人工智能</a>。</p>
-<p><strong>保持好奇心和激情是一件很难却很酷的事。</strong>我记得推免的时候系主任问我以后的规划，我说我想学智能算法让自己做的机器人有灵魂，哈哈哈，现在想想这种话也好意思在这么多老师面前说出口。后来来到了CQU，套用实验室师兄毕业论文中的致谢以表达我对导师们的感激之情：先生不以余学术浅陋，将余纳入门墙，从此言传身教，亲生相授。学生不敏，未习得先生一二，然耳濡目染，亦有所获。虽然自己很菜，但所幸对现在的研究方向颇为感兴趣，希望勤勤恳恳有所获。BCI以后肯定会很火，毕竟我的偶像Elon Musk也在17年创办了Neruolink。</p>
+<p><strong>学习真是一件很神奇的事，你会越来越发现自己有多无知又有多值得努力。</strong>本科的时候是在电子科创实验室，主要做一些控制方面的东西，也得过一些全国的奖，什么电赛、全国机器人大赛之类的。后来参加的比赛多了，见识过其他学校的同学水平，那时候才意识到自己眼界和能力有多欠缺。那种感觉就好像是你在使用旧式步枪，而对方已经开始应用自动制导了一样。虽然你正中十环，但对方给你的震慑力远比这微不足道的成绩更值得留意。那时候我开始对AI这个行业抱有强烈的兴趣，后来看过一些零星的报道和书籍，这里推荐微软亚洲研究院院长洪小文2017年在清华的报告：<a href="https://www.msra.cn/zh-cn/news/features/hon-the-brief-history-of-intelligence-1" target="_blank" rel="noopener">以科学的方式赤裸裸地剖析人工智能</a>。</p>
+<p><strong>保持好奇心和激情是一件很难却很酷的事。</strong>我记得推免的时候系主任问我以后的规划，我说我想学智能算法让自己做的机器人有灵魂，哈哈哈，现在想想这种话也好意思在这么多老师面前说出口。后来来到了CQU，套用实验室师兄毕业论文中的致谢以表达我对导师们的感激之情：先生不以余学术浅陋，将余纳入门墙，从此言传身教，亲生相授。学生不敏，未习得先生一二，然耳濡目染，亦有所获。虽然自己很菜，但所幸对现在的研究方向颇为感兴趣，希望勤勤恳恳有所获。</p>
 <h3 id="还有一些关于爱好"><a href="#还有一些关于爱好" class="headerlink" title="还有一些关于爱好"></a>还有一些关于爱好</h3><p>以后会在博客中开专栏更摄影的东西。</p>
-<p><strong>一定要开始学剪辑了。</strong>感觉没点爱好生活好像失去了一些灵魂要素。都在B站观望摄影好多年了，迟迟不开始主要是因为穷……等着今年一定要把α6400或者M6 mark II买了。会旅拍真是一件很酷的技能，无论是转场、运镜还是剪辑，早点熟练就可以早点记录下一些精彩的故事。</p>
 <p>&nbsp; &nbsp;</p>
 <p>“人的梦想是不会终止的”</p>
 <p>对喜欢的事多一点偏执和理想主义挺好</p>
@@ -198,7 +202,7 @@
   </entry>
   <entry>
     <title>【ML】Introduction</title>
-    <url>/2020/03/31/Introduction/</url>
+    <url>/2020/03/31/%5BML%5DIntroduction/</url>
     <content><![CDATA[<blockquote>
 <p>课程简介：本课程是国立台湾大学<a href="http://speech.ee.ntu.edu.tw/~tlkagk/index.html" target="_blank" rel="noopener">李宏毅(Hung-yi Lee)老师</a>2020年春期课程，课程内容包含回归、分类、深度学习、迁移学习、强化学习、元学习等重要内容。<img src="https://s1.ax1x.com/2020/03/31/GK1wfs.png" alt="知识图谱"></p>
 </blockquote>
@@ -225,10 +229,10 @@
 </ul>
 ]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>公开课</category>
       </categories>
       <tags>
-        <tag>公开课学习</tag>
+        <tag>机器学习</tag>
       </tags>
   </entry>
   <entry>
@@ -270,7 +274,7 @@
   </entry>
   <entry>
     <title>【神经工程学】绪论</title>
-    <url>/2020/03/28/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA/</url>
+    <url>/2020/03/28/%E3%80%90%E7%A5%9E%E7%BB%8F%E5%B7%A5%E7%A8%8B%E5%AD%A6%E3%80%91%E7%BB%AA%E8%AE%BA/</url>
     <content><![CDATA[<blockquote>
 <p>课程简介：神经工程是生物医学工程的一个分支学科，它致力于采用工程技术实现认识、修复、替代、增强或探索神经系统的特性。作为一个相对新兴的学科，尽管神经工程发展很快，但与其相关的信息和研究仍相对有限。一个制约研究队伍扩大的重要原因是我们的大学很少向本科生研究生传授有关神经科学的知识和技能。因此本导论课程的教学目的是通过对神经工程学中的一些基础问题及研究的介绍使得生物医学工程专业学生对神经工程学有初步的认识和了解。掌握神经工程学研究领域中一些基本的概念、原理和逻辑思维，为之前学习到的知识寻找应用范例，进而为有志于从事神经工程学研究的学生提供系统的知识培养。</p>
 </blockquote>
@@ -329,10 +333,10 @@
 <p><img src="https://s1.ax1x.com/2020/03/28/GAvMcj.png" alt="太空实验"></p>
 ]]></content>
       <categories>
-        <category>神经工程学</category>
+        <category>公开课</category>
       </categories>
       <tags>
-        <tag>公开课笔记</tag>
+        <tag>神经工程学</tag>
       </tags>
   </entry>
   <entry>
@@ -464,19 +468,17 @@
 <a id="more"></a>
 
 <ol>
-<li><p>采用对抗生成网络来增加数据集，这一点在情绪脑机接口上已经实现了（参考上海交大吕宝粮老师的研究）。</p>
+<li>采用对抗生成网络来增加数据集，这一点在情绪脑机接口上已经实现了（参考上海交大吕宝粮老师的研究）。</li>
+<li>迁移学习在SSVEP上的应用，数据迁移、特征迁移、模型迁移。<ul>
+<li>【论文笔记 7】中模型参数的迁移方法移植到TRCA上。</li>
+<li>采用【论文笔记 6】EA进行子空间迁移，目前正在做。</li>
+</ul>
 </li>
-<li><p>迁移学习已经应用到BCI上了，但是在SSVEP上的应用并不多见？可以在清华的数据集上测试一下，进行受试者之间的自适应。</p>
-</li>
-<li><p>清华19年研究了疲劳对SSVEP的影响，发现不同程度的疲劳会对SSVEP的相位和幅值产生影响。刚好14年他们有一篇文章，关于相位锁定CCA的研究（ρ-CCA），是否可以根据检测疲劳从而进行相位自适应？查阅过很多论文，主要难点在疲劳和相位之间的量化分析上…</p>
-</li>
+<li>清华19年研究了疲劳对SSVEP的影响，发现不同程度的疲劳会对SSVEP的相位和幅值产生影响。刚好14年他们有一篇文章，关于相位锁定CCA的研究（ρ-CCA），是否可以根据检测疲劳从而进行相位自适应？查阅过很多论文，主要难点在疲劳和相位之间的量化分析上…</li>
 </ol>
 ]]></content>
-      <categories>
-        <category>学习生活</category>
-      </categories>
       <tags>
-        <tag>idea</tag>
+        <tag>备忘录</tag>
       </tags>
   </entry>
   <entry>
@@ -490,7 +492,6 @@
 ]]></content>
       <tags>
         <tag>杂记</tag>
-        <tag>摄影</tag>
       </tags>
   </entry>
   <entry>
@@ -550,11 +551,8 @@
 <li><a href="https://docsmall.com/" target="_blank" rel="noopener">docsmall</a><br>一个非常简洁清新的图片压缩、GIF压缩、PDF压缩和分割网站，无广告。</li>
 </ol>
 ]]></content>
-      <categories>
-        <category>学习生活</category>
-      </categories>
       <tags>
-        <tag>编程</tag>
+        <tag>备忘录</tag>
       </tags>
   </entry>
 </search>
