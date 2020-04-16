@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    【论文笔记 7】Weighted Transfer Learning for MI |  Q. Sun&#39;s Blog
+    【论文笔记 8】Cross-Device Shared Latent Responses |  Q. Sun&#39;s Blog
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -33,7 +33,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-Weighted-Transfer-Learning-for-MI" class="article article-type-post" itemscope
+  <article id="post-Cross-Device-Shared-Latent-Responses" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -41,7 +41,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  【论文笔记 7】Weighted Transfer Learning for MI
+  【论文笔记 8】Cross-Device Shared Latent Responses
 </h1>
  
 
@@ -50,8 +50,8 @@
 
     
     <div class="article-meta">
-      <a href="/2020/04/08/Weighted-Transfer-Learning-for-MI/" class="article-date">
-  <time datetime="2020-04-08T06:46:42.000Z" itemprop="datePublished">2020-04-08</time>
+      <a href="/2020/04/16/Cross-Device-Shared-Latent-Responses/" class="article-date">
+  <time datetime="2020-04-16T04:52:55.000Z" itemprop="datePublished">2020-04-16</time>
 </a>
       
   <div class="article-category">
@@ -65,7 +65,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.1k字</span>
+            <span class="post-count">1.6k字</span>
         </span>
     </span>
 
@@ -74,7 +74,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">4分钟</span>
+            <span class="post-count">5分钟</span>
         </span>
     </span>
 </div>
@@ -99,50 +99,50 @@
       
 
       
-      <center>Weighted Transfer Learning for Improving Motor Imagery-Based Brain–Computer Interface</center>  
+      <center>Facilitating Calibration in High-Speed BCI Spellers
+    via Leveraging Cross-Device Shared Latent Responses</center>  
 
-<center>Ahmed M. Azab  et al.，谢菲尔德大学， 2019</center>
+<center>Masaki Nakanishi  et al.，加州大学圣迭戈分校，2020</center>
 
-<center>IEEE TRANSACTIONS ON NEURAL SYSTEMS AND REHABILITATION ENGINEERING </center>
+<center>Ieee Transactions on Biomedical Engineering</center>
 
-<p><strong>Abstract:</strong> 提出了一种基于模型参数的迁移学习方法。通过已有数据求得模型，将该模型参数迁移到含少量训练样本的target subject训练过程中，实现inter-subject 和 inter-session之间的迁移。针对已有数据和当前受试者之间可能存在的特征空间不一致等问题，在原迁移学习基础上增加了权重因子，实现对样本的筛选，这里相似度量方法采用KL散度。实验在3个公开数据集上进行了测试，分类模型采用逻辑回归。</p>
-<p><strong>Note:</strong> 本文采用基于模型的迁移方法；提出了根据KL散度的样本筛选方法；逻辑回归。</p>
+<p><strong>Abstract:</strong> 本文提出了一种device-to-device的迁移学习方法。实验测试了受试者利用实验室湿电极设备和移动式干电极设备进行数据采集时，相互之间数据迁移的可能性，同时探讨了三种电极分布组合的迁移效果。作者认为对来自不同设备的信号进行空间滤波后，其信号在一个潜在域(Latent Domain)上具有高度的相关性。其中，源域空间滤波器讨论了三种：AVG, CCA, TRCA，对source domian的信号进行空间滤波后，通过最小二乘回归找到target domain的空间滤波器，最后计算分别来自不同域的变换之后信号之间的相关性，实现分类（这里将相关系数与标准的CCA结果进行了融合）。目标刺激数40，数据长度1.5s，结果表明通过迁移学习后性能比标准CCA好；由TRCA构成的空间滤波器效果最佳；<font color=red>迁移学习方法没有进行标准训练的TRCA性能好，相差较大(7 blocks作为训练集)！</font></p>
+<p><strong>Note:</strong> SSVEP领域唯一一篇cross-device文章；类似于子空间学习；同一受试者不同实验设备；讨论了为什么迁移后性能比不上标准分类器的原因。</p>
 <a id="more"></a>
 
-<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="Logistic-Regression-Based-Transfer-Learning-Algorithm-LTL"><a href="#Logistic-Regression-Based-Transfer-Learning-Algorithm-LTL" class="headerlink" title="Logistic Regression-Based Transfer Learning Algorithm (LTL)"></a>Logistic Regression-Based Transfer Learning Algorithm (LTL)</h2><p>本文采用逻辑回归作为分类器，迁移学习的实现分两步：第一步根据已有数据构造source domain的分类器模型；第二步在target domian模型训练过程中，正则项加入评估不同域模型参数相似性的因子。</p>
-<h3 id="第一步-source-domain训练"><a href="#第一步-source-domain训练" class="headerlink" title="第一步 source domain训练"></a>第一步 source domain训练</h3><p>逻辑回归是一个基本的二分类模型，通过对线性模型进行变换，从而进行概率预测。模型预测值为一概率函数，对于二分类任务，通常认为0.5为分类阈值。该模型可以用logistic sigmoid函数表示为</p>
-<img src="https://s1.ax1x.com/2020/04/08/GWJ4Z6.png" alt="logistic sigmoid" style="zoom:50%;" />
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="论文思想"><a href="#论文思想" class="headerlink" title="论文思想"></a>论文思想</h2><p>作者认为理想情况下，针对某一事件产生的诱发响应(evoked source responses)是独立于设备和电极分布的，因此可以通过合适的空间滤波来对这些活动进行估计，从而task-relevant evoked responses可以在不同设备之间实现迁移。本文对同一受试者进行不同设备的数据采集，设备1为64导ActiveTwo system (BioSemi, Inc.)湿电极设备，设备2为30导Quick-30 system (Cognionics, Inc.)  移动式干电极设备。通过对来自不同设备的数据进行空间滤波，则在latent domain上两者的相关性较大。<strong>本文讨论了三种空间滤波方式：Channel averaging (AVG) , CCA, TRCA。</strong></p>
+<p><img src="https://s1.ax1x.com/2020/04/16/Jk98Gd.png" alt="论文思想"></p>
+<h2 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h2><p>10名受试者，实验范式为40刺激数的SSVEP speller，刺激频率8~15.8Hz，间隔0.2Hz，范式类似于清华的benchmark dataset。trial时长为2.5s，包含1s的提示，1.5s刺激。干电极设备先进行测试，然后湿电极设备，两个session在同一天完成，每个session包含8 blocks，session间有休息时间。</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkPYHf.png" alt="实验范式"></p>
+<h2 id="Proposed-target-identification-scheme"><a href="#Proposed-target-identification-scheme" class="headerlink" title="Proposed target-identification scheme"></a>Proposed target-identification scheme</h2><p>对source domain的信号进行空间滤波，得到ensemble 空间滤波器（这里采用ensemble方法）</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkioWQ.png" alt="组合滤波器"></p>
+<p>然后针对第n-th刺激频率，对源域均值信号$\bar{\chi_n}$进行空间滤波，即可得到individual transfered template $z_n=W^t\bar{\chi_n}$。源域的空间滤波器并不能在目标域上达到很好的降噪效果，故需要对test trial分别构造一个空间滤波器，该过程通过最小二乘回归实现。假设测试trial为x，对应的空间滤波器为w，那么优化问题变为最小化滤波后源域和目标域的信号L2范数</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkE29S.png" alt="目标域最佳滤波器"></p>
+<p>该问题的解可以通过下式估计</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkVsKJ.png" alt="JkVsKJ.png"></p>
+<p>至此，我们得到了源域和目标域变换到latent domian的信号$z_n$和$\hat{w}^t_nx$，接下来计算它们之间的相关系数，即可得到$r^{(1)}_n$，将该结果和test trial的CCA结果$r^{(2)}_n$，进行融合最后实现分类</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/Jkefje.png" alt="结果融合"></p>
+<h2 id="Performance-evaluation"><a href="#Performance-evaluation" class="headerlink" title="Performance evaluation"></a>Performance evaluation</h2><p>对每个设备的延迟时间(latency delay)进行分类计算（借鉴相位锁定CCA中的计算过程，包括回归分析，切线计算等等），最后按照延迟L s分别进行数据的提取。本文提出的方法首先需要跟无训练过程的CCA进行比较（如果连无训练集的CCA都比不过，那没必要进行数据迁移了…）。本文中的训练和测试数据分别来自不同的设备，所有的方法均采用了filter bank，通带数量为5。实验对比了三种不同的电极分布</p>
+<img src="https://s1.ax1x.com/2020/04/16/Jku87d.png" alt="Jku87d.png" style="zoom:67%;" />
 
-<p>该模型中，$S$表示某一个session，$X_s$表示样本特征矩阵，$W_s$为模型参数，即线性模型的权重。该模型的概率输出P根据分类阈值即可进行类别预测。该模型的关键是对参数$W_s$的估计，可以通过以下目标函数求得</p>
-<img src="https://s1.ax1x.com/2020/04/08/GWtPAK.png" alt="GWtPAK.png" style="zoom:50%;" />
-
-<img src="https://s1.ax1x.com/2020/04/08/GWtuHP.png" alt="GWtuHP.png" style="zoom:50%;" />
-
-<p>(2)式中，H表示交叉熵，表示对训练误差的度量；正则项表示对$W_s$中较大值的惩罚，以减小过拟合。该目标函数求解在训练集上完成，同时我们知道<strong>回归模型无局部最优解</strong>，故该函数存在唯一的最小值，可以通过梯度下降或者牛顿法求解。</p>
-<h3 id="第二步-target-domain训练"><a href="#第二步-target-domain训练" class="headerlink" title="第二步 target domain训练"></a>第二步 target domain训练</h3><p>对于new subject，模型的目标函数$L_1(w_S)$不仅要是分类错误率最低，还应让估计的模型参数$W_s$和source domain中尽量靠近，这样以实现模型参数的迁移，从而减少训练样本。</p>
-<img src="https://s1.ax1x.com/2020/04/08/GWUT0I.png" alt="GWUT0I.png" style="zoom:50%;" />
-
-<p>其中$R_{TL}$表示对$W_t$和$W_s$的相似性惩罚</p>
-<img src="https://s1.ax1x.com/2020/04/08/GWaVc4.png" alt="GWaVc4.png" style="zoom:50%;" />
-
-<p><font color=red>这里需要注意的是：$μ$和$\sum_{TL}$均是对source domain数据分布的估计，且该迁移过程是按照session/subject来的。</font></p>
-<h2 id="Weighted-Logistic-Regression-Based-Transfer-Learning-Algorithm"><a href="#Weighted-Logistic-Regression-Based-Transfer-Learning-Algorithm" class="headerlink" title="Weighted Logistic Regression-Based Transfer Learning Algorithm"></a>Weighted Logistic Regression-Based Transfer Learning Algorithm</h2><p><strong>把每个session进行同样权重的迁移是可行的吗？实际上由于EEG信号的非平稳性，EEG信号经过CSP后会进入不同的特征空间。</strong><font color=shocking pink>什么情况下需要调整权重？首先我们需要衡量数据的空间分布是否一致。</font></p>
-<p>本文作者通过计算source domian session和target domain session之间的KL散度，评估session之间的相似性，从而调整迁移过程中的$W_s$系数。首先，通常认为数据经过CSP后特征呈现正态分布，那么对于两正态分布的数据集$N_0(μ_0, \sum_0)$和$N_1(μ_1, \sum_1)$，KL散度为</p>
-<img src="https://s1.ax1x.com/2020/04/08/GWrbrD.png" alt="GWrbrD.png" style="zoom:50%;" />
-
-<p>这里的KL散度计算有监督和无监督两种方式。<strong>监督(S-wLTL)</strong>: session中按照类别不同分别计算KL散度，最后取平均；<strong>无监督(Us-wLTL)</strong>: session直接计算。最后得加权系数为</p>
-<img src="https://s1.ax1x.com/2020/04/08/GWy9YR.png" alt="GWy9YR.png" style="zoom:50%;" />
-
-<p>$R_{TL}$中参数更新为</p>
-<img src="https://s1.ax1x.com/2020/04/08/GW6l59.png" alt="GW6l59.png" style="zoom:50%;" />
-
-<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p><img src="https://s1.ax1x.com/2020/04/08/GWcaQ0.png" alt="Results"></p>
-<p>可以看到，在三个数据集上，当受试者trial数较少时，迁移学习方法能够达到显著的效果。随着trial数增加，迁移学习的效果不再明显。<strong>值得注意的是，对于dataset 3，trial数增加的时候迁移学习效果不如SS（SVM）方法效果。这可能是因为当前数据集只包含5个受试者的原因。</strong></p>
-<h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><ul>
-<li>KL散度计算时需要极端协方差矩阵，当受试者trial数不足时，该协方差矩阵并不能真实反映数据分布情况，可以尝试对协方差矩阵进行更有效的估计或者采用其他的度量方法；</li>
-<li>我们根据KL散度计算加权系数时，power值为4，改超参数未进行优化；</li>
-<li>本文的方法并不局限与逻辑回归的应用。</li>
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p>从下图可以看到提出的方法优于标准CCA，同时采用TRCA作为空间滤波器具有较好的效果（子带数为5，training trials为8）。</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/Jku4uF.png" alt="结果1"></p>
+<p>当训练集数量较小时，TRCA优势并不明显。</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkMPZ4.png" alt="结果2"></p>
+<h1 id="Discussions"><a href="#Discussions" class="headerlink" title="Discussions"></a>Discussions</h1><ul>
+<li>cross-device之所以能够提升性能，归功于空间滤波器的降噪作用，以及在transfered template中保留的相位信息；</li>
+<li>AVG方法虽然比其他两种方法差，但是仍然表现出了较标准CCA好或者相当的效果，这是因为通过AVG能够将template中的相位信息凸显出来，这是CCA所不具备的；</li>
+<li>当受试者training trials数量较小时，基于CCA的空间滤波器更好（TRCA的训练需要较多的trial）；</li>
+<li>由于实验中设备的使用顺序是固定的，所以实验结果可能引入了来自于实验顺序的影响（疲劳或者注意力变化等）；</li>
+<li>本文并没有考虑不同session间隔的影响，是否实验在不同的天数内测试会发生变化？</li>
+<li>本文所提出的方法没有标准的ensemble TRCA好，下面是training trial为8时的对比，标准TRCA中，8个trial采用LOO计算。</li>
 </ul>
+<p><img src="https://s1.ax1x.com/2020/04/16/Jk1YS1.png" alt="迁移学习疑惑行为"></p>
+<p><font color=shocking pink>首先需要对本文的方法进行解释，以TRCA作为空间滤波器为例。我们利用源域所有数据训练好TRCA的空间滤波器，然后对来自目标域的数据一个个trial分别进行优化，得到目标域的空间滤波器，然后计算相关系数。意思说对于目标域的计算，其实是一个无训练集的无监督学习过程。这又有点类似于【论文笔记 7】中的模型参数迁移，只是对于目标域的参数计算并不同。<strong>为什么作者不尝试类似于【论文笔记 6】中的，将源域数据变换后增加目标域训练集数量呢？那么接下来在目标域进行TRCA的训练，再对比标准的TRCA。</strong></font></p>
+<ul>
+<li>本文提出的方法还可以通过正则化进行优化，从而移除不好的channel。</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkGYSs.png" alt="正则化改进"></p>
 
       
       <!-- reward -->
@@ -166,7 +166,7 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MI/" rel="tag">MI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/" rel="tag">迁移学习</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSVEP/" rel="tag">SSVEP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/" rel="tag">迁移学习</a></li></ul>
 
 
     </footer>
@@ -177,19 +177,10 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/04/16/Cross-Device-Shared-Latent-Responses/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            【论文笔记 8】Cross-Device Shared Latent Responses
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/04/04/Euclidean-space-data-alignment/" class="article-nav-link">
+      <a href="/2020/04/08/Weighted-Transfer-Learning-for-MI/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">【论文笔记 6】Euclidean space data alignment</div>
+        <div class="article-nav-title">【论文笔记 7】Weighted Transfer Learning for MI</div>
       </a>
     
   </nav>

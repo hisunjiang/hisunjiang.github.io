@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-04-08T08:05:34.459Z</updated>
+  <updated>2020-04-16T07:00:37.873Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【论文笔记 8】Cross-Device Shared Latent Responses</title>
+    <link href="https://hisunjiang.gitee.io/2020/04/16/Cross-Device-Shared-Latent-Responses/"/>
+    <id>https://hisunjiang.gitee.io/2020/04/16/Cross-Device-Shared-Latent-Responses/</id>
+    <published>2020-04-16T04:52:55.000Z</published>
+    <updated>2020-04-16T07:00:37.873Z</updated>
+    
+    <summary type="html">
+    
+      &lt;center&gt;Facilitating Calibration in High-Speed BCI Spellers
+    via Leveraging Cross-Device Shared Latent Responses&lt;/center&gt;  
+
+&lt;center&gt;Masaki Nakanishi  et al.，加州大学圣迭戈分校，2020&lt;/center&gt;
+
+&lt;center&gt;Ieee Transactions on Biomedical Engineering&lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt; 本文提出了一种device-to-device的迁移学习方法。实验测试了受试者利用实验室湿电极设备和移动式干电极设备进行数据采集时，相互之间数据迁移的可能性，同时探讨了三种电极分布组合的迁移效果。作者认为对来自不同设备的信号进行空间滤波后，其信号在一个潜在域(Latent Domain)上具有高度的相关性。其中，源域空间滤波器讨论了三种：AVG, CCA, TRCA，对source domian的信号进行空间滤波后，通过最小二乘回归找到target domain的空间滤波器，最后计算分别来自不同域的变换之后信号之间的相关性，实现分类（这里将相关系数与标准的CCA结果进行了融合）。目标刺激数40，数据长度1.5s，结果表明通过迁移学习后性能比标准CCA好；由TRCA构成的空间滤波器效果最佳；&lt;font color=red&gt;迁移学习方法没有进行标准训练的TRCA性能好，相差较大(7 blocks作为训练集)！&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; SSVEP领域唯一一篇cross-device文章；类似于子空间学习；同一受试者不同实验设备；讨论了为什么迁移后性能比不上标准分类器的原因。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
+    
+  </entry>
   
   <entry>
     <title>【论文笔记 7】Weighted Transfer Learning for MI</title>
@@ -131,9 +164,9 @@
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
-    
       <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
     
   </entry>
   
@@ -268,9 +301,9 @@
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
-    
       <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
     
   </entry>
   
@@ -410,7 +443,7 @@
     <link href="https://hisunjiang.gitee.io/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/"/>
     <id>https://hisunjiang.gitee.io/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</id>
     <published>2020-03-26T01:20:30.000Z</published>
-    <updated>2020-04-13T05:03:37.617Z</updated>
+    <updated>2020-04-13T08:16:13.238Z</updated>
     
     <summary type="html">
     

@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【论文笔记 8】Cross-Device Shared Latent Responses</title>
+    <url>/2020/04/16/Cross-Device-Shared-Latent-Responses/</url>
+    <content><![CDATA[<center>Facilitating Calibration in High-Speed BCI Spellers
+    via Leveraging Cross-Device Shared Latent Responses</center>  
+
+<center>Masaki Nakanishi  et al.，加州大学圣迭戈分校，2020</center>
+
+<center>Ieee Transactions on Biomedical Engineering</center>
+
+<p><strong>Abstract:</strong> 本文提出了一种device-to-device的迁移学习方法。实验测试了受试者利用实验室湿电极设备和移动式干电极设备进行数据采集时，相互之间数据迁移的可能性，同时探讨了三种电极分布组合的迁移效果。作者认为对来自不同设备的信号进行空间滤波后，其信号在一个潜在域(Latent Domain)上具有高度的相关性。其中，源域空间滤波器讨论了三种：AVG, CCA, TRCA，对source domian的信号进行空间滤波后，通过最小二乘回归找到target domain的空间滤波器，最后计算分别来自不同域的变换之后信号之间的相关性，实现分类（这里将相关系数与标准的CCA结果进行了融合）。目标刺激数40，数据长度1.5s，结果表明通过迁移学习后性能比标准CCA好；由TRCA构成的空间滤波器效果最佳；<font color=red>迁移学习方法没有进行标准训练的TRCA性能好，相差较大(7 blocks作为训练集)！</font></p>
+<p><strong>Note:</strong> SSVEP领域唯一一篇cross-device文章；类似于子空间学习；同一受试者不同实验设备；讨论了为什么迁移后性能比不上标准分类器的原因。</p>
+<a id="more"></a>
+
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="论文思想"><a href="#论文思想" class="headerlink" title="论文思想"></a>论文思想</h2><p>作者认为理想情况下，针对某一事件产生的诱发响应(evoked source responses)是独立于设备和电极分布的，因此可以通过合适的空间滤波来对这些活动进行估计，从而task-relevant evoked responses可以在不同设备之间实现迁移。本文对同一受试者进行不同设备的数据采集，设备1为64导ActiveTwo system (BioSemi, Inc.)湿电极设备，设备2为30导Quick-30 system (Cognionics, Inc.)  移动式干电极设备。通过对来自不同设备的数据进行空间滤波，则在latent domain上两者的相关性较大。<strong>本文讨论了三种空间滤波方式：Channel averaging (AVG) , CCA, TRCA。</strong></p>
+<p><img src="https://s1.ax1x.com/2020/04/16/Jk98Gd.png" alt="论文思想"></p>
+<h2 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h2><p>10名受试者，实验范式为40刺激数的SSVEP speller，刺激频率8~15.8Hz，间隔0.2Hz，范式类似于清华的benchmark dataset。trial时长为2.5s，包含1s的提示，1.5s刺激。干电极设备先进行测试，然后湿电极设备，两个session在同一天完成，每个session包含8 blocks，session间有休息时间。</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkPYHf.png" alt="实验范式"></p>
+<h2 id="Proposed-target-identification-scheme"><a href="#Proposed-target-identification-scheme" class="headerlink" title="Proposed target-identification scheme"></a>Proposed target-identification scheme</h2><p>对source domain的信号进行空间滤波，得到ensemble 空间滤波器（这里采用ensemble方法）</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkioWQ.png" alt="组合滤波器"></p>
+<p>然后针对第n-th刺激频率，对源域均值信号$\bar{\chi_n}$进行空间滤波，即可得到individual transfered template $z_n=W^t\bar{\chi_n}$。源域的空间滤波器并不能在目标域上达到很好的降噪效果，故需要对test trial分别构造一个空间滤波器，该过程通过最小二乘回归实现。假设测试trial为x，对应的空间滤波器为w，那么优化问题变为最小化滤波后源域和目标域的信号L2范数</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkE29S.png" alt="目标域最佳滤波器"></p>
+<p>该问题的解可以通过下式估计</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkVsKJ.png" alt="JkVsKJ.png"></p>
+<p>至此，我们得到了源域和目标域变换到latent domian的信号$z_n$和$\hat{w}^t_nx$，接下来计算它们之间的相关系数，即可得到$r^{(1)}_n$，将该结果和test trial的CCA结果$r^{(2)}_n$，进行融合最后实现分类</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/Jkefje.png" alt="结果融合"></p>
+<h2 id="Performance-evaluation"><a href="#Performance-evaluation" class="headerlink" title="Performance evaluation"></a>Performance evaluation</h2><p>对每个设备的延迟时间(latency delay)进行分类计算（借鉴相位锁定CCA中的计算过程，包括回归分析，切线计算等等），最后按照延迟L s分别进行数据的提取。本文提出的方法首先需要跟无训练过程的CCA进行比较（如果连无训练集的CCA都比不过，那没必要进行数据迁移了…）。本文中的训练和测试数据分别来自不同的设备，所有的方法均采用了filter bank，通带数量为5。实验对比了三种不同的电极分布</p>
+<img src="https://s1.ax1x.com/2020/04/16/Jku87d.png" alt="Jku87d.png" style="zoom:67%;" />
+
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p>从下图可以看到提出的方法优于标准CCA，同时采用TRCA作为空间滤波器具有较好的效果（子带数为5，training trials为8）。</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/Jku4uF.png" alt="结果1"></p>
+<p>当训练集数量较小时，TRCA优势并不明显。</p>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkMPZ4.png" alt="结果2"></p>
+<h1 id="Discussions"><a href="#Discussions" class="headerlink" title="Discussions"></a>Discussions</h1><ul>
+<li>cross-device之所以能够提升性能，归功于空间滤波器的降噪作用，以及在transfered template中保留的相位信息；</li>
+<li>AVG方法虽然比其他两种方法差，但是仍然表现出了较标准CCA好或者相当的效果，这是因为通过AVG能够将template中的相位信息凸显出来，这是CCA所不具备的；</li>
+<li>当受试者training trials数量较小时，基于CCA的空间滤波器更好（TRCA的训练需要较多的trial）；</li>
+<li>由于实验中设备的使用顺序是固定的，所以实验结果可能引入了来自于实验顺序的影响（疲劳或者注意力变化等）；</li>
+<li>本文并没有考虑不同session间隔的影响，是否实验在不同的天数内测试会发生变化？</li>
+<li>本文所提出的方法没有标准的ensemble TRCA好，下面是training trial为8时的对比，标准TRCA中，8个trial采用LOO计算。</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/16/Jk1YS1.png" alt="迁移学习疑惑行为"></p>
+<p><font color=shocking pink>首先需要对本文的方法进行解释，以TRCA作为空间滤波器为例。我们利用源域所有数据训练好TRCA的空间滤波器，然后对来自目标域的数据一个个trial分别进行优化，得到目标域的空间滤波器，然后计算相关系数。意思说对于目标域的计算，其实是一个无训练集的无监督学习过程。这又有点类似于【论文笔记 7】中的模型参数迁移，只是对于目标域的参数计算并不同。<strong>为什么作者不尝试类似于【论文笔记 6】中的，将源域数据变换后增加目标域训练集数量呢？那么接下来在目标域进行TRCA的训练，再对比标准的TRCA。</strong></font></p>
+<ul>
+<li>本文提出的方法还可以通过正则化进行优化，从而移除不好的channel。</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/16/JkGYSs.png" alt="正则化改进"></p>
+]]></content>
+      <categories>
+        <category>BCI</category>
+        <category>论文笔记</category>
+      </categories>
+      <tags>
+        <tag>迁移学习</tag>
+        <tag>SSVEP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【论文笔记 7】Weighted Transfer Learning for MI</title>
     <url>/2020/04/08/Weighted-Transfer-Learning-for-MI/</url>
     <content><![CDATA[<center>Weighted Transfer Learning for Improving Motor Imagery-Based Brain–Computer Interface</center>  
@@ -183,8 +240,8 @@
         <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>SSVEP</tag>
         <tag>迁移学习</tag>
+        <tag>SSVEP</tag>
       </tags>
   </entry>
   <entry>
@@ -373,8 +430,8 @@
         <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>SSVEP</tag>
         <tag>迁移学习</tag>
+        <tag>SSVEP</tag>
       </tags>
   </entry>
   <entry>
@@ -529,6 +586,9 @@
 <li><p><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程</a><br>里面包含很多编程语言的学习资料，平时复习语法时可以看一看。特别推荐里面提供的很多在线工具。</p>
 </li>
 <li><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000" target="_blank" rel="noopener">廖雪峰官网Git教程</a><br>里面Git教程很详细，还有一些Python、Java的教程。</p>
+</li>
+<li><p><a href="https://scikit-learn.org/stable/index.html" target="_blank" rel="noopener">scikit-learn</a></p>
+<p>Python的机器学习包。</p>
 </li>
 <li><p><a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">Notepad++</a><br>一个非常简洁小巧的代码编辑器，支持多种源码的查看和编辑。</p>
 </li>
