@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-     Q. Sun&#39;s Blog
+    【论文笔记 9】UI and UD training of CNN for SSVEP BCI |  Q. Sun&#39;s Blog
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -32,52 +32,17 @@
 <body>
   <div id="app">
     <main class="content">
-      
-<section class="cover">
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover0.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">Q. Sun&#39;s Blog</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-
-<div id="main">
-  <section class="outer">
-  <article class="articles">
-    
-    
-    
-    
-    <article id="post-Exploiting-inter-subject-information-for-SSVEP-based-BCI" class="article article-type-post" itemscope
+      <section class="outer">
+  <article id="post-UI-and-UD-training-of-CNN-for-SSVEP-BCI" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
     
     <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/"
-    >【论文笔记 3】Exploiting inter-subject information for SSVEP-based BCI</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  【论文笔记 9】UI and UD training of CNN for SSVEP BCI
+</h1>
  
 
     </header>
@@ -85,8 +50,8 @@
 
     
     <div class="article-meta">
-      <a href="/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/" class="article-date">
-  <time datetime="2020-03-27T08:57:06.000Z" itemprop="datePublished">2020-03-27</time>
+      <a href="/2020/05/09/UI-and-UD-training-of-CNN-for-SSVEP-BCI/" class="article-date">
+  <time datetime="2020-05-09T06:50:51.000Z" itemprop="datePublished">2020-05-09</time>
 </a>
       
   <div class="article-category">
@@ -95,364 +60,207 @@
 
       
       
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <center>Enhancing performances of SSVEP-based brain–computer interfaces via exploiting inter-subject information</center>
-
-<center>Xiaogang Chen，清华大学，2015</center>
-
-<center>Journal of Neural Engineering</center>
-
-<p><strong>Abstract:</strong>  根据已有的受试者数据构造template，用于新的受试者进行分类，类似于迁移学习的思想。于是作者提出了transfer template based canonical correlation analysis (tt-CCA) ，在线实验过程中利用新的测试数据进行template更新。数据格式和清华的公开数据集一致，包括40个刺激和6个block。采用LOO进行正确率验证，即11个受试者作为source subject，用来构造transfer template。</p>
-<p><strong>Note:</strong>  有迁移学习的意思，但是只是简单的受试者平均而已，这样的效果肯定没有对每个受试者进行template计算正确率高。需要注意的是，本文的方法是不需要训练集的，而且引入了在线更新的手段，使得其自适应更强。</p>
-      
-      <a class="article-more-link" href="/2020/03/27/Exploiting-inter-subject-information-for-SSVEP-based-BCI/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSVEP/" rel="tag">SSVEP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/" rel="tag">迁移学习</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-Alpha-neurofeedback-training-NFT" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/27/Alpha-neurofeedback-training-NFT/"
-    >【论文笔记 2】Alpha neurofeedback training(NFT)</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/03/27/Alpha-neurofeedback-training-NFT/" class="article-date">
-  <time datetime="2020-03-27T04:07:46.000Z" itemprop="datePublished">2020-03-27</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/BCI/">BCI</a> / <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <center>Alpha neurofeedback training improves SSVEP-based BCI performance</center>
-
-<center>万峰团队，澳门大学，2016</center>
-
-<center>Journal of Neural Engineering</center>
-
-<p><strong>Abstract:</strong> 作者通过对受试者进行神经反馈训练，使其individual alpha band (IAB) amplitudes  产生下调，从而增加受试者对SSVEP的敏感性。实验表明，经历NFT的受试者产生的SSVEP信噪比(+16.5%)和分类正确率(+20.3%)均明显提升。实验分两步，第一是发现alpha波与SSVEP之间的关系，第二根据第一步实验结果对受试者进行训练，最后对比有无训练的受试者之间差异。刺激为7~15Hz之间的10个频率，6导，算法采用标准CCA。</p>
-<p><strong>Note:</strong> alpha波会对SSVEP产生影响（已有论文发现，引言中有介绍），可以通过调制alpha波增强SSVEP；引言列出了诸多关于神经反馈训练的参考论文。</p>
-      
-      <a class="article-more-link" href="/2020/03/27/Alpha-neurofeedback-training-NFT/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSVEP/" rel="tag">SSVEP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A5%9E%E7%BB%8F%E5%8F%8D%E9%A6%88%E8%AE%AD%E7%BB%83/" rel="tag">神经反馈训练</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-Learning-across-multi-stimulus" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/26/Learning-across-multi-stimulus/"
-    >【论文笔记 1】Learning across multi-stimulus</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/03/26/Learning-across-multi-stimulus/" class="article-date">
-  <time datetime="2020-03-26T14:53:45.000Z" itemprop="datePublished">2020-03-26</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/BCI/">BCI</a> / <a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <center>Learning across multi-stimulus enhances target recognition methods in SSVEP-based BCIs</center>  
-
-<center>万峰团队，澳门大学，2020</center>
-
-<center>Journal of Neural Engineering</center>
-
-<p><strong>Abstract:</strong> SSVEP传统的特征提取方法是利用一个target刺激构造一个权值矩阵w，而本文作者表明，可以通过目标刺激周围的几个刺激共同计算w，从而得到更好的特征提取效果，即multi-stimulus。作者将multi-stimulus和extended CCA、ensemble TRCA结合（使用了filter bank），在清华的35名受试者数据集上得到了较好的效果。</p>
-<p><strong>Note:</strong> 利用非目标刺激也能增加目标识别的准确性；提供了一种不同算法的融合策略。</p>
-      
-      <a class="article-more-link" href="/2020/03/26/Learning-across-multi-stimulus/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSVEP/" rel="tag">SSVEP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/" rel="tag">特征提取</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-一些论文idea" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/26/%E4%B8%80%E4%BA%9B%E8%AE%BA%E6%96%87idea/"
-    >一些论文idea</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/03/26/%E4%B8%80%E4%BA%9B%E8%AE%BA%E6%96%87idea/" class="article-date">
-  <time datetime="2020-03-26T13:32:26.000Z" itemprop="datePublished">2020-03-26</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>记录一些不成熟的点子，以后有一定知识量了再来解释和实现。</p>
-      
-      <a class="article-more-link" href="/2020/03/26/%E4%B8%80%E4%BA%9B%E8%AE%BA%E6%96%87idea/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%87%E5%BF%98%E5%BD%95/" rel="tag">备忘录</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-光影" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/26/%E5%85%89%E5%BD%B1/"
-    >光影</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/03/26/%E5%85%89%E5%BD%B1/" class="article-date">
-  <time datetime="2020-03-26T05:03:45.000Z" itemprop="datePublished">2020-03-26</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>下午透过窗口缝隙照射在墙上的光。</p>
-<p>…</p>
-      
-      <a class="article-more-link" href="/2020/03/26/%E5%85%89%E5%BD%B1/">more...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%AE%B0/" rel="tag">杂记</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-  </article>
-  
-
-  
-  <nav class="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
-  </nav>
-  
-</section>
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1k字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">3分钟</span>
+        </span>
+    </span>
 </div>
 
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <center>Comparing user-dependent and user-independent training of CNN
+    for SSVEP BCI</center>
+
+<center>Aravind Ravi  et al.，滑铁卢大学，2020</center>
+
+<center>Journal of Neural Engineering</center>
+
+<p><strong>Abstract:</strong> 论文探讨了两种模型训练方式下的分类效果，即user-dependent(UD)和user-independent(UI)。模型采用CNN，输入特征为多通道EEG信号FFT变换后的结果，分别幅值特征和复数特征。CNN采用了四层网络结构，输入层、输出层和两卷积层。实验数据有两个，第一个是作者实验室采集的数据，第二个是加州大学圣迭戈分校数据。实验验证了采用复数作为输入特征的有效性，同时CNN模型优于CCA、FBCCA和TRCA。</p>
+<p><strong>Note:</strong> 给出了CNN-SSVEP的相关文章参考，揭示了当前的研究现状；可通过滑窗增加训练数据集；同一个trial前后几秒的数据相位可能会发生变化，这不利于TRCA模型。</p>
+<a id="more"></a>
+
+<h1 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h1><h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><p><strong>Dataset1：</strong>21名受试者，7刺激，6导（实际用3导），刺激频率范围为8.423Hz-14.87Hz，执行7个run，每个run重复八次。刺激时长达6s。</p>
+<p><strong>Dataset2：</strong>10名受试者，2刺激，8导，频率范围9.25Hz-14.75Hz，15个block，每个block 12 trial。刺激时长达4s。</p>
+<p><strong>对单个试次进行滑窗，增加数据集。单个类别训练数据最少达54trial。</strong></p>
+<h2 id="输入特征"><a href="#输入特征" class="headerlink" title="输入特征"></a>输入特征</h2><h3 id="Magnitude-spectrum-features"><a href="#Magnitude-spectrum-features" class="headerlink" title="Magnitude spectrum features"></a>Magnitude spectrum features</h3><p>对时域信号进行傅里叶变换后，计算幅值（实部虚部平方和开更号）。采用3Hz-35Hz频带范围数据作为特征点，本文中共计110点。以dataset1为例，构造的输入特征矩阵为</p>
+<img src="https://s1.ax1x.com/2020/05/09/YQT7WR.png" alt="YQT7WR.png" style="zoom:70%;" />
+
+<h3 id="Complex-spectrum-features"><a href="#Complex-spectrum-features" class="headerlink" title="Complex spectrum features"></a>Complex spectrum features</h3><p>对于SSVEP信号来说，相位信息非常重要，因此我们应单独把信号相位部分纳入输入矩阵，即FFT后的虚部。以此构造的输入特征矩阵为</p>
+<img src="https://s1.ax1x.com/2020/05/09/YQ7F6P.png" alt="YQ7F6P.png" style="zoom:67%;" />
+
+<h2 id="CNN-framework"><a href="#CNN-framework" class="headerlink" title="CNN framework"></a>CNN framework</h2><img src="https://s1.ax1x.com/2020/05/09/YQ78mT.png" alt="YQ78mT.png" style="zoom:80%;" />
+
+<p>本文采用4层结构的CNN，包含两个卷积层，无池化层。其具体的操作为：</p>
+<ul>
+<li>ReLU作为卷积层激活函数</li>
+<li>Dropout</li>
+<li>Batch Normalization</li>
+<li>输出层采用softmax</li>
+<li>随机梯度下降+momentum</li>
+<li>LOSS采用交叉熵</li>
+</ul>
+<p><font color=red>第一层卷积的作用是评估各通道的贡献（衡量其权重），卷积核为$N_{ch}<em>1$；第二层卷积对输入信号进行谱分析，卷积核1</em>10；两层卷积层filter个数均为$2N_{ch}$。</font></p>
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="分类结果"><a href="#分类结果" class="headerlink" title="分类结果"></a>分类结果</h2><img src="https://s1.ax1x.com/2020/05/09/YQjYKs.png" alt="YQjYKs.png" style="zoom: 67%;" />
+
+<img src="https://s1.ax1x.com/2020/05/09/YQj6M9.png" alt="YQj6M9.png" style="zoom:80%;" />
+
+<p>上述结果是Dataset1和Dataset2上的分类效果，可以看到</p>
+<ul>
+<li>UD方法优于UI方法，这是很明显的；</li>
+<li>采用复数特征的效果优于幅值特征，因为SSVEP相位信息丰富；</li>
+<li><font color=red> FBCCA在Dataset1上效果低于CCA；</font></li>
+<li><font color=red>TRCA分类正确率接近机会水平。</font></li>
+</ul>
+<p>后面两点是比较反常的现象，通常我们认为filter bank添加后效果会明显提升，但这里在作者自己采集的数据上效果变差。这里TRCA效果最差的原因，作者认为是本文进行了滑窗获取数据的原因。<strong>单个试次前后时间段的相位会发生偏移，这会导致TRCA无法提取出任务相关成分。因为测试TRCA时，传统的做法是在刺激onset后取数据，这保证了同刺激下相位的一致性。</strong></p>
+<h2 id="特征可视化"><a href="#特征可视化" class="headerlink" title="特征可视化"></a>特征可视化</h2><img src="https://s1.ax1x.com/2020/05/09/YQxw3F.png" alt="YQxw3F.png" style="zoom:80%;" />
+
+<p>对CNN的输入层，两个卷积层后ReLU的输出进行特征可视化，可以发现</p>
+<ul>
+<li>随着网络加深，类间差异变得明显；</li>
+<li>采用复数作为特征，分类效果更加理想。</li>
+</ul>
+<img src="https://s1.ax1x.com/2020/05/09/YQzsxg.png" alt="YQzsxg.png" style="zoom:80%;" />
+
+<p>上面是对Dataset2所有受试者的第二层卷积后ReLU输出进行特征可视化的结果，可以看到复数特征的分类效果优于幅值特征；<strong>其次通过图(c)可以看到，我们对某一刺激进行单独可视化，CNN把单试次不同时间段的数据进行了分离，表明了CNN具有提取相位信息的能力。</strong></p>
+<h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><ul>
+<li>本文采用了user-independent的方法构建CNN模型，在应用到unseen user上，这是典型的迁移学习问题。在CNN-BCI中，跨被试的论文较少（2018起），这是未来的一个研究重点。</li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>版权声明： </strong s>
+              本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow"
+                target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CNN/" rel="tag">CNN</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSVEP/" rel="tag">SSVEP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/" rel="tag">迁移学习</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+    
+      <a href="/2020/04/16/Cross-Device-Shared-Latent-Responses/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">【论文笔记 8】Cross-Device Shared Latent Responses</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: 'tj6cFv8k9iEEzScWEip9KOak-gzGzoHsz',
+        app_key: 'V0UHIV8UaX5w4IKQMBDsOoui',
+        path: window.location.pathname,
+        notify: 'true',
+        verify: 'false',
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
       <footer class="footer">
   <div class="outer">
     <ul class="list-inline">
@@ -608,6 +416,30 @@
 </script>
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    onClick: (e) => {
+      $('.toc-link').removeClass('is-active-link');
+      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
+      $(e.target.hash).scrollIntoView();
+      return false;
+    }
+  });
+</script>
 
 
 

@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【论文笔记 9】UI and UD training of CNN for SSVEP BCI</title>
+    <url>/2020/05/09/UI-and-UD-training-of-CNN-for-SSVEP-BCI/</url>
+    <content><![CDATA[<center>Comparing user-dependent and user-independent training of CNN
+    for SSVEP BCI</center>
+
+<center>Aravind Ravi  et al.，滑铁卢大学，2020</center>
+
+<center>Journal of Neural Engineering</center>
+
+<p><strong>Abstract:</strong> 论文探讨了两种模型训练方式下的分类效果，即user-dependent(UD)和user-independent(UI)。模型采用CNN，输入特征为多通道EEG信号FFT变换后的结果，分别幅值特征和复数特征。CNN采用了四层网络结构，输入层、输出层和两卷积层。实验数据有两个，第一个是作者实验室采集的数据，第二个是加州大学圣迭戈分校数据。实验验证了采用复数作为输入特征的有效性，同时CNN模型优于CCA、FBCCA和TRCA。</p>
+<p><strong>Note:</strong> 给出了CNN-SSVEP的相关文章参考，揭示了当前的研究现状；可通过滑窗增加训练数据集；同一个trial前后几秒的数据相位可能会发生变化，这不利于TRCA模型。</p>
+<a id="more"></a>
+
+<h1 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h1><h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><p><strong>Dataset1：</strong>21名受试者，7刺激，6导（实际用3导），刺激频率范围为8.423Hz-14.87Hz，执行7个run，每个run重复八次。刺激时长达6s。</p>
+<p><strong>Dataset2：</strong>10名受试者，2刺激，8导，频率范围9.25Hz-14.75Hz，15个block，每个block 12 trial。刺激时长达4s。</p>
+<p><strong>对单个试次进行滑窗，增加数据集。单个类别训练数据最少达54trial。</strong></p>
+<h2 id="输入特征"><a href="#输入特征" class="headerlink" title="输入特征"></a>输入特征</h2><h3 id="Magnitude-spectrum-features"><a href="#Magnitude-spectrum-features" class="headerlink" title="Magnitude spectrum features"></a>Magnitude spectrum features</h3><p>对时域信号进行傅里叶变换后，计算幅值（实部虚部平方和开更号）。采用3Hz-35Hz频带范围数据作为特征点，本文中共计110点。以dataset1为例，构造的输入特征矩阵为</p>
+<img src="https://s1.ax1x.com/2020/05/09/YQT7WR.png" alt="YQT7WR.png" style="zoom:70%;" />
+
+<h3 id="Complex-spectrum-features"><a href="#Complex-spectrum-features" class="headerlink" title="Complex spectrum features"></a>Complex spectrum features</h3><p>对于SSVEP信号来说，相位信息非常重要，因此我们应单独把信号相位部分纳入输入矩阵，即FFT后的虚部。以此构造的输入特征矩阵为</p>
+<img src="https://s1.ax1x.com/2020/05/09/YQ7F6P.png" alt="YQ7F6P.png" style="zoom:67%;" />
+
+<h2 id="CNN-framework"><a href="#CNN-framework" class="headerlink" title="CNN framework"></a>CNN framework</h2><img src="https://s1.ax1x.com/2020/05/09/YQ78mT.png" alt="YQ78mT.png" style="zoom:80%;" />
+
+<p>本文采用4层结构的CNN，包含两个卷积层，无池化层。其具体的操作为：</p>
+<ul>
+<li>ReLU作为卷积层激活函数</li>
+<li>Dropout</li>
+<li>Batch Normalization</li>
+<li>输出层采用softmax</li>
+<li>随机梯度下降+momentum</li>
+<li>LOSS采用交叉熵</li>
+</ul>
+<p><font color=red>第一层卷积的作用是评估各通道的贡献（衡量其权重），卷积核为$N_{ch}<em>1$；第二层卷积对输入信号进行谱分析，卷积核1</em>10；两层卷积层filter个数均为$2N_{ch}$。</font></p>
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="分类结果"><a href="#分类结果" class="headerlink" title="分类结果"></a>分类结果</h2><img src="https://s1.ax1x.com/2020/05/09/YQjYKs.png" alt="YQjYKs.png" style="zoom: 67%;" />
+
+<img src="https://s1.ax1x.com/2020/05/09/YQj6M9.png" alt="YQj6M9.png" style="zoom:80%;" />
+
+<p>上述结果是Dataset1和Dataset2上的分类效果，可以看到</p>
+<ul>
+<li>UD方法优于UI方法，这是很明显的；</li>
+<li>采用复数特征的效果优于幅值特征，因为SSVEP相位信息丰富；</li>
+<li><font color=red> FBCCA在Dataset1上效果低于CCA；</font></li>
+<li><font color=red>TRCA分类正确率接近机会水平。</font></li>
+</ul>
+<p>后面两点是比较反常的现象，通常我们认为filter bank添加后效果会明显提升，但这里在作者自己采集的数据上效果变差。这里TRCA效果最差的原因，作者认为是本文进行了滑窗获取数据的原因。<strong>单个试次前后时间段的相位会发生偏移，这会导致TRCA无法提取出任务相关成分。因为测试TRCA时，传统的做法是在刺激onset后取数据，这保证了同刺激下相位的一致性。</strong></p>
+<h2 id="特征可视化"><a href="#特征可视化" class="headerlink" title="特征可视化"></a>特征可视化</h2><img src="https://s1.ax1x.com/2020/05/09/YQxw3F.png" alt="YQxw3F.png" style="zoom:80%;" />
+
+<p>对CNN的输入层，两个卷积层后ReLU的输出进行特征可视化，可以发现</p>
+<ul>
+<li>随着网络加深，类间差异变得明显；</li>
+<li>采用复数作为特征，分类效果更加理想。</li>
+</ul>
+<img src="https://s1.ax1x.com/2020/05/09/YQzsxg.png" alt="YQzsxg.png" style="zoom:80%;" />
+
+<p>上面是对Dataset2所有受试者的第二层卷积后ReLU输出进行特征可视化的结果，可以看到复数特征的分类效果优于幅值特征；<strong>其次通过图(c)可以看到，我们对某一刺激进行单独可视化，CNN把单试次不同时间段的数据进行了分离，表明了CNN具有提取相位信息的能力。</strong></p>
+<h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><ul>
+<li>本文采用了user-independent的方法构建CNN模型，在应用到unseen user上，这是典型的迁移学习问题。在CNN-BCI中，跨被试的论文较少（2018起），这是未来的一个研究重点。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>BCI</category>
+        <category>论文笔记</category>
+      </categories>
+      <tags>
+        <tag>迁移学习</tag>
+        <tag>SSVEP</tag>
+        <tag>CNN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【论文笔记 8】Cross-Device Shared Latent Responses</title>
     <url>/2020/04/16/Cross-Device-Shared-Latent-Responses/</url>
     <content><![CDATA[<center>Facilitating Calibration in High-Speed BCI Spellers
@@ -53,8 +124,8 @@
         <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>SSVEP</tag>
         <tag>迁移学习</tag>
+        <tag>SSVEP</tag>
       </tags>
   </entry>
   <entry>
@@ -160,9 +231,9 @@
 <h3 id="MI-Datasets"><a href="#MI-Datasets" class="headerlink" title="MI Datasets"></a>MI Datasets</h3><p><img src="https://s1.ax1x.com/2020/04/04/G0DGAH.png" alt="MI"></p>
 <p>首先可以看到，不管是RA还是EA，应用过后均取得了较好的效果；EA-CSP-LDA的效果最佳。</p>
 <h3 id="ERP-Dataset"><a href="#ERP-Dataset" class="headerlink" title="ERP Dataset"></a>ERP Dataset</h3><p><img src="https://s1.ax1x.com/2020/04/04/G0DgCn.png" alt="ERP"></p>
-<h3 id="参考矩阵的取法？"><a href="#参考矩阵的取法？" class="headerlink" title="参考矩阵的取法？"></a>参考矩阵的取法？</h3><p>由前面算法的推导可以看出，参考矩阵对迁移效果影响很关键，然而本文有四种参考矩阵的求法：Riemannian mean of the resting trials (RR), Euclidean mean of the resting trials (ER), Riemannian mean of all imagery trials (RI), and Euclidean mean of all imagery trials (EI) . 采用不同的参考，在MI数据集上进行测试后可以发现，<strong>还是EI（即EA）最佳。</strong></p>
+<h3 id="参考矩阵的取法？"><a href="#参考矩阵的取法？" class="headerlink" title="参考矩阵的取法？"></a>参考矩阵的取法？</h3><p>由前面算法的推导可以看出，参考矩阵对迁移效果影响很关键，然而本文有四种参考矩阵的求法：Riemannian mean of the resting trials (RR), Euclidean mean of the resting trials (ER), Riemannian mean of all imagery trials (RI), and Euclidean mean of all imagery trials (EI) . 采用不同的参考，在MI数据集上进行测试后可以发现，<strong>还是EI（即EA+imagery trials）最佳。</strong></p>
 <p><img src="https://s1.ax1x.com/2020/04/04/G0s4k4.png" alt="G0s4k4.png"></p>
-<h2 id="Simulated-online-supervised-classification"><a href="#Simulated-online-supervised-classification" class="headerlink" title="Simulated online supervised classification"></a>Simulated online supervised classification</h2><p>本文亦进行了在线监督学习，即选取一个受试者的数据，将其中一部分保留作为测试数据，其余部分为在线添加的带标签样本。随着实验的进行，不断的添加标记样本进去，从而更新参考信号，分类器的训练也用到了新添加的标记样本。<font color=red>（这里进行在线监督分类的目的应该是为了验证当前受试者已有样本数对分类效果的影响）。</font><strong>篇幅有限，不具体讨论了，EA的效果较优。</strong></p>
+<h2 id="Simulated-online-supervised-classification"><a href="#Simulated-online-supervised-classification" class="headerlink" title="Simulated online supervised classification"></a>Simulated online supervised classification</h2><p>本文亦进行了在线监督学习，即选取一个受试者的数据，将其中一部分保留作为测试数据，其余部分为在线添加的带标签样本。随着实验的进行，不断的添加标记样本进去，从而更新参考信号，分类器的训练也用到了新添加的标记样本。<strong>target 受试者参考矩阵是根据其已有的部分训练样本求得。</strong><font color=red>（这里进行在线监督分类的目的应该是为了验证当前受试者已有样本数对分类效果的影响）。</font><strong>篇幅有限，不具体讨论了，EA的效果较优。</strong></p>
 <h1 id="Future-work"><a href="#Future-work" class="headerlink" title="Future work"></a>Future work</h1><p>首先，不同受试者之间存在的数据漂移包括三类：<strong>Covariate shift, Prior probability shift, Concept shift</strong>.</p>
 <ul>
 <li>EA仅考虑了covariate shift;</li>
@@ -240,8 +311,8 @@
         <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>SSVEP</tag>
         <tag>迁移学习</tag>
+        <tag>SSVEP</tag>
       </tags>
   </entry>
   <entry>
@@ -430,8 +501,8 @@
         <category>论文笔记</category>
       </categories>
       <tags>
-        <tag>SSVEP</tag>
         <tag>迁移学习</tag>
+        <tag>SSVEP</tag>
       </tags>
   </entry>
   <entry>
@@ -605,10 +676,15 @@
 <li><a href="https://www.grammarly.com/" target="_blank" rel="noopener">Grammarly</a><br>强大的英文写作工具，自动检查语法错误并纠正。搭配<a href="http://www.phrasebank.manchester.ac.uk/" target="_blank" rel="noopener">phasebank</a>（曼彻斯特大学学术英语写作语料库，包括论文each part的写作技巧）和<a href="https://www.english-corpora.org/coca/" target="_blank" rel="noopener">coca</a>（当代美语语料库，可以查看一些词语或者短语的用法，以及在美国出版物中的使用频率）一起使用，英语写作更加标准。</li>
 </ol>
 <h1 id="兴趣区"><a href="#兴趣区" class="headerlink" title="兴趣区"></a>兴趣区</h1><ol>
-<li><a href="https://www.pexels.com/zh-cn/" target="_blank" rel="noopener">Pexels</a><br>由摄影作者分享的素材照片，视频等。免费下载无水印，不需要注册。没事可以看看，提高一下审美。</li>
-<li><a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a><br>高清素材照片免费下载，无需注册。</li>
-<li><a href="https://www.doyoudo.com/" target="_blank" rel="noopener">doyoudo</a><br>Pr、Ps、Ae等软件的教程网。学剪辑当然还是关注B站上的一些摄影师更有收获。</li>
-<li><a href="https://docsmall.com/" target="_blank" rel="noopener">docsmall</a><br>一个非常简洁清新的图片压缩、GIF压缩、PDF压缩和分割网站，无广告。</li>
+<li><p><a href="https://tuchong.com/" target="_blank" rel="noopener">图虫</a></p>
+<p>优质摄影师交流社区。</p>
+</li>
+<li><p><a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a><br>高清素材照片免费下载，无需注册。</p>
+</li>
+<li><p><a href="https://www.doyoudo.com/" target="_blank" rel="noopener">doyoudo</a><br>Pr、Ps、Ae等软件的教程网。学剪辑当然还是关注B站上的一些摄影师更有收获。</p>
+</li>
+<li><p><a href="https://docsmall.com/" target="_blank" rel="noopener">docsmall</a><br>一个非常简洁清新的图片压缩、GIF压缩、PDF压缩和分割网站，无广告。</p>
+</li>
 </ol>
 ]]></content>
       <tags>

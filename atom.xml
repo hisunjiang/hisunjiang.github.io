@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hisunjiang.gitee.io/"/>
-  <updated>2020-04-16T07:00:37.873Z</updated>
+  <updated>2020-05-09T08:15:45.838Z</updated>
   <id>https://hisunjiang.gitee.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【论文笔记 9】UI and UD training of CNN for SSVEP BCI</title>
+    <link href="https://hisunjiang.gitee.io/2020/05/09/UI-and-UD-training-of-CNN-for-SSVEP-BCI/"/>
+    <id>https://hisunjiang.gitee.io/2020/05/09/UI-and-UD-training-of-CNN-for-SSVEP-BCI/</id>
+    <published>2020-05-09T06:50:51.000Z</published>
+    <updated>2020-05-09T08:15:45.838Z</updated>
+    
+    <summary type="html">
+    
+      &lt;center&gt;Comparing user-dependent and user-independent training of CNN
+    for SSVEP BCI&lt;/center&gt;
+
+&lt;center&gt;Aravind Ravi  et al.，滑铁卢大学，2020&lt;/center&gt;
+
+&lt;center&gt;Journal of Neural Engineering&lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt; 论文探讨了两种模型训练方式下的分类效果，即user-dependent(UD)和user-independent(UI)。模型采用CNN，输入特征为多通道EEG信号FFT变换后的结果，分别幅值特征和复数特征。CNN采用了四层网络结构，输入层、输出层和两卷积层。实验数据有两个，第一个是作者实验室采集的数据，第二个是加州大学圣迭戈分校数据。实验验证了采用复数作为输入特征的有效性，同时CNN模型优于CCA、FBCCA和TRCA。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 给出了CNN-SSVEP的相关文章参考，揭示了当前的研究现状；可通过滑窗增加训练数据集；同一个trial前后几秒的数据相位可能会发生变化，这不利于TRCA模型。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="BCI" scheme="https://hisunjiang.gitee.io/categories/BCI/"/>
+    
+      <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
+    
+      <category term="CNN" scheme="https://hisunjiang.gitee.io/tags/CNN/"/>
+    
+  </entry>
   
   <entry>
     <title>【论文笔记 8】Cross-Device Shared Latent Responses</title>
@@ -43,9 +78,9 @@
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
-    
       <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
     
   </entry>
   
@@ -164,9 +199,9 @@
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
-    
       <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
     
   </entry>
   
@@ -301,9 +336,9 @@
       <category term="论文笔记" scheme="https://hisunjiang.gitee.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
-    
       <category term="迁移学习" scheme="https://hisunjiang.gitee.io/tags/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SSVEP" scheme="https://hisunjiang.gitee.io/tags/SSVEP/"/>
     
   </entry>
   
@@ -443,7 +478,7 @@
     <link href="https://hisunjiang.gitee.io/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/"/>
     <id>https://hisunjiang.gitee.io/2020/03/26/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</id>
     <published>2020-03-26T01:20:30.000Z</published>
-    <updated>2020-04-13T08:16:13.238Z</updated>
+    <updated>2020-04-20T01:55:12.001Z</updated>
     
     <summary type="html">
     
